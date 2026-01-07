@@ -1,0 +1,34 @@
+{
+  "page": {
+    "title": "Page d'accueil"
+  },
+  "navbar": {
+    "routes": [
+      {
+        "label": "Accueil",
+        "href": "/"
+      },
+      {
+        "label": "Département",
+        "href": "/department"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
+      },
+      {
+        "label": "Services",
+        "href": "/services"
+      },
+      {
+        "label": "Articles",
+        "href": "/articles"
+      }
+    ]
+  },
+  "content": {
+    "title": "Mon Component",
+    "description": "Description du Component"
+  }
+}
+

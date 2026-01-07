@@ -1,0 +1,34 @@
+{
+    "page": {
+        "title": "Home Page"
+    },
+    "navbar": {
+        "cta": "Book Your Consultation",
+        "routes": [
+            {
+                "label": "Home",
+                "href": "/"
+            },
+            {
+                "label": "Department",
+                "href": "/department"
+            },
+            {
+                "label": "Contact",
+                "href": "/contact"
+            },
+            {
+                "label": "Services",
+                "href": "/services"
+            },
+            {
+                "label": "Articles",
+                "href": "/articles"
+            }
+        ]
+    },
+    "content": {
+        "title": "My Component",
+        "description": "My Component Description"
+    }
+}

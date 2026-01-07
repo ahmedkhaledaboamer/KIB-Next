@@ -1,0 +1,35 @@
+{
+  "page": {
+    "title": "الصفحة الرئيسية"
+  },
+  "navbar": {
+    "cta": "إحجز استشارتك",
+    "routes": [
+      {
+        "label": "الرئيسية",
+        "href": "/"
+      },
+      {
+        "label": "القسم",
+        "href": "/department"
+      },
+      {
+        "label": "اتصل بنا",
+        "href": "/contact"
+      },
+      {
+        "label": "الخدمات",
+        "href": "/services"
+      },
+      {
+        "label": "المقالات",
+        "href": "/articles"
+      }
+    ]
+  },
+  "content": {
+    "title": "المكون",
+    "description": "وصف المكون"
+  }
+}
+

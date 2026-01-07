@@ -1,11 +1,11 @@
-import { useIntlayer } from "next-intlayer/server";
+import { useTranslations } from 'next-intl';
 
 const MyComponent = () => {
-  const content = useIntlayer("content");
+  const t = useTranslations('content');
   return (
     <div>
-      <h1>{content.title}</h1>
-      <p>{content.description}</p>
+      <h1>{t('title')}</h1>
+      <p>{t('description')}</p>
     </div>
   );
 };

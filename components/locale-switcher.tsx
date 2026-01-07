@@ -1,32 +1,53 @@
 "use client";
-import { getLocaleName, getLocalizedUrl, LocalesValues } from "intlayer";
-import { useLocale } from "next-intlayer";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/routing";
+import { useLocale } from "next-intl";
+
+import ReactFlagsSelect from "react-flags-select";
+
+// Map locale codes to country codes
+const localeToCountry: Record<string, string> = {
+  ar: "AE",
+  en: "US",
+  fr: "FR",
+};
+
+// Map country codes to locale codes
+const countryToLocale: Record<string, string> = {
+  AE: "ar",
+  US: "en",
+  FR: "fr",
+};
 
 const LocaleSwitcher = () => {
-  const { locale, pathWithoutLocale, availableLocales, setLocale } = useLocale();
+  const locale = useLocale();
   const router = useRouter();
+  const pathname = usePathname();
 
-  const handleChange = (newLocale: LocalesValues) => {
-    setLocale(newLocale);
-    const newUrl = getLocalizedUrl(pathWithoutLocale, newLocale);
-    router.replace(newUrl);
+  // Get the current country code based on locale
+  const selectedCountry = localeToCountry[locale] || "AE";
+
+  const handleChange = (countryCode: string) => {
+    const newLocale = countryToLocale[countryCode] || "ar";
+    router.replace(pathname, { locale: newLocale });
   };
 
   return (
-    <div className="flex items-center gap-2">
-      <select
-        onChange={(e) => handleChange(e.target.value as LocalesValues)}
-        value={locale}
-        className="border border-gray-300 rounded-md p-2"
-      >
-        {availableLocales.map((localeItem) => (
-          <option key={localeItem} value={localeItem}>
-            {getLocaleName(localeItem, locale)}
-          </option>
-        ))}
-      </select>
-    </div>
+    <ReactFlagsSelect
+      selectButtonClassName="!text-white"
+      searchPlaceholder="Search for a language"
+      selected={selectedCountry}
+      selectedSize={20}
+      optionsSize={20}
+      onSelect={(code) => handleChange(code)}
+      countries={["AE", "US", "FR"]}
+      customLabels={{
+        AE: "العربية",
+        US: "English",
+        FR: "Français",
+      }}
+      showSelectedLabel={true}
+      showOptionLabel={true}
+    />
   );
 };
 
