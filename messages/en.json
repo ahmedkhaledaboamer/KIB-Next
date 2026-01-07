@@ -31,6 +31,14 @@
         "title": "My Component",
         "description": "My Component Description"
     },
+    "header": {
+        "title": "Premium Legal Counsel",
+        "subtitle": "Trusted Legal Expertise with a Gold‑Standard",
+        "cta": {
+            "bookConsultation": "Book Your Consultation",
+            "exploreServices": "Explore Our Services"
+        }
+    },
     "footer": {
         "contact": {
             "title": "Contact Us",

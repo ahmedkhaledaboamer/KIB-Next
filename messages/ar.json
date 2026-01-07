@@ -31,6 +31,14 @@
     "title": "المكون",
     "description": "وصف المكون"
   },
+  "header": {
+    "title": "مستشار قانوني متميز",
+    "subtitle": "خبرة قانونية موثوقة بمعايير ذهبية",
+    "cta": {
+      "bookConsultation": "إحجز استشارتك",
+      "exploreServices": "استكشف خدماتنا"
+    }
+  },
   "footer": {
     "contact": {
       "title": "تواصل معنا",

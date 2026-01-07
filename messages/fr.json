@@ -30,6 +30,14 @@
     "title": "Mon Component",
     "description": "Description du Component"
   },
+  "header": {
+    "title": "Conseil Juridique Premium",
+    "subtitle": "Expertise Juridique de Confiance avec des Normes d'Or",
+    "cta": {
+      "bookConsultation": "Réservez Votre Consultation",
+      "exploreServices": "Découvrez Nos Services"
+    }
+  },
   "footer": {
     "contact": {
       "title": "Contactez-nous",

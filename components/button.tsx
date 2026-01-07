@@ -7,7 +7,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const buttonVariants = cva(
-  "rounded-md px-4 py-2 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300",
+  "rounded-md cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300",
   {
     variants: {
       variant: {
@@ -18,9 +18,9 @@ export const buttonVariants = cva(
         link: "bg-transparent text-primary",
       },
       size: {
-        sm: "text-sm",
-        md: "text-md",
-        lg: "text-lg",
+        sm: "",
+        md: "",
+        lg: "",
       },
     },
     defaultVariants: {
@@ -30,9 +30,37 @@ export const buttonVariants = cva(
   }
 );
 
-export default function Button({ children, className, variant, size, ...props }: ButtonProps) {
+export default function Button({ children, className, variant, size = "md", ...props }: ButtonProps) {
+  const sizeStyles = {
+    sm: {
+      fontSize: "clamp(0.875rem, 1vw, 1rem)",
+      paddingTop: "clamp(0.5rem, 0.75vw, 0.75rem)",
+      paddingBottom: "clamp(0.5rem, 0.75vw, 0.75rem)",
+      paddingLeft: "clamp(0.75rem, 1.25vw, 1.25rem)",
+      paddingRight: "clamp(0.75rem, 1.25vw, 1.25rem)",
+    },
+    md: {
+      fontSize: "clamp(1rem, 1.25vw, 1.25rem)",
+      paddingTop: "clamp(0.5rem, 0.75vw, 1rem)",
+      paddingBottom: "clamp(0.5rem, 0.75vw, 1rem)",
+      paddingLeft: "clamp(1rem, 1.5vw, 1.5rem)",
+      paddingRight: "clamp(1rem, 1.5vw, 1.5rem)",
+    },
+    lg: {
+      fontSize: "clamp(1.125rem, 1.5vw, 1.5rem)",
+      paddingTop: "clamp(0.75rem, 1vw, 1.25rem)",
+      paddingBottom: "clamp(0.75rem, 1vw, 1.25rem)",
+      paddingLeft: "clamp(1.25rem, 2vw, 2rem)",
+      paddingRight: "clamp(1.25rem, 2vw, 2rem)",
+    },
+  };
+
   return (
-    <button className={cn(buttonVariants({ variant, size, className }))} {...props}>
+    <button
+      className={cn(buttonVariants({ variant, size, className }))}
+      style={sizeStyles[size]}
+      {...props}
+    >
       {children}
     </button>
   );

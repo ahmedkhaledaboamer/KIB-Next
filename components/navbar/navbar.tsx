@@ -4,9 +4,9 @@ import Button from "@/components/button";
 import { Link, usePathname } from "@/i18n/routing";
 import { cn } from "@/utils/cn";
 import { useLocale, useTranslations } from "next-intl";
-import Image from "next/image";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import LocaleSwitcher from "../locale-switcher";
+import Logo from "../logo";
 import MobileNavbar from "./mobile-nav";
 
 interface Route {
@@ -21,13 +21,8 @@ export default function Navbar() {
   const isRTL = useMemo(() => locale === "ar", [locale]);
   const routesRaw = t.raw("routes");
 
-  // Initialize scroll state with lazy initialization
-  const [isScrolled, setIsScrolled] = useState(() => {
-    if (typeof window !== "undefined") {
-      return window.scrollY > 10;
-    }
-    return false;
-  });
+  // Initialize scroll state - always false on initial render to prevent hydration mismatch
+  const [isScrolled, setIsScrolled] = useState(false);
 
   // Memoize routes processing
   const routes = useMemo<Route[]>(() => {
@@ -55,14 +50,15 @@ export default function Navbar() {
 
   // Optimized scroll handler with requestAnimationFrame
   useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    let ticking = false;
-
+    // Set initial scroll state after mount to prevent hydration mismatch
     const updateScrollState = () => {
       setIsScrolled(window.scrollY > 10);
-      ticking = false;
     };
+
+    // Check initial scroll position
+    updateScrollState();
+
+    let ticking = false;
 
     const handleScroll = () => {
       if (!ticking) {
@@ -78,59 +74,65 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "bg-secondary/95 backdrop-blur-sm py-3 px-4 md:py-4 md:px-8",
+        "bg-secondary/95 backdrop-blur-sm",
         "absolute left-1/2 -translate-x-1/2 z-50",
         "flex justify-between items-center",
         "shadow-lg shadow-black/20",
         "transition-all duration-300 ease-in-out",
-
         isScrolled
           ? "w-full top-0 rounded-none fixed"
           : "w-full lg:w-[90vw] md:rounded-full md:top-4"
       )}
+      style={{
+        paddingTop: "clamp(0.75rem, 1vw, 1.5rem)",
+        paddingBottom: "clamp(0.75rem, 1vw, 1.5rem)",
+        paddingLeft: "clamp(1rem, 2vw, 3rem)",
+        paddingRight: "clamp(1rem, 2vw, 3rem)",
+      }}
       role="navigation"
       aria-label="Main navigation"
       dir={isRTL ? "rtl" : "ltr"}
     >
       {/* Logo */}
-      <Link
-        href="/"
-        className="relative z-10 hover:scale-105 active:scale-95 drop-shadow-2xl drop-shadow-white/20 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-secondary rounded-3xl"
-        aria-label="Home"
-      >
-        <Image
-          src="/logo.webp"
-          alt="Logo"
-          sizes="(max-width: 768px) 80px, 100px"
-          width={100}
-          height={100}
-          className="rounded-3xl shadow-lg w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-contain"
-          loading="eager"
-          priority
-        />
-      </Link>
+      <Logo className=" transition-transform duration-300 hover:scale-105 w-fit" size={100} />
 
       {/* Desktop Navigation Links */}
-      <ul className={cn("hidden md:flex items-center gap-6 lg:gap-8")} role="list">
+      <ul
+        className={cn("hidden md:flex items-center")}
+        style={{
+          gap: "clamp(1.5rem, 2vw, 3rem)",
+        }}
+        role="list"
+      >
         {routes.map((route) => (
           <li key={route.href} role="none">
             <Link
               href={route.href}
               className={cn(
-                "relative text-white text-base lg:text-lg font-semibold",
+                "relative text-white font-semibold",
                 "transition-colors duration-200",
-                "hover:text-primary focus:outline-none  rounded-md px-2 py-1",
+                "hover:text-primary focus:outline-none rounded-md",
                 isActive(route.href) ? "text-primary" : "hover:opacity-90"
               )}
+              style={{
+                fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                paddingTop: "clamp(0.25rem, 0.5vw, 0.5rem)",
+                paddingBottom: "clamp(0.25rem, 0.5vw, 0.5rem)",
+                paddingLeft: "clamp(0.5rem, 0.75vw, 1rem)",
+                paddingRight: "clamp(0.5rem, 0.75vw, 1rem)",
+              }}
               aria-current={isActive(route.href) ? "page" : undefined}
             >
               {route.label}
               {isActive(route.href) && (
                 <span
                   className={cn(
-                    "absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full",
+                    "absolute bottom-0 left-0 right-0 bg-primary rounded-full",
                     "animate-in fade-in slide-in-from-left-1 duration-300"
                   )}
+                  style={{
+                    height: "clamp(2px, 0.25vw, 4px)",
+                  }}
                   aria-hidden="true"
                 />
               )}
@@ -141,7 +143,10 @@ export default function Navbar() {
 
       {/* CTA Section */}
       <div
-        className={cn("flex items-center gap-3 md:gap-4", isRTL ? "flex-row-reverse" : "flex-row")}
+        className={cn("flex items-center", isRTL ? "flex-row-reverse" : "flex-row")}
+        style={{
+          gap: "clamp(0.75rem, 1vw, 1.5rem)",
+        }}
       >
         <div className="hidden md:flex">
           <LocaleSwitcher />

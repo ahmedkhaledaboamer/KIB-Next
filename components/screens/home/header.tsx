@@ -1,8 +1,11 @@
 import Button from "@/components/button";
+import { getTranslations } from "next-intl/server";
 
-export default function Header() {
+export default async function Header() {
+  const t = await getTranslations("header");
+
   return (
-    <header className="relative grid grid-cols-1 lg:grid-cols-2 h-svh gap-4">
+    <header className="relative grid grid-cols-1 lg:grid-cols-2 h-svh">
       <div className="absolute inset-0 bg-black/50 z-10" />
       <video
         src="/header.mp4"
@@ -11,17 +14,41 @@ export default function Header() {
         loop
         className="w-full h-full object-cover absolute z-0"
       />
-      <div className="container z-20 text-white text-center flex flex-col items-center justify-center gap-4">
-        <h1 className="text-4xl md:text-7xl font-bold text-primary">Premium Legal Counsel</h1>
-        <h2 className="text-2xl md:text-3xl font-bold text-white">
-          Trusted Legal Expertise with a Gold‑Standard
+      <div
+        className="container z-20 text-white text-center flex flex-col items-center justify-center"
+        style={{
+          gap: "clamp(1.5rem, 3vw, 4rem)",
+        }}
+      >
+        <h1
+          className="font-bold text-primary"
+          style={{
+            fontSize: "clamp(2rem, 5vw, 6rem)",
+            lineHeight: "1.1",
+          }}
+        >
+          {t("title")}
+        </h1>
+        <h2
+          className="font-bold text-white"
+          style={{
+            fontSize: "clamp(1.25rem, 2.5vw, 3rem)",
+            lineHeight: "1.2",
+          }}
+        >
+          {t("subtitle")}
         </h2>
-        <div className="flex items-center justify-center gap-4 flex-col lg:flex-row">
+        <div
+          className="flex items-center justify-center flex-col lg:flex-row"
+          style={{
+            gap: "clamp(1rem, 2vw, 2rem)",
+          }}
+        >
           <Button variant="primary" size="lg" className="font-extrabold">
-            Book Your Consultation
+            {t("cta.bookConsultation")}
           </Button>
           <Button variant="secondary" size="lg" className="font-extrabold">
-            Explore Our Services
+            {t("cta.exploreServices")}
           </Button>
         </div>
       </div>

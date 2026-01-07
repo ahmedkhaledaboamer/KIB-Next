@@ -2,7 +2,7 @@ import { Link } from "@/i18n/routing";
 import { cn } from "@/utils/cn";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
-import Image from "next/image";
+import Logo from "./logo";
 
 interface FooterLink {
   label: string;
@@ -84,44 +84,64 @@ export default async function Footer() {
   ];
 
   return (
-    <footer className="bg-secondary text-white py-12 md:py-16 lg:py-20" dir={isRTL ? "rtl" : "ltr"}>
+    <footer
+      className="bg-secondary text-white"
+      style={{
+        paddingTop: "clamp(3rem, 4vw, 6rem)",
+        paddingBottom: "clamp(3rem, 4vw, 6rem)",
+      }}
+      dir={isRTL ? "rtl" : "ltr"}
+    >
       <div className="container">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12 mb-12 ">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+          style={{
+            gap: "clamp(2rem, 3vw, 4rem)",
+            marginBottom: "clamp(2rem, 3vw, 4rem)",
+          }}
+        >
           {/* Column 1: Logo and Mission Statement */}
-          <div className="flex flex-col gap-6">
-            <Link
-              href="/"
-              className="flex flex-col items-center md:items-start gap-4 hover:opacity-90 transition-opacity group"
-              aria-label="Home"
-            >
-              <div className="relative">
-                <Image
-                  src="/logo.webp"
-                  alt="Logo"
-                  width={120}
-                  height={120}
-                  className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain rounded-full shadow-lg group-hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                />
-              </div>
-              {t("description") && (
-                <p className="text-white/80 text-sm md:text-base leading-relaxed text-center md:text-start max-w-full">
-                  {t("description")}
-                </p>
-              )}
-            </Link>
+          <div className="flex flex-col" style={{ gap: "clamp(1rem, 1.5vw, 2rem)" }}>
+            <Logo className=" transition-transform duration-300 hover:scale-105 w-fit" size={120} />
+            {t("description") && (
+              <p
+                className="text-white/80 leading-relaxed text-center md:text-start max-w-full"
+                style={{
+                  fontSize: "clamp(0.875rem, 1vw, 1.125rem)",
+                }}
+              >
+                {t("description")}
+              </p>
+            )}
           </div>
 
           {/* Column 2: Our Group */}
-          <div className="flex flex-col gap-6">
-            <h3 className="text-primary text-xl md:text-2xl font-bold">{t("ourGroup.title")}</h3>
-            <div className="flex flex-col gap-2 max-h-[400px] overflow-y-auto custom-scrollbar">
+          <div className="flex flex-col" style={{ gap: "clamp(1rem, 1.5vw, 2rem)" }}>
+            <h3
+              className="text-primary font-bold"
+              style={{
+                fontSize: "clamp(1.25rem, 1.75vw, 2rem)",
+              }}
+            >
+              {t("ourGroup.title")}
+            </h3>
+            <div
+              className="flex flex-col overflow-y-auto custom-scrollbar"
+              style={{
+                gap: "clamp(0.5rem, 0.75vw, 1rem)",
+                maxHeight: "clamp(20rem, 25vw, 30rem)",
+              }}
+            >
               {groupEntities.map((entity, index) => (
                 <a
                   key={index}
                   href={entity.href}
-                  className="bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-lg px-4 py-3 text-white/90 hover:text-primary transition-all duration-200 text-sm md:text-base font-medium"
+                  className="bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-lg text-white/90 hover:text-primary transition-all duration-200 font-medium"
+                  style={{
+                    padding: "clamp(0.75rem, 1vw, 1.25rem) clamp(1rem, 1.5vw, 2rem)",
+                    fontSize: "clamp(0.875rem, 1vw, 1.125rem)",
+                  }}
                   aria-label={entity.name}
                 >
                   {entity.name}
@@ -131,14 +151,26 @@ export default async function Footer() {
           </div>
 
           {/* Column 3: Quick Links */}
-          <div className="flex flex-col gap-6">
-            <h3 className="text-primary text-xl md:text-2xl font-bold">{t("quickLinks.title")}</h3>
-            <ul className="flex flex-col gap-3">
+          <div className="flex flex-col" style={{ gap: "clamp(1rem, 1.5vw, 2rem)" }}>
+            <h3
+              className="text-primary font-bold"
+              style={{
+                fontSize: "clamp(1.25rem, 1.75vw, 2rem)",
+              }}
+            >
+              {t("quickLinks.title")}
+            </h3>
+            <ul className="flex flex-col" style={{ gap: "clamp(0.75rem, 1vw, 1.25rem)" }}>
               {quickLinks.map((link) => (
                 <li key={link.href} role="none">
                   <Link
                     href={link.href}
-                    className="text-white/80 hover:text-primary transition-colors text-base md:text-lg font-medium block py-1"
+                    className="text-white/80 hover:text-primary transition-colors font-medium block"
+                    style={{
+                      fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                      paddingTop: "clamp(0.25rem, 0.5vw, 0.5rem)",
+                      paddingBottom: "clamp(0.25rem, 0.5vw, 0.5rem)",
+                    }}
                     aria-label={link.label}
                   >
                     {link.label}
@@ -149,37 +181,99 @@ export default async function Footer() {
           </div>
 
           {/* Column 4: Contact Information */}
-          <div className="flex flex-col gap-6">
-            <h3 className="text-primary text-xl md:text-2xl font-bold">{contact.title}</h3>
-            <div className="flex flex-col gap-4">
+          <div className="flex flex-col" style={{ gap: "clamp(1rem, 1.5vw, 2rem)" }}>
+            <h3
+              className="text-primary font-bold"
+              style={{
+                fontSize: "clamp(1.25rem, 1.75vw, 2rem)",
+              }}
+            >
+              {contact.title}
+            </h3>
+            <div className="flex flex-col" style={{ gap: "clamp(0.75rem, 1vw, 1.5rem)" }}>
               {/* Phone */}
               <Link
                 href={`tel:${contact.phone.replace(/\s/g, "")}`}
-                className="flex items-center gap-3 text-white/90 hover:text-primary transition-colors group"
+                className="flex items-center text-white/90 hover:text-primary transition-colors group"
+                style={{
+                  gap: "clamp(0.75rem, 1vw, 1.25rem)",
+                }}
                 aria-label={`Call us: ${contact.phone}`}
               >
-                <Phone className="size-5 text-primary group-hover:scale-110 transition-transform shrink-0" />
-                <span className="text-base md:text-lg">{contact.phone}</span>
+                <Phone
+                  className="text-primary group-hover:scale-110 transition-transform shrink-0"
+                  style={{
+                    width: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                    height: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                  }}
+                />
+                <span
+                  style={{
+                    fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                  }}
+                >
+                  {contact.phone}
+                </span>
               </Link>
 
               {/* Email */}
               <Link
                 href={`mailto:${contact.email}`}
-                className="flex items-center gap-3 text-white/90 hover:text-primary transition-colors group"
+                className="flex items-center text-white/90 hover:text-primary transition-colors group"
+                style={{
+                  gap: "clamp(0.75rem, 1vw, 1.25rem)",
+                }}
                 aria-label={`Email us: ${contact.email}`}
               >
-                <Mail className="size-5 text-primary group-hover:scale-110 transition-transform shrink-0" />
-                <span className="text-base md:text-lg break-all">{contact.email}</span>
+                <Mail
+                  className="text-primary group-hover:scale-110 transition-transform shrink-0"
+                  style={{
+                    width: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                    height: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                  }}
+                />
+                <span
+                  className="break-all"
+                  style={{
+                    fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                  }}
+                >
+                  {contact.email}
+                </span>
               </Link>
 
               {/* Location */}
-              <div className="flex items-start gap-3 text-white/90">
-                <MapPin className="size-5 text-primary shrink-0 mt-1" />
-                <span className="text-base md:text-lg">{contact.location}</span>
+              <div
+                className="flex items-start text-white/90"
+                style={{
+                  gap: "clamp(0.75rem, 1vw, 1.25rem)",
+                }}
+              >
+                <MapPin
+                  className="text-primary shrink-0"
+                  style={{
+                    width: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                    height: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                    marginTop: "clamp(0.25rem, 0.5vw, 0.5rem)",
+                  }}
+                />
+                <span
+                  style={{
+                    fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                  }}
+                >
+                  {contact.location}
+                </span>
               </div>
 
               {/* Social Media Icons */}
-              <div className="flex items-center gap-4 mt-2">
+              <div
+                className="flex items-center"
+                style={{
+                  gap: "clamp(0.75rem, 1vw, 1.5rem)",
+                  marginTop: "clamp(0.5rem, 0.75vw, 1rem)",
+                }}
+              >
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
                   return (
@@ -191,7 +285,12 @@ export default async function Footer() {
                       className="text-white/80 hover:text-primary transition-colors hover:scale-110 transform duration-200"
                       aria-label={social.ariaLabel}
                     >
-                      <Icon className="size-5" />
+                      <Icon
+                        style={{
+                          width: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                          height: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                        }}
+                      />
                     </Link>
                   );
                 })}
@@ -203,9 +302,13 @@ export default async function Footer() {
         {/* Copyright */}
         <div
           className={cn(
-            "pt-8 border-t border-white/10 text-sm md:text-base text-white/60",
+            "border-t border-white/10 text-white/60",
             isRTL ? "text-right" : "text-left md:text-center"
           )}
+          style={{
+            paddingTop: "clamp(1.5rem, 2vw, 2.5rem)",
+            fontSize: "clamp(0.875rem, 1vw, 1.125rem)",
+          }}
         >
           <p>{t("copyright")}</p>
         </div>
