@@ -86,7 +86,7 @@ export default function Navbar() {
 
         isScrolled
           ? "w-full top-0 rounded-none fixed"
-          : "w-full md:w-[90vw] md:rounded-full md:top-4"
+          : "w-full lg:w-[90vw] md:rounded-full md:top-4"
       )}
       role="navigation"
       aria-label="Main navigation"

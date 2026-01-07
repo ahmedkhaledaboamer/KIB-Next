@@ -30,5 +30,91 @@
     "content": {
         "title": "My Component",
         "description": "My Component Description"
+    },
+    "footer": {
+        "contact": {
+            "title": "Contact Us",
+            "phone": "+971 521068882",
+            "email": "info@shazmlc.com",
+            "location": "United Arab Emirates"
+        },
+        "quickLinks": {
+            "title": "Quick Links",
+            "links": [
+                {
+                    "label": "Home",
+                    "href": "/"
+                },
+                {
+                    "label": "Our Services",
+                    "href": "/services"
+                },
+                {
+                    "label": "Departments",
+                    "href": "/department"
+                },
+                {
+                    "label": "FAQ",
+                    "href": "/faq"
+                },
+                {
+                    "label": "Privacy Policy",
+                    "href": "/privacy"
+                },
+                {
+                    "label": "Contact Us",
+                    "href": "/contact"
+                }
+            ]
+        },
+        "ourGroup": {
+            "title": "Our Group",
+            "entities": [
+                {
+                    "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla for Legal Consultations",
+                    "href": "#"
+                },
+                {
+                    "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla for General Consultations",
+                    "href": "#"
+                },
+                {
+                    "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla for Artificial Intelligence and Research",
+                    "href": "#"
+                },
+                {
+                    "name": "Al Sarh Al Shamekh for Maritime Shipping Lines Agency",
+                    "href": "#"
+                },
+                {
+                    "name": "84 Star Capital for Real Estate Investment",
+                    "href": "#"
+                },
+                {
+                    "name": "KIB for Claims Settlement Services",
+                    "href": "#"
+                },
+                {
+                    "name": "KIB for Businessmen Services",
+                    "href": "#"
+                },
+                {
+                    "name": "KIB for Finance",
+                    "href": "#"
+                },
+                {
+                    "name": "KIB for Trade",
+                    "href": "#"
+                }
+            ]
+        },
+        "description": "Delivering legal excellence with gold standards throughout the United Arab Emirates with an unwavering commitment to the success of our clients.",
+        "copyright": "© 2024 Sheikh Abdul Aziz Bin Abdullah Al Mualla Legal Consultancy. All rights reserved.",
+        "socialMedia": {
+            "linkedin": "LinkedIn",
+            "twitter": "Twitter",
+            "instagram": "Instagram",
+            "facebook": "Facebook"
+        }
     }
 }
