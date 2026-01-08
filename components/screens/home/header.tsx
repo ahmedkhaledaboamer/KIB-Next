@@ -1,12 +1,17 @@
 import Button from "@/components/button";
 import FlagList from "@/components/FlagList";
-import { getTranslations } from "next-intl/server";
+import { cn } from "@/utils/cn";
+import { getLocale, getTranslations } from "next-intl/server";
 
 export default async function Header() {
   const t = await getTranslations("header");
-
+  const locale = await getLocale();
+  const isRTL = locale === "ar";
   return (
-    <header className="relative grid grid-cols-1 lg:grid-cols-2 h-svh">
+    <header
+      className={cn("relative grid grid-cols-1 lg:grid-cols-2 h-svh w-full")}
+      dir={isRTL ? "rtl" : "ltr"}
+    >
       <div className="absolute inset-0 bg-black/50 z-10" />
       <video
         src="/header.mp4"
@@ -52,7 +57,10 @@ export default async function Header() {
             {t("cta.exploreServices")}
           </Button>
         </div>
-        <div className="w-full  absolute bottom-2 md:bottom-[4%] lg:bottom-[10%] left-0 right-0 px-4">
+        <div
+          className="w-full  absolute bottom-2 md:bottom-[4%] lg:bottom-[10%] px-4  left-0 right-0"
+          dir={isRTL ? "rtl" : "ltr"}
+        >
           <FlagList />
         </div>
       </div>
