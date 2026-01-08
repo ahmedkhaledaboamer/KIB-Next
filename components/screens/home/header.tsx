@@ -1,4 +1,5 @@
 import Button from "@/components/button";
+import FlagList from "@/components/FlagList";
 import { getTranslations } from "next-intl/server";
 
 export default async function Header() {
@@ -50,6 +51,9 @@ export default async function Header() {
           <Button variant="secondary" size="lg" className="font-extrabold">
             {t("cta.exploreServices")}
           </Button>
+        </div>
+        <div className="w-full  absolute bottom-2 md:bottom-[4%] lg:bottom-[10%] left-0 right-0 px-4">
+          <FlagList />
         </div>
       </div>
     </header>

@@ -21,9 +21,6 @@ export default function Navbar() {
   const isRTL = useMemo(() => locale === "ar", [locale]);
   const routesRaw = t.raw("routes");
 
-  // Initialize scroll state - always false on initial render to prevent hydration mismatch
-  const [isScrolled, setIsScrolled] = useState(false);
-
   // Memoize routes processing
   const routes = useMemo<Route[]>(() => {
     if (!Array.isArray(routesRaw)) return [];
@@ -48,29 +45,6 @@ export default function Navbar() {
     [pathname, locale]
   );
 
-  // Optimized scroll handler with requestAnimationFrame
-  useEffect(() => {
-    // Set initial scroll state after mount to prevent hydration mismatch
-    const updateScrollState = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    // Check initial scroll position
-    updateScrollState();
-
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateScrollState);
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <nav
       className={cn(
@@ -79,16 +53,9 @@ export default function Navbar() {
         "flex justify-between items-center",
         "shadow-lg shadow-black/20",
         "transition-all duration-300 ease-in-out",
-        isScrolled
-          ? "w-full top-0 rounded-none fixed"
-          : "w-full lg:w-[90vw] md:rounded-full md:top-4"
+        "w-full top-0 rounded-none fixed",
+        'px-4 py-4'
       )}
-      style={{
-        paddingTop: "clamp(0.75rem, 1vw, 1.5rem)",
-        paddingBottom: "clamp(0.75rem, 1vw, 1.5rem)",
-        paddingLeft: "clamp(1rem, 2vw, 3rem)",
-        paddingRight: "clamp(1rem, 2vw, 3rem)",
-      }}
       role="navigation"
       aria-label="Main navigation"
       dir={isRTL ? "rtl" : "ltr"}

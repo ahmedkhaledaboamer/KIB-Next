@@ -19,7 +19,7 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       <Navbar />
-      <section className="min-h-svh ">{children}</section>
+      <section className="min-h-svh pt-20">{children}</section>
       <Footer />
     </NextIntlClientProvider>
   );

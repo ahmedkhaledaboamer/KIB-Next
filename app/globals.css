@@ -58,3 +58,20 @@
   scrollbar-width: thin;
   scrollbar-color: #fd9908 rgba(255, 255, 255, 0.1);
 }
+
+/* Flag Swiper Styles */
+.flag-swiper {
+  padding: clamp(0.5rem, 1vw, 1rem) 0;
+}
+
+.flag-swiper .swiper-slide {
+  transition: transform 0.3s linear;
+}
+
+.flag-swiper .swiper-slide:hover {
+  transform: translateY(-5px);
+}
+
+.flag-swiper .swiper-slide-active {
+  transform: scale(1.05);
+}

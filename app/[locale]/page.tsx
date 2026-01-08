@@ -1,14 +1,12 @@
-import LocaleSwitcher from "@/components/locale-switcher";
 import Header from "@/components/screens/home/header";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function Page() {
-  const t = useTranslations("page");
+export default async function Page() {
+  const t = await getTranslations("page");
 
   return (
     <section>
       <Header />
-      <LocaleSwitcher />
     </section>
   );
 }
