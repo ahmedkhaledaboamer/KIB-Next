@@ -1,6 +1,6 @@
 "use client";
 import { usePathname, useRouter } from "@/i18n/routing";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import ReactFlagsSelect from "react-flags-select";
 
@@ -22,6 +22,7 @@ const LocaleSwitcher = () => {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const t = useTranslations("localeSwitcher");
 
   // Get the current country code based on locale
   const selectedCountry = localeToCountry[locale] || "AE";
@@ -34,7 +35,7 @@ const LocaleSwitcher = () => {
   return (
     <ReactFlagsSelect
       selectButtonClassName="!text-white"
-      searchPlaceholder="Search for a language"
+      searchPlaceholder={t("searchPlaceholder")}
       selected={selectedCountry}
       selectedSize={20}
       optionsSize={20}

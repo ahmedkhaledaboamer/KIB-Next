@@ -3,7 +3,7 @@
         "title": "Home Page"
     },
     "navbar": {
-        "cta": "Book Your Consultation",
+        "cta": "Book Consultation",
         "routes": [
             {
                 "label": "Home",
@@ -35,7 +35,7 @@
         "title": "Premium Legal Counsel",
         "subtitle": "Trusted Legal Expertise with a Gold‑Standard",
         "cta": {
-            "bookConsultation": "Book Your Consultation",
+            "bookConsultation": "Book Consultation",
             "exploreServices": "Explore Our Services"
         }
     },
@@ -124,5 +124,171 @@
             "instagram": "Instagram",
             "facebook": "Facebook"
         }
+    },
+    "services": {
+        "title": "Our Services",
+        "subtitle": "Explore our comprehensive legal and administrative collections  — luxury solutions with international standards..",
+        "searchPlaceholder": "Search services...",
+        "searchButton": "Search",
+        "bookButton": "Booking",
+        "loading": "Loading services...",
+        "noResults": "No services found",
+        "resultsFound": "results found",
+        "noServices": "No services available",
+        "viewAll": "View All Services"
+    },
+    "servicesShowcase": {
+        "title": "Our Services",
+        "subtitle": "Explore the range of services we offer to help you succeed.",
+        "viewAll": "View All Services",
+        "loading": "Loading services..."
+    },
+    "customerCare": {
+        "title": "Every",
+        "titleHighlight": "customer is important",
+        "subtitle": ", we take care of your business",
+        "cards": {
+            "information": {
+                "title": "Information",
+                "subtitle": "Get Expert Advice",
+                "buttonText": "Learn More"
+            },
+            "consultation": {
+                "title": "Consultation",
+                "subtitle": "Professional Services",
+                "buttonText": "Contact Us"
+            },
+            "virtual": {
+                "title": " Legal Consultations",
+                "subtitle": "Always Available",
+                "buttonText": "Book Now"
+            },
+            "support": {
+                "title": "Support",
+                "subtitle": "We Are Here to Help",
+                "buttonText": "Get Help"
+            }
+        }
+    },
+    "whyChooseUs": {
+        "title": "Why Choose Us!",
+        "subtitle": "Excellence, expertise, integrity, and unwavering dedication to success.",
+        "features": {
+            "freeConsultation": "Free Consultation",
+            "support24": "24/7 Support",
+            "confidential": "Confidential"
+        },
+        "slides": {
+            "expertTeam": {
+                "title": "Expert Legal Team",
+                "description": "Multi-Specialty",
+                "stats": "50+ Lawyers"
+            },
+            "provenApproach": {
+                "title": "Proven First Approch",
+                "description": "Success Rate",
+                "stats": "98% Win Rate"
+            },
+            "clientSatisfaction": {
+                "title": "Client Satisfaction",
+                "description": "Happy Clients",
+                "stats": "50+ Cases"
+            }
+        }
+    },
+    "ourProcess": {
+        "title": "Our Process",
+        "steps": {
+            "consultation": "Consultation.",
+            "caseEvaluation": "Case Evaluation.",
+            "strategicPlanning": "Strategic Planning.",
+            "representation": "Representation.",
+            "caseFollowUp": "Case Follow-Up."
+        }
+    },
+    "legal": {
+        "title": "Legal Innovation",
+        "titleHighlight": "Hub",
+        "subtitle": "Pioneering the future of legal services with cutting-edge technology",
+        "services": {
+            "contractReview": {
+                "title": "Contract",
+                "titleRest": "Review",
+                "description": "Using AI technology to quickly analyze and assess contract risks."
+            },
+            "smartContracts": {
+                "title": "Smart",
+                "titleRest": "Contracts",
+                "description": "Secure and transparent execution of contracts using advanced blockchain technology."
+            },
+            "legalConsults": {
+                "title": "Legal",
+                "titleRest": "Consults",
+                "description": "Convenient remote meetings with our expert legal team for fast and reliable guidance."
+            },
+            "caseStrategy": {
+                "title": "Case",
+                "titleRest": "Strategy",
+                "description": "Using analytics, insights, and data-driven planning to achieve the best case outcomes."
+            }
+        }
+    },
+    "practiceAreas": {
+        "title": "Areas of",
+        "titleHighlight": "Practice",
+        "subtitle": "Expert representation across fields. Decades of excellence commitment.",
+        "areas": {
+            "commercial": {
+                "title": "Commercial",
+                "items": {
+                    "maAdvice": "M&A Advice",
+                    "contractLaw": "Contract Law",
+                    "businessLaw": "Business Law"
+                }
+            },
+            "familyLaw": {
+                "title": "Family Law",
+                "items": {
+                    "divorceLaw": "Divorce Law",
+                    "childCustody": "Child Custody",
+                    "adoptionCases": "Adoption Cases"
+                }
+            },
+            "advocacy": {
+                "title": "Advocacy",
+                "items": {
+                    "whiteCrimes": "White Crimes",
+                    "duiDefense": "DUI Defense",
+                    "judicialAppeals": "Judicial appeals"
+                }
+            },
+            "protection": {
+                "title": "Protection",
+                "items": {
+                    "financialCrime": "Financial Crime",
+                    "drivingCrimes": "Driving Crimes",
+                    "legalAppeals": "Legal Appeals"
+                }
+            }
+        }
+    },
+    "servicesSlider": {
+        "title": "Sector",
+        "titleHighlight": "Expertise",
+        "subtitle": "Comprehensive legal expertise across key sectors"
+    },
+    "cardDetails": {
+        "sub": "Sub Services",
+        "chat": "Chat",
+        "noDescription": "No description"
+    },
+    "categoriesModal": {
+        "noSubServices": "No sub-services available"
+    },
+    "timeWeather": {
+        "loading": "Loading..."
+    },
+    "localeSwitcher": {
+        "searchPlaceholder": "Search for a language"
     }
 }

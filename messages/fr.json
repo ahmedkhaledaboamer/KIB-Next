@@ -123,6 +123,172 @@
       "instagram": "Instagram",
       "facebook": "Facebook"
     }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Découvrez la gamme de services que nous offrons pour vous aider à réussir.",
+    "searchPlaceholder": "Rechercher des services...",
+    "searchButton": "Rechercher",
+    "bookButton": "Réserver maintenant",
+    "loading": "Chargement des services...",
+    "noResults": "Aucun service trouvé",
+    "resultsFound": "résultats trouvés",
+    "noServices": "Aucun service disponible",
+    "viewAll": "Voir tous les services"
+  },
+  "servicesShowcase": {
+    "title": "Nos Services",
+    "subtitle": "Découvrez la gamme de services que nous offrons pour vous aider à réussir.",
+    "viewAll": "Voir tous les services",
+    "loading": "Chargement des services..."
+  },
+  "customerCare": {
+    "title": "Chaque",
+    "titleHighlight": "client est important",
+    "subtitle": ", nous prenons soin de votre entreprise",
+    "cards": {
+      "information": {
+        "title": "Information",
+        "subtitle": "Obtenez des conseils d'experts",
+        "buttonText": "En savoir plus"
+      },
+      "consultation": {
+        "title": "Consultation",
+        "subtitle": "Services professionnels",
+        "buttonText": "Contactez-nous"
+      },
+      "virtual": {
+        "title": "Consultations juridiques",
+        "subtitle": "Toujours disponible",
+        "buttonText": "Réserver maintenant"
+      },
+      "support": {
+        "title": "Support",
+        "subtitle": "Nous sommes là pour vous aider",
+        "buttonText": "Obtenir de l'aide"
+      }
+    }
+  },
+  "whyChooseUs": {
+    "title": "Pourquoi nous choisir!",
+    "subtitle": "Excellence, expertise, intégrité et dévouement inébranlable au succès.",
+    "features": {
+      "freeConsultation": "Consultation gratuite",
+      "support24": "Support 24/7",
+      "confidential": "Confidentiel"
+    },
+    "slides": {
+      "expertTeam": {
+        "title": "Équipe juridique experte",
+        "description": "Multi-spécialité",
+        "stats": "50+ Avocats"
+      },
+      "provenApproach": {
+        "title": "Approche éprouvée d'abord",
+        "description": "Taux de réussite",
+        "stats": "98% Taux de victoire"
+      },
+      "clientSatisfaction": {
+        "title": "Satisfaction client",
+        "description": "Clients heureux",
+        "stats": "50+ Affaires"
+      }
+    }
+  },
+  "ourProcess": {
+    "title": "Notre processus",
+    "steps": {
+      "consultation": "Consultation.",
+      "caseEvaluation": "Évaluation du dossier.",
+      "strategicPlanning": "Planification stratégique.",
+      "representation": "Représentation.",
+      "caseFollowUp": "Suivi du dossier."
+    }
+  },
+  "legal": {
+    "title": "Hub d'innovation",
+    "titleHighlight": "juridique",
+    "subtitle": "Pionnier de l'avenir des services juridiques avec une technologie de pointe",
+    "services": {
+      "contractReview": {
+        "title": "Révision de",
+        "titleRest": "contrat",
+        "description": "Utilisation de la technologie IA pour analyser et évaluer rapidement les risques contractuels."
+      },
+      "smartContracts": {
+        "title": "Contrats",
+        "titleRest": "intelligents",
+        "description": "Exécution sécurisée et transparente des contrats grâce à une technologie blockchain avancée."
+      },
+      "legalConsults": {
+        "title": "Consultations",
+        "titleRest": "juridiques",
+        "description": "Réunions à distance pratiques avec notre équipe juridique experte pour des conseils rapides et fiables."
+      },
+      "caseStrategy": {
+        "title": "Stratégie de",
+        "titleRest": "dossier",
+        "description": "Utilisation d'analyses, d'informations et de planification basée sur les données pour obtenir les meilleurs résultats de dossier."
+      }
+    }
+  },
+  "practiceAreas": {
+    "title": "Domaines de",
+    "titleHighlight": "pratique",
+    "subtitle": "Représentation experte dans tous les domaines. Des décennies d'engagement envers l'excellence.",
+    "areas": {
+      "commercial": {
+        "title": "Commercial",
+        "items": {
+          "maAdvice": "Conseil en fusions et acquisitions",
+          "contractLaw": "Droit des contrats",
+          "businessLaw": "Droit des affaires"
+        }
+      },
+      "familyLaw": {
+        "title": "Droit de la famille",
+        "items": {
+          "divorceLaw": "Droit du divorce",
+          "childCustody": "Garde d'enfants",
+          "adoptionCases": "Cas d'adoption"
+        }
+      },
+      "advocacy": {
+        "title": "Plaidoyer",
+        "items": {
+          "whiteCrimes": "Crimes en col blanc",
+          "duiDefense": "Défense contre conduite en état d'ivresse",
+          "judicialAppeals": "Appels judiciaires"
+        }
+      },
+      "protection": {
+        "title": "Protection",
+        "items": {
+          "financialCrime": "Crime financier",
+          "drivingCrimes": "Crimes de conduite",
+          "legalAppeals": "Appels légaux"
+        }
+      }
+    }
+  },
+  "servicesSlider": {
+    "title": "Expertise",
+    "titleHighlight": "sectorielle",
+    "subtitle": "Expertise juridique complète dans les secteurs clés"
+  },
+  "cardDetails": {
+    "sub": "Sous",
+    "chat": "Chat",
+    "noDescription": "Aucune description"
+  },
+  "categoriesModal": {
+    "noSubServices": "Aucun sous-service disponible"
+  },
+  "timeWeather": {
+    "loading": "Chargement..."
+  },
+  "localeSwitcher": {
+    "searchPlaceholder": "Rechercher une langue"
   }
 }
 

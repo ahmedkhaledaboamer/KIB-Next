@@ -124,5 +124,171 @@
       "instagram": "إنستغرام",
       "facebook": "فيسبوك"
     }
+  },
+  "services": {
+    "title": "خدماتنا",
+    "subtitle": "اكتشف مجموعة الخدمات التي نقدمها لمساعدتك على النجاح.",
+    "searchPlaceholder": "ابحث عن الخدمات...",
+    "searchButton": "بحث",
+    "bookButton": "احجز الآن",
+    "loading": "جاري تحميل الخدمات...",
+    "noResults": "لم يتم العثور على خدمات",
+    "resultsFound": "نتيجة موجودة",
+    "noServices": "لا توجد خدمات متاحة",
+    "viewAll": "عرض جميع الخدمات"
+  },
+  "servicesShowcase": {
+    "title": "خدماتنا",
+    "subtitle": "اكتشف مجموعة الخدمات التي نقدمها لمساعدتك على النجاح.",
+    "viewAll": "عرض جميع الخدمات",
+    "loading": "جاري تحميل الخدمات..."
+  },
+  "customerCare": {
+    "title": "كل",
+    "titleHighlight": "عميل مهم",
+    "subtitle": "نحن نهتم بأعمالك",
+    "cards": {
+      "information": {
+        "title": "معلومات",
+        "subtitle": "احصل على نصيحة الخبراء",
+        "buttonText": "اعرف المزيد"
+      },
+      "consultation": {
+        "title": "استشارة",
+        "subtitle": "خدمات احترافية",
+        "buttonText": "اتصل بنا"
+      },
+      "virtual": {
+        "title": "استشارات قانونية        ",
+        "subtitle": "متاح دائماً",
+        "buttonText": "احجز الآن"
+      },
+      "support": {
+        "title": "الدعم",
+        "subtitle": "نحن هنا للمساعدة",
+        "buttonText": "احصل على المساعدة"
+      }
+    }
+  },
+  "whyChooseUs": {
+    "title": "لماذا تختارنا!",
+    "subtitle": "التميز، الخبرة، النزاهة، والتفاني الثابت في النجاح.",
+    "features": {
+      "freeConsultation": "استشارة مجانية",
+      "support24": "دعم على مدار الساعة",
+      "confidential": "سري"
+    },
+    "slides": {
+      "expertTeam": {
+        "title": "فريق قانوني خبير",
+        "description": "متعدد التخصصات",
+        "stats": "50+ محامي"
+      },
+      "provenApproach": {
+        "title": "نهج مثبت أولاً",
+        "description": "معدل النجاح",
+        "stats": "98% معدل الفوز"
+      },
+      "clientSatisfaction": {
+        "title": "رضا العملاء",
+        "description": "عملاء سعداء",
+        "stats": "50+ قضية"
+      }
+    }
+  },
+  "ourProcess": {
+    "title": "عملنا",
+    "steps": {
+      "consultation": "الاستشارة.",
+      "caseEvaluation": "تقييم القضية.",
+      "strategicPlanning": "التخطيط الاستراتيجي.",
+      "representation": "التمثيل.",
+      "caseFollowUp": "متابعة القضية."
+    }
+  },
+  "legal": {
+    "title": "مركز الابتكار",
+    "titleHighlight": "القانوني",
+    "subtitle": "ريادة مستقبل الخدمات القانونية بتقنيات متطورة",
+    "services": {
+      "contractReview": {
+        "title": "مراجعة",
+        "titleRest": "العقد",
+        "description": "استخدام تقنية الذكاء الاصطناعي لتحليل وتقييم مخاطر العقود بسرعة."
+      },
+      "smartContracts": {
+        "title": "العقود",
+        "titleRest": "الذكية",
+        "description": "تنفيذ آمن وشفاف للعقود باستخدام تقنية البلوك تشين المتقدمة."
+      },
+      "legalConsults": {
+        "title": "الاستشارات",
+        "titleRest": "القانونية",
+        "description": "لقاءات عن بُعد مريحة مع فريقنا القانوني الخبير للحصول على إرشادات سريعة وموثوقة."
+      },
+      "caseStrategy": {
+        "title": "استراتيجية",
+        "titleRest": "القضية",
+        "description": "استخدام التحليلات والرؤى والتخطيط القائم على البيانات لتحقيق أفضل نتائج القضية."
+      }
+    }
+  },
+  "practiceAreas": {
+    "title": "مجالات",
+    "titleHighlight": "الممارسة",
+    "subtitle": "تمثيل خبير عبر المجالات. عقود من التميز والالتزام.",
+    "areas": {
+      "commercial": {
+        "title": "تجاري",
+        "items": {
+          "maAdvice": "نصائح الاندماج والاستحواذ",
+          "contractLaw": "قانون العقود",
+          "businessLaw": "قانون الأعمال"
+        }
+      },
+      "familyLaw": {
+        "title": "قانون الأسرة",
+        "items": {
+          "divorceLaw": "قانون الطلاق",
+          "childCustody": "حضانة الأطفال",
+          "adoptionCases": "قضايا التبني"
+        }
+      },
+      "advocacy": {
+        "title": "الدفاع",
+        "items": {
+          "whiteCrimes": "جرائم ذوي الياقات البيضاء",
+          "duiDefense": "الدفاع عن القيادة تحت تأثير الكحول",
+          "judicialAppeals": "الاستئنافات القضائية"
+        }
+      },
+      "protection": {
+        "title": "الحماية",
+        "items": {
+          "financialCrime": "الجريمة المالية",
+          "drivingCrimes": "جرائم القيادة",
+          "legalAppeals": "الاستئنافات القانونية"
+        }
+      }
+    }
+  },
+  "servicesSlider": {
+    "title": "الخبرة",
+    "titleHighlight": "القطاعية",
+    "subtitle": "خبرة قانونية شاملة عبر القطاعات الرئيسية"
+  },
+  "cardDetails": {
+    "sub": "فرعي",
+    "chat": "محادثة",
+    "noDescription": "لا يوجد وصف"
+  },
+  "categoriesModal": {
+    "noSubServices": "لا توجد خدمات فرعية متاحة"
+  },
+  "timeWeather": {
+    "loading": "جاري التحميل..."
+  },
+  "localeSwitcher": {
+    "searchPlaceholder": "ابحث عن لغة"
   }
 }

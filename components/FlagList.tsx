@@ -1,7 +1,7 @@
+ 
 "use client";
 
-import Image from "next/image";
-import { useMemo } from "react";
+ import { useMemo } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -17,66 +17,59 @@ interface FlagListProps {
 export default function FlagList({
   flags,
   autoplayDelay = 1000,
-  speed = 1000,
+  speed = 2000,  
 }: FlagListProps = {}) {
-  // Default flags if none provided
-  const flagList = useMemo(() => {
-    if (flags && flags.length > 0) {
-      return flags;
-    }
-    return Array.from({ length: 12 }).map((_, index) => ({
-      src: `/flags/flag-${index + 1}.webp`,
-      alt: `Flag ${index + 1}`,
-    }));
+   const flagList = useMemo(() => {
+    const baseFlags = flags && flags.length > 0 
+      ? flags 
+      : Array.from({ length: 12 }).map((_, index) => ({
+          src: `/flags/flag-${index + 1}.webp`,
+          alt: `Flag ${index + 1}`,
+        }));
+    
+     return [...baseFlags, ...baseFlags, ...baseFlags];
   }, [flags]);
 
   return (
-    <div
-      className="w-full mx-auto"
-      style={{
-        maxWidth: "clamp(20rem, 90vw, 80rem)",
-        paddingLeft: "clamp(1rem, 2vw, 2rem)",
-        paddingRight: "clamp(1rem, 2vw, 2rem)",
-      }}
-    >
+    <div className="w-full px-4">
       <Swiper
         modules={[Autoplay]}
-        loop={flagList.length > 3}
+        loop={true}
         autoplay={{
-          delay: autoplayDelay,
+          delay: 0,
           disableOnInteraction: false,
-          pauseOnMouseEnter: true,
+          pauseOnMouseEnter: false,
           reverseDirection: false,
         }}
-        speed={speed}
+        speed={1000}
         breakpoints={{
           320: {
-            slidesPerView: 2,
-            spaceBetween: 12,
+            slidesPerView: 3,
+            spaceBetween: 8,
           },
           480: {
-            slidesPerView: 3,
-            spaceBetween: 16,
+            slidesPerView: 4,
+            spaceBetween: 10,
           },
           640: {
-            slidesPerView: 4,
-            spaceBetween: 20,
+            slidesPerView: 5,
+            spaceBetween: 12,
           },
           768: {
-            slidesPerView: 5,
-            spaceBetween: 24,
+            slidesPerView: 6,
+            spaceBetween: 14,
           },
           1024: {
-            slidesPerView: 6,
-            spaceBetween: 28,
+            slidesPerView: 8,
+            spaceBetween: 16,
           },
           1280: {
-            slidesPerView: 7,
-            spaceBetween: 32,
+            slidesPerView: 10,
+            spaceBetween: 18,
           },
           1536: {
-            slidesPerView: 8,
-            spaceBetween: 40,
+            slidesPerView: 12,
+            spaceBetween: 20,
           },
         }}
         className="flag-swiper"
@@ -87,28 +80,13 @@ export default function FlagList({
           <SwiperSlide
             key={index}
             className="flex items-center justify-center"
-            style={{
-              width: "clamp(3rem, 5vw, 5.5rem)",
-            }}
           >
-            <div
-              className="relative w-full h-full backdrop-blur-sm rounded-lg transition-all duration-300 hover:scale-110"
-              style={{
-                aspectRatio: "3/2",
-                padding: "clamp(0.375rem, 0.75vw, 0.75rem)",
-              }}
-            >
-              <Image
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-20 xl:w-32 xl:h-20 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl    ">
+              <img
                 src={flag.src}
                 alt={flag.alt}
-                width={80}
-                height={53}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
                 loading="lazy"
-                sizes="(max-width: 640px) 3rem, (max-width: 1024px) 4rem, 5.5rem"
-                style={{
-                  filter: "drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1))",
-                }}
               />
             </div>
           </SwiperSlide>

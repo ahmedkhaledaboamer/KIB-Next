@@ -67,7 +67,7 @@ export default function Navbar() {
       <ul
         className={cn("hidden md:flex items-center")}
         style={{
-          gap: "clamp(1.5rem, 2vw, 3rem)",
+          gap: "clamp(1rem, 2vw, 2rem)",
         }}
         role="list"
       >
@@ -82,7 +82,7 @@ export default function Navbar() {
                 isActive(route.href) ? "text-primary" : "hover:opacity-90"
               )}
               style={{
-                fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                fontSize: "clamp(1.5rem, 1.25vw, 3rem)",
                 paddingTop: "clamp(0.25rem, 0.5vw, 0.5rem)",
                 paddingBottom: "clamp(0.25rem, 0.5vw, 0.5rem)",
                 paddingLeft: "clamp(0.5rem, 0.75vw, 1rem)",
@@ -121,6 +121,7 @@ export default function Navbar() {
         <Button
           className="hidden lg:flex whitespace-nowrap"
           variant="primary"
+          size="sm"
           aria-label={t("cta")}
         >
           {t("cta")}

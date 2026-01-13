@@ -18,7 +18,7 @@ export default function Logo({ className, href = "/", size = 100 }: LogoProps) {
         height={size}
         className={cn(
           className,
-          "rounded-3xl shadow-lg object-contain w-full h-full drop-shadow-2xl drop-shadow-white/10"
+          "rounded-3xl   object-contain w-full h-full d  "
         )}
         loading="eager"
         priority
