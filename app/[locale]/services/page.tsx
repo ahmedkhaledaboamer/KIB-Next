@@ -4,11 +4,11 @@ import Pagination from "@/components/Pagination";
 import { Iservices } from "@/components/screens/home/ServicesShowcase";
 import SearchBar from "@/components/screens/services/SearchBar";
 
-import { getServices , isLoading } from "@/utils/getServices";
+import { getServices, isLoading } from "@/utils/getServices";
 import { getLocale, getTranslations } from "next-intl/server";
 
 const ITEMS_PER_PAGE = 12;
-
+// https://shazmlc.cloud/webhook/web-services-booking
 export default async function ServicesPage({
   searchParams,
 }: {
@@ -42,10 +42,16 @@ export default async function ServicesPage({
   // Ensure currentPage is within valid range (clamp to valid range)
   const validCurrentPage = Math.min(Math.max(1, currentPage), totalPages);
 
+  const sessionId = await searchParamsData["session_id"];
+
   const startIndex = (validCurrentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
   const currentServices = filteredServices.slice(startIndex, endIndex);
 
+  if (sessionId) {
+    // TODO ADD Your Function Here To Handle the session_id
+    console.log("session_id: ", sessionId);
+  }
 
   return (
     <div className="min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-[5%] pt-[calc(5%+80px)]">
