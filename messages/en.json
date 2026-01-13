@@ -126,6 +126,9 @@
         }
     },
     "services": {
+        "showing": "Showing",
+        "of": "of",
+        "services": "services",
         "title": "Our Services",
         "subtitle": "Explore our comprehensive legal and administrative collections  — luxury solutions with international standards..",
         "searchPlaceholder": "Search services...",

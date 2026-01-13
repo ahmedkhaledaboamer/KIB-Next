@@ -1,20 +1,25 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
+import { useRouter, usePathname } from "@/i18n/routing";
+import React, { useState, useEffect } from "react";
 
 interface PaginationProps {
   totalPages?: number;
   currentPage?: number;
   onPageChange?: (page: number) => void;
+  searchTerm?: string;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
   totalPages = 5,
   currentPage: externalCurrentPage,
   onPageChange,
+  searchTerm = "",
 }) => {
   const [internalCurrentPage, setInternalCurrentPage] = useState<number>(1);
   const [windowWidth, setWindowWidth] = useState<number>(0);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const currentPage = externalCurrentPage ?? internalCurrentPage;
 
@@ -22,8 +27,8 @@ const Pagination: React.FC<PaginationProps> = ({
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   // Sync with external page
@@ -32,9 +37,26 @@ const Pagination: React.FC<PaginationProps> = ({
   }, [externalCurrentPage]);
 
   const handlePageChange = (page: number) => {
-    if (page >= 1 && page <= totalPages) {
+    if (page >= 1 && page <= totalPages && page !== currentPage) {
       if (externalCurrentPage === undefined) setInternalCurrentPage(page);
-      onPageChange?.(page);
+      
+      // Update URL if onPageChange is not provided (SSR mode)
+      if (!onPageChange) {
+        const params = new URLSearchParams();
+        if (searchTerm.trim()) {
+          params.set("search", searchTerm.trim());
+        }
+        if (page > 1) {
+          params.set("page", page.toString());
+        }
+        const queryString = params.toString();
+        const newUrl = queryString ? `${pathname}?${queryString}` : pathname;
+        router.replace(newUrl);
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        onPageChange(page);
+      }
     }
   };
 
@@ -62,19 +84,19 @@ const Pagination: React.FC<PaginationProps> = ({
     }
 
     const pages: (number | string)[] = [1];
-    if (startPage > 2) pages.push('...');
+    if (startPage > 2) pages.push("...");
     for (let i = startPage; i <= endPage; i++) pages.push(i);
-    if (endPage < totalPages - 1) pages.push('...');
+    if (endPage < totalPages - 1) pages.push("...");
     pages.push(totalPages);
 
     return pages;
   };
 
   const getButtonSize = () => {
-    if (windowWidth <= 320) return 'w-8 h-8 text-xs';
-    if (windowWidth < 640) return 'w-9 h-9 text-sm';
-    if (windowWidth < 768) return 'w-10 h-10';
-    return 'w-11 h-11';
+    if (windowWidth <= 320) return "w-8 h-8 text-xs";
+    if (windowWidth < 640) return "w-9 h-9 text-sm";
+    if (windowWidth < 768) return "w-10 h-10";
+    return "w-11 h-11";
   };
 
   const buttonSizeClass = getButtonSize();
@@ -89,8 +111,8 @@ const Pagination: React.FC<PaginationProps> = ({
           disabled={currentPage === 1}
           className={`${buttonSizeClass} rounded-lg flex items-center justify-center font-semibold transition ${
             currentPage === 1
-              ? 'bg-[#0d8d82] text-white/50 cursor-not-allowed'
-              : 'bg-[#0d8d82] text-white hover:bg-[#3ec9bb]'
+              ? "bg-[#0d8d82] text-white/50 cursor-not-allowed"
+              : "bg-[#0d8d82] text-white hover:bg-[#3ec9bb]"
           }`}
         >
           ‹
@@ -98,7 +120,7 @@ const Pagination: React.FC<PaginationProps> = ({
 
         {/* Pages */}
         {pageNumbers.map((page, index) =>
-          page === '...' ? (
+          page === "..." ? (
             <span
               key={`ellipsis-${index}`}
               className={`${buttonSizeClass} flex items-center justify-center text-gray-500`}
@@ -111,8 +133,8 @@ const Pagination: React.FC<PaginationProps> = ({
               onClick={() => handlePageChange(page as number)}
               className={`${buttonSizeClass} rounded-lg font-semibold transition ${
                 currentPage === page
-                  ? 'bg-[#0d8d82] text-white'
-                  : 'border border-[#0d8d82] text-[#0d8d82] hover:bg-[#0d8d82] hover:text-white'
+                  ? "bg-[#0d8d82] text-white"
+                  : "border border-[#0d8d82] text-[#0d8d82] hover:bg-[#0d8d82] hover:text-white"
               }`}
             >
               {page}
@@ -126,8 +148,8 @@ const Pagination: React.FC<PaginationProps> = ({
           disabled={currentPage === totalPages}
           className={`${buttonSizeClass} rounded-lg flex items-center justify-center font-semibold transition ${
             currentPage === totalPages
-              ? 'bg-[#12b3a6] text-white/50 cursor-not-allowed'
-              : 'bg-[#12b3a6] text-white hover:bg-[#3ec9bb]'
+              ? "bg-[#12b3a6] text-white/50 cursor-not-allowed"
+              : "bg-[#12b3a6] text-white hover:bg-[#3ec9bb]"
           }`}
         >
           ›

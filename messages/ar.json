@@ -127,6 +127,9 @@
   },
   "services": {
     "title": "خدماتنا",
+    "showing": "إظهار",
+    "of": "من",
+    "services": "خدمات",
     "subtitle": "اكتشف مجموعة الخدمات التي نقدمها لمساعدتك على النجاح.",
     "searchPlaceholder": "ابحث عن الخدمات...",
     "searchButton": "بحث",

@@ -1,7 +1,7 @@
 import Button from "@/components/button";
 import CardDetails from "@/components/CardDetails";
 import CardDetailsSkeleton from "@/components/CardDetailsSkeleton";
-import { getServices } from "@/utils/getServices";
+import { getServices, isLoading } from "@/utils/getServices";
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 
@@ -24,7 +24,6 @@ export default async function ServicesShowcase() {
   // Fetch services
   const services = await getServices();
   const displayedServices = services.slice(0, 8);
-  const isLoading = services.length === 0;
 
   return (
     <section
@@ -41,12 +40,10 @@ export default async function ServicesShowcase() {
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-[clamp(2rem,4vw,4rem)]">
         <div>
           <h2 className="font-bold text-gray-900 text-[clamp(1.75rem,5vw,7rem)] leading-tight">
-            {t("title")} 
+            {t("title")}
           </h2>
 
-          <p className="text-gray-700 text-[clamp(1rem,3vw,4rem)]">
-            {t("subtitle")}
-          </p>
+          <p className="text-gray-700 text-[clamp(1rem,3vw,4rem)]">{t("subtitle")}</p>
         </div>
 
         {/* CTA Button linked with locale */}
@@ -58,7 +55,8 @@ export default async function ServicesShowcase() {
       </div>
 
       {/* GRID */}
-      <div className="
+      <div
+        className="
           grid
           grid-cols-1
           sm:grid-cols-2
@@ -69,9 +67,7 @@ export default async function ServicesShowcase() {
         "
       >
         {isLoading
-          ? Array.from({ length: 8 }).map((_, i) => (
-              <CardDetailsSkeleton key={i} />
-            ))
+          ? Array.from({ length: 8 }).map((_, i) => <CardDetailsSkeleton key={i} />)
           : displayedServices.map((service: Iservices) => (
               <CardDetails
                 key={service.id}
@@ -83,11 +79,7 @@ export default async function ServicesShowcase() {
       </div>
 
       {/* LOADING TEXT */}
-      {isLoading && (
-        <p className="text-center text-gray-500 mt-10">
-          {t("loading")}
-        </p>
-      )}
+      {isLoading && <p className="text-center text-gray-500 mt-10">{t("loading")}</p>}
     </section>
   );
 }

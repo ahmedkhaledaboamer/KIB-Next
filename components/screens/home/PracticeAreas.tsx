@@ -60,12 +60,11 @@ export default function PracticeAreas() {
     <div className="relative w-full overflow-hidden px-[5%]">
       {/* Background */}
       <div
-  className="absolute inset-0 bg-cover bg-center bg-fixed"
-  style={{ backgroundImage: "url(/images/dd.webp)" }}
->
-   <div className="absolute inset-0 bg-black/30" />
-</div>
-
+        className="absolute inset-0 bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: "url(/images/dd.webp)" }}
+      >
+        <div className="absolute inset-0 bg-black/30" />
+      </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen py-16">
@@ -75,8 +74,7 @@ export default function PracticeAreas() {
             className="font-bold text-white mb-4 leading-tight"
             style={{ fontSize: "clamp(2rem, 5vw, 6rem)" }}
           >
-            {t("title")}{" "}
-            <span className="text-orange-500">{t("titleHighlight")}</span>
+            {t("title")} <span className="text-orange-500">{t("titleHighlight")}</span>
           </h1>
           <p
             className="text-gray-100 font-light"
