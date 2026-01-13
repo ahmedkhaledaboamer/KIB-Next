@@ -8,9 +8,12 @@ import Link from "next/link";
 export default async function Header() {
   const t = await getTranslations("header");
   const locale = await getLocale();
-
+  const isRTL = locale === "ar";
   return (
-    <header className={cn("relative min-h-screen w-full flex flex-col")}>
+    <header
+      className={cn("relative min-h-screen w-full flex flex-col")}
+      dir={isRTL ? "rtl" : "ltr"}
+    >
       {/* Overlay */}
       {/* <div className="absolute inset-0 bg-black/10 z-10" /> */}
 
