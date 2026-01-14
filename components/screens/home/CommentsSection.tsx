@@ -3,6 +3,23 @@
 import React, { useState, useEffect } from 'react';
 import { Send, ChevronLeft, ChevronRight, CheckCircle, AlertCircle } from 'lucide-react';
 
+interface Testimonial {
+  rating: number;
+  total: number;
+  text: string;
+  author: string;
+  position: string;
+}
+
+interface CommentResponse {
+  Name: string;
+  Email: string;
+  postive_message: string;
+  id: number;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export default function CommentsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [formData, setFormData] = useState({
@@ -16,30 +33,11 @@ export default function CommentsSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [isLoadingComments, setIsLoadingComments] = useState(true);
 
-  // Testimonials data
-  const testimonials = [
-    {
-      rating: 4.8,
-      total: 200,
-      text: "The results we've seen after partnering with Bexon are beyond our expectations. They not only understood our vision but also brought new ideas.",
-      author: "Ralph Edwards",
-      position: "Co. Founder"
-    },
-    {
-      rating: 4.9,
-      total: 200,
-      text: "Working with this team has been an absolute game-changer for our company. Their innovative approach and dedication to excellence exceeded !",
-      author: "Sarah Mitchell",
-      position: "CEO"
-    },
-    {
-      rating: 4.7,
-      total: 200,
-      text: "Professional, creative, and results-driven. They delivered exactly what we needed and more. The entire process was smooth and collaborative.",
-      author: "Michael Chen",
-      position: "Director"
-    },
+  // Default testimonials as fallback
+  const defaultTestimonials: Testimonial[] = [
     {
       rating: 4.8,
       total: 200,
@@ -63,8 +61,73 @@ export default function CommentsSection() {
     }
   ];
 
+  // Map API response to testimonial format
+  const mapCommentsToTestimonials = (comments: CommentResponse[]): Testimonial[] => {
+    if (!comments || comments.length === 0) {
+      return defaultTestimonials;
+    }
+    
+    return comments.map((comment) => ({
+      rating: 4.8, // Default rating since API doesn't provide it
+      total: comments.length, // Use total comments count
+      text: comment.postive_message || '',
+      author: comment.Name || '',
+      position: 'Client' // Default position since API doesn't provide it
+    }));
+  };
+
+  // Fetch comments from API
+  const fetchComments = async () => {
+    setIsLoadingComments(true);
+    try {
+      const response = await fetch('https://shazmlc.cloud/webhook/website-feedback', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ command: 'fetch' }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Failed to fetch comments: ${response.status}`);
+      }
+
+      const responseText = await response.text();
+      let comments: CommentResponse[] = [];
+      
+      if (responseText) {
+        try {
+          comments = JSON.parse(responseText);
+        } catch (parseError) {
+          console.error('Error parsing comments response:', parseError);
+        }
+      }
+
+      if (Array.isArray(comments)) {
+        const mappedTestimonials = mapCommentsToTestimonials(comments);
+        setTestimonials(mappedTestimonials);
+        // Reset slide to 0 if we have new data
+        if (mappedTestimonials.length > 0) {
+          setCurrentSlide(0);
+        }
+      }
+    } catch (error) {
+      console.error('Error fetching comments:', error);
+      // Fallback to default testimonials on error
+      setTestimonials(defaultTestimonials);
+    } finally {
+      setIsLoadingComments(false);
+    }
+  };
+
+  // Fetch comments on component mount
+  useEffect(() => {
+    fetchComments();
+  }, []);
+
   // Auto-play slider
   useEffect(() => {
+    if (testimonials.length === 0) return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % testimonials.length);
     }, 5000);
@@ -141,13 +204,16 @@ export default function CommentsSection() {
     setIsSubmitting(true);
 
     try {
-      // Send directly to API from client side
+      // Send directly to API from client side with command = commit
       const response = await fetch('https://shazmlc.cloud/webhook/website-feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          command: 'commit'
+        }),
       });
 
       if (!response.ok) {
@@ -170,6 +236,9 @@ export default function CommentsSection() {
       setFormData({ name: '', email: '', message: '' });
       setTouched({});
       setErrors({});
+      
+      // Refetch comments after successful submission
+      await fetchComments();
       
       // Reset success message after 3 seconds
       setTimeout(() => {
@@ -316,19 +385,24 @@ export default function CommentsSection() {
           <div className="bg-[#0d2929] rounded-3xl p-8 md:p-10 border border-gray-800 relative overflow-hidden">
             {/* Slider Container */}
             <div className="relative">
-              <div
-                className="transition-opacity duration-500"
-                style={{ opacity: 1 }}
-              >
-                {/* Header */}
-                <div className="mb-6">
-                  <h3 className="text-2xl font-semibold text-gray-300 mb-2">
-                    Client Feedback 
-                    <span className="text-white ml-2">
-                      ({testimonials[currentSlide].rating}/out of {testimonials[currentSlide].total})
-                    </span>
-                  </h3>
+              {isLoadingComments ? (
+                <div className="flex items-center justify-center py-12">
+                  <div className="w-8 h-8 border-2 border-teal-500 border-t-transparent rounded-full animate-spin"></div>
                 </div>
+              ) : testimonials.length > 0 ? (
+                <div
+                  className="transition-opacity duration-500"
+                  style={{ opacity: 1 }}
+                >
+                  {/* Header */}
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-semibold text-gray-300 mb-2">
+                      Client Feedback 
+                      <span className="text-white ml-2">
+                        ({testimonials[currentSlide].rating}/out of {testimonials[currentSlide].total})
+                      </span>
+                    </h3>
+                  </div>
 
                 {/* Quote Icon */}
                 <div className="mb-6">
@@ -371,21 +445,26 @@ export default function CommentsSection() {
                     </button>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            {/* Progress Dots */}
-            <div className="flex justify-center gap-2 mt-6">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  onClick={() => setCurrentSlide(index)}
-                  className={`h-2 rounded-full transition-all ${
-                    currentSlide === index ? 'w-8 bg-teal-500' : 'w-2 bg-gray-600'
-                  }`}
-                />
-              ))}
+                  {/* Progress Dots */}
+                  <div className="flex justify-center gap-2 mt-6">
+                    {testimonials.map((_, index) => (
+                      <button
+                        key={index}
+                        type="button"
+                        onClick={() => setCurrentSlide(index)}
+                        className={`h-2 rounded-full transition-all ${
+                          currentSlide === index ? 'w-8 bg-teal-500' : 'w-2 bg-gray-600'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className="text-center py-12 text-gray-400">
+                  <p>No comments available yet.</p>
+                </div>
+              )}
             </div>
           </div>
         </div>

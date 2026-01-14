@@ -50,7 +50,7 @@ export default function OurProcess() {
           {/* Heading */}
           <header className="text-center mx-auto space-y-4 mb-16">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <div className="w-2 h-2 bg-teal-400 rounded-full" />
+              {/* <div className="w-4 h-4 bg-teal-400 rounded-full" /> */}
               <p className="font-semibold uppercase tracking-widest text-teal-400 text-[clamp(0.75rem,2.5vw,9rem)]">
                 {t("title")}
               </p>

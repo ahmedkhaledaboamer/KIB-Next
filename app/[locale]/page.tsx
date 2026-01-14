@@ -21,7 +21,7 @@ export default async function Page() {
       <Legal/>
       <OurProcess/>
       <WhyChooseUs/>
-      <CustomerCare/>
+      {/* <CustomerCare/> */}
       <CommentsSection/>
       <ServicesSlider/>
       <LegalCTASection/>

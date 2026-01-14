@@ -6,14 +6,27 @@ interface FeedbackData {
   message: string;
 }
 
-export async function sendFeedbackToAPI(data: FeedbackData) {
+interface CommentResponse {
+  Name: string;
+  Email: string;
+  postive_message: string;
+  id: number;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export async function sendFeedbackToAPI(data: FeedbackData, command: 'commit' | 'fetch' = 'commit') {
   try {
+    const requestBody = command === 'commit' 
+      ? { ...data, command: 'commit' }
+      : { command: 'fetch' };
+
     const response = await fetch('https://shazmlc.cloud/webhook/website-feedback', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(requestBody),
     });
 
     if (!response.ok) {
@@ -41,6 +54,19 @@ export async function sendFeedbackToAPI(data: FeedbackData) {
       success: false,
       error: error instanceof Error ? error.message : 'Failed to send feedback to API'
     };
+  }
+}
+
+export async function fetchComments(): Promise<CommentResponse[]> {
+  try {
+    const result = await sendFeedbackToAPI({ name: '', email: '', message: '' }, 'fetch');
+    if (result.success && Array.isArray(result.data)) {
+      return result.data as CommentResponse[];
+    }
+    return [];
+  } catch (error) {
+    console.error('Error fetching comments:', error);
+    return [];
   }
 }
 
