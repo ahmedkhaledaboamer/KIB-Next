@@ -48,6 +48,7 @@ export default async function Header() {
 
           <div className="flex flex-row items-center justify-center lg:justify-start flex-wrap gap-[clamp(1rem,1.5vw,2rem)]">
             <Button variant="primary" size="sm" className="font-extrabold">
+              
               {t("cta.bookConsultation")}
             </Button>
 

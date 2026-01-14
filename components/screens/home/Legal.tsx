@@ -43,7 +43,7 @@ export default function Legal() {
       fontSize: "clamp(2rem, 6vw, 8rem)", 
     }}
   >
-    {t("title")} <span className="text-cyan-500">{t("titleHighlight")}</span>
+    {t("title")} <span className="text-[#0e9185]">{t("titleHighlight")}</span>
   </h1>
   
   <p
@@ -80,7 +80,7 @@ export default function Legal() {
       {/* Content */}
       <div className="flex-1 w-full text-center   mt-6 lg:mt-0">
         <h2 className="text-[clamp(2rem,5vw,6rem)] font-bold text-gray-900 leading-snug mb-4">
-          <span className="text-cyan-500">{service.title.highlight}</span>
+          <span className="text-[#0e9185]">{service.title.highlight}</span>
           {service.title.rest}
         </h2>
         <p className="text-[clamp(1rem,2.5vw,4rem)] text-gray-700 font-medium leading-relaxed">

@@ -23,7 +23,7 @@ export default function ServicesSlider() {
   {/* Title & Subtitle */}
   <div className="flex-1 min-w-[200px]">
     <h2 className="text-[clamp(2rem,5vw,6rem)] font-bold text-gray-900">
-      {t("title")} <span className="text-orange-500">{t("titleHighlight")}</span>
+      {t("title")} <span className="text-[#0e9185]">{t("titleHighlight")}</span>
     </h2>
     <p className="mt-2 text-[clamp(1rem,2.5vw,3rem)] text-gray-900">
       {t("subtitle")}
@@ -32,11 +32,11 @@ export default function ServicesSlider() {
 
   {/* Arrows */}
   <div className="flex gap-3 mt-2 md:mt-0">
-    <button className="services-prev cursor-pointer w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-orange-500 text-white flex items-center justify-center hover:bg-orange-600 transition-shadow shadow-md hover:shadow-lg">
+    <button className="services-prev cursor-pointer w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-[#0e9185] text-white flex items-center justify-center hover:bg-orange-600 transition-shadow shadow-md hover:shadow-lg">
     <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
 
     </button>
-    <button className="services-next cursor-pointer w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-orange-500 text-white flex items-center justify-center hover:bg-orange-600 transition-shadow shadow-md hover:shadow-lg">
+    <button className="services-next cursor-pointer w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-[#0e9185] text-white flex items-center justify-center hover:bg-orange-600 transition-shadow shadow-md hover:shadow-lg">
     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
     </button>
   </div>
@@ -78,7 +78,7 @@ export default function ServicesSlider() {
 
   {/* Content */}
   <div className="p-5 flex-grow flex flex-col">
-    <h3 className="text-[clamp(1.5rem,2.5vw,3.5rem)] font-bold text-orange-500 mb-2">
+    <h3 className="text-[clamp(1.5rem,2.5vw,3.5rem)] font-bold text-[#0e9185] mb-2">
       {service.title}
     </h3>
     <p className="text-[clamp(1rem,2vw,2rem)] text-gray-700 leading-relaxed flex-grow overflow-hidden">

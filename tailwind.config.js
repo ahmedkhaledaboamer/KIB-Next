@@ -11,7 +11,7 @@ module.exports = {
         sans: ['Majalla', 'serif'], 
       },
       colors: {
-        primary: "#fd9908",
+        primary: "#FE7F2D",
         secondary: "#181f29",
         tertiary: "#00d3ff",
       },

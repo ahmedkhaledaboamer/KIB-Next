@@ -33,9 +33,9 @@ export default function ScrollToTopButton() {
         fixed bottom-5 z-[99999]
         w-11 h-11 rounded
         flex items-center justify-center
-        bg-[#fd9908] text-white
+        bg-[#171d27] text-white
         transition-all duration-500 ease-in-out
-        hover:bg-[#db850d] active:scale-95 cursor-pointer
+        hover:bg-[#171d27] active:scale-95 cursor-pointer
         ${
           isVisible
             ? 'opacity-100 right-5 pointer-events-auto'

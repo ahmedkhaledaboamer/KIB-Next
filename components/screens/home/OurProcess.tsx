@@ -29,7 +29,7 @@ export default function OurProcess() {
           {/* Title */}
           <h2
             className="font-bold mb-12 text-center"
-            style={{ fontSize: "clamp(2rem,5vw,6rem)", color: "#FFA500" }}
+            style={{ fontSize: "clamp(2rem,5vw,6rem)", color: "#ff6900" }}
           >
             {t("title")} 
           </h2>

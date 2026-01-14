@@ -6,6 +6,7 @@ import SearchBar from "@/components/screens/services/SearchBar";
 
 import { getServices, isLoading } from "@/utils/getServices";
 import { getLocale, getTranslations } from "next-intl/server";
+import { sendBookingToAPI } from "@/utils/saveBooking";
 
 const ITEMS_PER_PAGE = 12;
 // https://shazmlc.cloud/webhook/web-services-booking
@@ -42,15 +43,26 @@ export default async function ServicesPage({
   // Ensure currentPage is within valid range (clamp to valid range)
   const validCurrentPage = Math.min(Math.max(1, currentPage), totalPages);
 
-  const sessionId = await searchParamsData["session_id"];
+  const sessionId = typeof searchParamsData["session_id"] === "string" 
+    ? searchParamsData["session_id"] 
+    : undefined;
 
   const startIndex = (validCurrentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
   const currentServices = filteredServices.slice(startIndex, endIndex);
 
+  // Send booking data to API if sessionId exists
   if (sessionId) {
-    // TODO ADD Your Function Here To Handle the session_id
-    console.log("session_id: ", sessionId);
+    try {
+      const result = await sendBookingToAPI(sessionId);
+      if (result.success) {
+        console.log("Booking data sent successfully:", result.data);
+      } else {
+        console.error("Failed to send booking data:", result.error);
+      }
+    } catch (error) {
+      console.error("Error sending booking data:", error);
+    }
   }
 
   return (
@@ -84,9 +96,7 @@ export default async function ServicesPage({
           )
         ) : totalPages > 1 ? (
           <>
-            {t("showing") || "Showing"} {startIndex + 1}-
-            {Math.min(endIndex, filteredServices.length)} {t("of") || "of"}{" "}
-            {filteredServices.length} {t("services") || "services"}
+           
           </>
         ) : (
           `${filteredServices.length} ${t("services") || "services"}`
