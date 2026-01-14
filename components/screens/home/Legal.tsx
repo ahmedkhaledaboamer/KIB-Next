@@ -96,3 +96,161 @@ export default function Legal() {
     );
   }
   
+
+
+
+
+
+
+// "use client";
+
+// import { ArrowRight } from 'lucide-react';
+
+// export default function LegalServicesBento() {
+//   const services = [
+//     {
+//       category: "Innovation",
+//       title: "AI-Powered Contract Analysis",
+//       image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=800&fit=crop',
+//       size: 'large', // Takes 2 columns
+//     },
+//     {
+//       category: "Technology",
+//       title: "Smart Contracts",
+//       image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
+//       size: 'small',
+//     },
+//     {
+//       category: "Support",
+//       title: "Virtual Legal Consultations",
+//       image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=800&fit=crop',
+//       size: 'small',
+//     },
+//     {
+//       category: "Strategy",
+//       title: "Data-Driven Case Strategy",
+//       image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop',
+//       size: 'large', // Takes 2 columns
+//     },
+//   ];
+
+//   return (
+//     <section className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8 lg:p-16">
+//       <div className="max-w-7xl mx-auto">
+        
+//         {/* Header */}
+//         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-16">
+//           <div>
+//             {/* Badge */}
+//             <div className="inline-flex items-center gap-2 mb-6">
+//               <div className="w-2 h-2 bg-teal-500 rounded-full" />
+//               <span className="text-sm font-semibold uppercase tracking-wider text-teal-600">
+//                 PROUD PROJECTS
+//               </span>
+//             </div>
+
+//             {/* Title */}
+//             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+//               Breaking Boundaries,
+//               <br />
+//               Building <span className="text-teal-600">Dreams.</span>
+//             </h1>
+//           </div>
+
+//           {/* Right Side Content */}
+//           <div className="lg:max-w-md space-y-6">
+//             <p className="text-gray-600 text-lg leading-relaxed">
+//               We work closely with our clients to understand their unique needs and craft tailored solutions that address challenges.
+//             </p>
+//             <button className="px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-full transition-all flex items-center gap-2 group">
+//               <span>More Projects</span>
+//               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Bento Grid */}
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+//           {/* Card 1 - Large (2 columns) */}
+//           <div className="lg:col-span-2 group relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden cursor-pointer">
+//             <img
+//               src={services[0].image}
+//               alt={services[0].title}
+//               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+//             />
+//             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+            
+//             <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+//               <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-4">
+//                 {services[0].category}
+//               </span>
+//               <h3 className="text-3xl lg:text-4xl font-bold">
+//                 {services[0].title}
+//               </h3>
+//             </div>
+//           </div>
+
+//           {/* Card 2 - Small */}
+//           <div className="group relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden cursor-pointer">
+//             <img
+//               src={services[1].image}
+//               alt={services[1].title}
+//               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+//             />
+//             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+            
+//             <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+//               <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-4">
+//                 {services[1].category}
+//               </span>
+//               <h3 className="text-2xl lg:text-3xl font-bold">
+//                 {services[1].title}
+//               </h3>
+//             </div>
+//           </div>
+
+//           {/* Card 3 - Small */}
+//           <div className="group relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden cursor-pointer">
+//             <img
+//               src={services[2].image}
+//               alt={services[2].title}
+//               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+//             />
+//             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+            
+//             <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+//               <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-4">
+//                 {services[2].category}
+//               </span>
+//               <h3 className="text-2xl lg:text-3xl font-bold">
+//                 {services[2].title}
+//               </h3>
+//             </div>
+//           </div>
+
+//           {/* Card 4 - Large (2 columns) */}
+//           <div className="lg:col-span-2 group relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden cursor-pointer">
+//             <img
+//               src={services[3].image}
+//               alt={services[3].title}
+//               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+//             />
+//             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+            
+//             <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+//               <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-4">
+//                 {services[3].category}
+//               </span>
+//               <h3 className="text-3xl lg:text-4xl font-bold">
+//                 {services[3].title}
+//               </h3>
+//             </div>
+//           </div>
+
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// }
