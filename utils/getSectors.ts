@@ -3,11 +3,14 @@ import { getLocale } from "next-intl/server";
 let isLoading = true;
 let errorMessage = null;
 
-
-async function getServices() {
+async function getSectors() {
   try {
     const locale = await getLocale();
-    const res = await fetch(`https://shazmlc.cloud/webhook/service?lang=${locale}`);
+    const res = await fetch(`https://shazmlc.cloud/webhook/Sector-task?lang=${locale}`);
+
+    if (!res.ok) {
+      throw new Error(`Failed to fetch sectors: ${res.status}`);
+    }
 
     return await res.json();
   } catch (error: unknown) {
@@ -15,10 +18,12 @@ async function getServices() {
     if (error instanceof Error) {
       errorMessage = error.message;
     }
-    console.error("Error fetching services:", error);
+    console.error("Error fetching sectors:", error);
+    return [];
   } finally {
     isLoading = false;
   }
 }
 
-export { isLoading, getServices, errorMessage };
+export { isLoading, getSectors, errorMessage };
+

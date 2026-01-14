@@ -1,7 +1,5 @@
-'use client';
-
 import DepartmentsHero from "@/components/screens/department/DepartmentsHero";
-import DepartmentSlider from "@/components/screens/department/DepartmentSlider";
+import DepartmentsPage from "@/components/screens/department/DepartmentsPage";
 import QuickContact from "@/components/screens/department/QuickContact";
 
 export default function DepartmentPage() {
@@ -9,8 +7,7 @@ export default function DepartmentPage() {
     <div>
       <DepartmentsHero />
       <QuickContact/>
-      <DepartmentSlider/>
-      
+      <DepartmentsPage/>
     </div>
   );
 }
