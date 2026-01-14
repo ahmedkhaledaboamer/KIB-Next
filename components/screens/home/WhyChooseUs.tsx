@@ -17,6 +17,7 @@ const WhyChooseUs = () => {
   const t = useTranslations("whyChooseUs");
   const locale = useLocale();
 
+  const isRTL = useMemo(() => locale === "ar", [locale]);
   const features: Feature[] = useMemo(() => [
     {
       icon: <Users className="w-[clamp(2rem,4vw,4rem)] h-[clamp(2rem,4vw,4rem)] text-orange-500 mx-auto" />,
@@ -36,7 +37,7 @@ const WhyChooseUs = () => {
       stats: t("slides.clientSatisfaction.stats"),
       highlight: "green"
     }
-  ], [t, locale]);
+  ], [t]);
 
   // Auto-play
   useEffect(() => {
@@ -101,7 +102,8 @@ const WhyChooseUs = () => {
             <div className="relative overflow-hidden rounded-3xl">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                style={{ transform: `translateX(${isRTL ? currentSlide * 100 : -currentSlide * 100}%)` }}
+                dir={isRTL ? "rtl" : "ltr"}
               >
                 {features.map((feature, index) => (
                   <div key={index} className="min-w-full flex-shrink-0">

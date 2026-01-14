@@ -1,6 +1,6 @@
-import { getSectors } from '@/utils/getSectors';
-import { Suspense } from 'react';
-import SectorSliderContent from './SectorSliderContent';
+import { getSectors } from "@/utils/getSectors";
+import { Suspense } from "react";
+import SectorSliderContent from "./SectorSliderContent";
 
 interface ApiSector {
   id: string;
@@ -15,13 +15,11 @@ interface ApiResponse {
 }
 
 function SectorSliderSkeleton() {
-  return (
-    <SectorSliderContent sectors={[]} isLoading={true} />
-  );
+  return <SectorSliderContent sectors={[]} isLoading={true} />;
 }
 
 async function SectorsContent() {
-  const apiData = await getSectors() as ApiResponse[];
+  const apiData = (await getSectors()) as ApiResponse[];
 
   if (!apiData || !Array.isArray(apiData) || apiData.length === 0 || !apiData[0]?.sectors) {
     return (
