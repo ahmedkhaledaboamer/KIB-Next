@@ -77,11 +77,17 @@ export default function TimeWeatherWidget() {
   
   const lottieRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<any>(null);
+  const isMountedRef = useRef(false);
 
- 
+  // Mark as mounted to avoid hydration mismatch
+  useEffect(() => {
+    isMountedRef.current = true;
+  }, []);
 
   // Update Time
   useEffect(() => {
+    if (!isMountedRef.current) return;
+
     const updateTime = () => {
       const now = new Date();
       const hours = now.getHours();
@@ -110,6 +116,8 @@ export default function TimeWeatherWidget() {
 
   // Fetch Weather
   useEffect(() => {
+    if (!isMountedRef.current) return;
+
     const fetchWeather = async () => {
       try {
         const response = await fetch(

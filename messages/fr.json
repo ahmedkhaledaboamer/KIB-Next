@@ -3,6 +3,7 @@
     "title": "Page d'accueil"
   },
   "navbar": {
+    "cta": "Réserver une consultation",
     "routes": [
       {
         "label": "Accueil",
@@ -125,6 +126,9 @@
     }
   },
   "services": {
+    "showing": "Affichage",
+    "of": "de",
+    "services": "services",
     "title": "Nos Services",
     "subtitle": "Découvrez la gamme de services que nous offrons pour vous aider à réussir.",
     "searchPlaceholder": "Rechercher des services...",
@@ -197,12 +201,19 @@
   },
   "ourProcess": {
     "title": "Notre processus",
+    "headline": "Un processus fluide pour des résultats remarquables.",
+    "stepLabel": "Étape",
     "steps": {
       "consultation": "Consultation.",
       "caseEvaluation": "Évaluation du dossier.",
       "strategicPlanning": "Planification stratégique.",
       "representation": "Représentation.",
       "caseFollowUp": "Suivi du dossier."
+    },
+    "descriptions": {
+      "consultation": "La première étape consiste à comprendre vos besoins et objectifs uniques.",
+      "caseEvaluation": "Nous analysons votre dossier en détail pour définir la meilleure stratégie.",
+      "strategicPlanning": "Nous élaborons un plan ciblé et concret, adapté à votre situation."
     }
   },
   "legal": {
@@ -240,33 +251,45 @@
       "commercial": {
         "title": "Commercial",
         "items": {
-          "maAdvice": "Conseil en fusions et acquisitions",
-          "contractLaw": "Droit des contrats",
-          "businessLaw": "Droit des affaires"
+          "maAdvice": "Obligations des commerçants",
+          "contractLaw": "Affaires commerciales",
+          "businessLaw": "Réglementation des entreprises",
+          "bankingLaw": "Effets de commerce",
+          "intellectualProperty": "Commerce numérique",
+          "laborLaw": "Résolution des litiges commerciaux"
         }
       },
       "familyLaw": {
         "title": "Droit de la famille",
         "items": {
-          "divorceLaw": "Droit du divorce",
-          "childCustody": "Garde d'enfants",
-          "adoptionCases": "Cas d'adoption"
+          "divorceLaw": "Mariage",
+          "childCustody": "Divorce",
+          "adoptionCases": "Successions et héritages",
+          "inheritanceLaw": "Capacité juridique et tutelle",
+          "guardianshipLaw": "Garde d'enfants",
+          "adoptionLaw": "Statut personnel pour non-musulmans"
         }
       },
       "advocacy": {
         "title": "Plaidoyer",
         "items": {
-          "whiteCrimes": "Crimes en col blanc",
-          "duiDefense": "Défense contre conduite en état d'ivresse",
-          "judicialAppeals": "Appels judiciaires"
+          "whiteCrimes": "Pénal et civil",
+          "duiDefense": "Commercial et administratif",
+          "judicialAppeals": "Exécution",
+          "arbitration": "Droit du travail",
+          "familyLaw": "Affaires urgentes",
+          "criminalLaw": "Droit électronique"
         }
       },
       "protection": {
         "title": "Protection",
         "items": {
-          "financialCrime": "Crime financier",
-          "drivingCrimes": "Crimes de conduite",
-          "legalAppeals": "Appels légaux"
+          "financialCrime": "Contrats",
+          "drivingCrimes": "Droit pénal",
+          "legalAppeals": "Droit institutionnel",
+          "criminalLaw": "Droit numérique",
+          "civilLaw": "Juridique",
+          "internationalLaw": "Droit financier"
         }
       }
     }
@@ -274,7 +297,41 @@
   "servicesSlider": {
     "title": "Expertise",
     "titleHighlight": "sectorielle",
-    "subtitle": "Expertise juridique complète dans les secteurs clés"
+    "subtitle": "Expertise juridique complète dans les secteurs clés",
+    "services": {
+      "fintechPermit": {
+        "title": "Permis FinTech",
+        "description": "Conseils réglementaires FinTech aux EAU"
+      },
+      "amlRules": {
+        "title": "Règles AML",
+        "description": "Conformité AML et portée des règles CTF"
+      },
+      "offPlanRules": {
+        "title": "Règles hors plan",
+        "description": "Ventes hors plan et immobilier"
+      },
+      "buildingLaw": {
+        "title": "Droit de la construction",
+        "description": "Expertise en plan de contrat FIDIC"
+      },
+      "medLiab": {
+        "title": "Responsabilité médicale",
+        "description": "Soutien juridique médical"
+      },
+      "medicalData": {
+        "title": "Données médicales",
+        "description": "Assurer la conformité réglementaire des données des patients"
+      },
+      "techPermit": {
+        "title": "Permis technologique",
+        "description": "Conseils et soutien aux entreprises"
+      },
+      "dataPrivacy": {
+        "title": "Confidentialité des données",
+        "description": "Protection des données aux EAU, réglementaire"
+      }
+    }
   },
   "cardDetails": {
     "sub": "Sous",

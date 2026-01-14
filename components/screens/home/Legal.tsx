@@ -33,7 +33,7 @@ export default function Legal() {
     ];
   
     return (
-      <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <main className="min-h-screen p-[5%] bg-gradient-to-b from-gray-50 to-white">
         <div className=" max-w-10xl  xl-max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           {/* Header */}
           <div className="text-center mb-28 px-4">
@@ -43,7 +43,7 @@ export default function Legal() {
       fontSize: "clamp(2rem, 6vw, 8rem)", 
     }}
   >
-    {t("title")} <span className="text-[#0e9185]">{t("titleHighlight")}</span>
+    {t("title")} 
   </h1>
   
   <p

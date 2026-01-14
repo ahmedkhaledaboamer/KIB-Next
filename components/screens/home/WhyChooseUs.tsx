@@ -1,13 +1,13 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Check, Heart, Trophy, Users } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 interface Feature {
   icon: React.ReactNode;
   title: string;
-  description: string;
+  description?: string;
   stats?: string;
   highlight?: string;
 }
@@ -15,30 +15,28 @@ interface Feature {
 const WhyChooseUs = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const t = useTranslations("whyChooseUs");
+  const locale = useLocale();
 
-  const features: Feature[] = [
+  const features: Feature[] = useMemo(() => [
     {
       icon: <Users className="w-[clamp(2rem,4vw,4rem)] h-[clamp(2rem,4vw,4rem)] text-orange-500 mx-auto" />,
       title: t("slides.expertTeam.title"),
-      description: t("slides.expertTeam.description"),
       stats: t("slides.expertTeam.stats"),
       highlight: "orange"
     },
     {
       icon: <Heart className="w-[clamp(2rem,4vw,4rem)] h-[clamp(2rem,4vw,4rem)] text-orange-500 mx-auto" />,
       title: t("slides.provenApproach.title"),
-      description: t("slides.provenApproach.description"),
       stats: t("slides.provenApproach.stats"),
       highlight: "blue"
     },
     {
       icon: <Trophy className="w-[clamp(2rem,4vw,4rem)] h-[clamp(2rem,4vw,4rem)] text-orange-500 mx-auto" />,
       title: t("slides.clientSatisfaction.title"),
-      description: t("slides.clientSatisfaction.description"),
       stats: t("slides.clientSatisfaction.stats"),
       highlight: "green"
     }
-  ];
+  ], [t, locale]);
 
   // Auto-play
   useEffect(() => {
@@ -46,7 +44,7 @@ const WhyChooseUs = () => {
       setCurrentSlide((prev) => (prev + 1) % features.length);
     }, 3000);
     return () => clearInterval(timer);
-  }, [features.length]);
+  }, [features]);
 
   const goToSlide = (index: number) => setCurrentSlide(index);
 
@@ -115,9 +113,7 @@ const WhyChooseUs = () => {
                       <div className="text-orange-500 text-5xl md:text-6xl font-bold mb-2">
                         {feature.stats}
                       </div>
-                      <div className="text-orange-400 text-2xl md:text-3xl font-semibold">
-                        {feature.description}
-                      </div>
+                     
                     </div>
                   </div>
                 ))}

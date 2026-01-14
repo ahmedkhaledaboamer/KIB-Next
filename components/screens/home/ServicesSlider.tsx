@@ -9,10 +9,27 @@ import { useTranslations } from 'next-intl';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/grid';
-import { services } from '@/data/servicesData';
-
 export default function ServicesSlider() {
   const t = useTranslations("servicesSlider");
+  
+  const services = [
+    { id: 1, title: t("services.fintechPermit.title"), description: t("services.fintechPermit.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/30804-elementor-io-optimized.webp' },
+    { id: 2, title: t("services.amlRules.title"), description: t("services.amlRules.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/1100-elementor-io-optimized.webp' },
+    { id: 3, title: t("services.offPlanRules.title"), description: t("services.offPlanRules.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/2149311465-elementor-io-optimized.webp' },
+    { id: 4, title: t("services.buildingLaw.title"), description: t("services.buildingLaw.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/33848-min.webp' },
+    { id: 5, title: t("services.medLiab.title"), description: t("services.medLiab.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/55875-elementor-io-optimized.webp' },
+    { id: 6, title: t("services.medicalData.title"), description: t("services.medicalData.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/962-elementor-io-optimized.webp' },
+    { id: 7, title: t("services.techPermit.title"), description: t("services.techPermit.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/962-elementor-io-optimized.webp' },
+    { id: 8, title: t("services.dataPrivacy.title"), description: t("services.dataPrivacy.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/2151915116.webp' },
+    { id: 22, title: t("services.fintechPermit.title"), description: t("services.fintechPermit.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/30804-elementor-io-optimized.webp' },
+    { id: 33, title: t("services.amlRules.title"), description: t("services.amlRules.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/1100-elementor-io-optimized.webp' },
+    { id: 54, title: t("services.offPlanRules.title"), description: t("services.offPlanRules.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/2149311465-elementor-io-optimized.webp' },
+    { id: 34, title: t("services.buildingLaw.title"), description: t("services.buildingLaw.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/33848-min.webp' },
+    { id: 87, title: t("services.medLiab.title"), description: t("services.medLiab.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/55875-elementor-io-optimized.webp' },
+    { id: 77, title: t("services.medicalData.title"), description: t("services.medicalData.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/962-elementor-io-optimized.webp' },
+    { id: 88, title: t("services.techPermit.title"), description: t("services.techPermit.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/962-elementor-io-optimized.webp' },
+    { id: 99, title: t("services.dataPrivacy.title"), description: t("services.dataPrivacy.description"), image: 'https://shazmlc.com/wp-content/uploads/2025/12/2151915116.webp' },
+  ];
 
   return (
     <section className="w-full bg-gray-50 p-[5%]">

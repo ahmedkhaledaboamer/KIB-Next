@@ -1,0 +1,351 @@
+{
+    "page": {
+        "title": "Startseite"
+    },
+    "navbar": {
+        "cta": "Beratung buchen",
+        "routes": [
+            {
+                "label": "Startseite",
+                "href": "/"
+            },
+            {
+                "label": "Abteilung",
+                "href": "/department"
+            },
+            {
+                "label": "Kontakt",
+                "href": "/contact"
+            },
+            {
+                "label": "Dienstleistungen",
+                "href": "/services"
+            },
+            {
+                "label": "Artikel",
+                "href": "/articles"
+            }
+        ]
+    },
+    "content": {
+        "title": "Meine Komponente",
+        "description": "Meine Komponentenbeschreibung"
+    },
+    "header": {
+        "title": "Premium Rechtsberatung",
+        "subtitle": "Vertrauenswürdige Rechtsexpertise mit Goldstandard",
+        "cta": {
+            "bookConsultation": "Beratung buchen",
+            "exploreServices": "Unsere Dienstleistungen erkunden"
+        }
+    },
+    "footer": {
+        "contact": {
+            "title": "Kontaktieren Sie uns",
+            "phone": "+971 521068882",
+            "email": "info@shazmlc.com",
+            "location": "Vereinigte Arabische Emirate"
+        },
+        "quickLinks": {
+            "title": "Schnelllinks",
+            "links": [
+                {
+                    "label": "Startseite",
+                    "href": "/"
+                },
+                {
+                    "label": "Unsere Dienstleistungen",
+                    "href": "/services"
+                },
+                {
+                    "label": "Abteilungen",
+                    "href": "/department"
+                },
+                {
+                    "label": "FAQ",
+                    "href": "/faq"
+                },
+                {
+                    "label": "Datenschutzrichtlinie",
+                    "href": "/privacy"
+                },
+                {
+                    "label": "Kontaktieren Sie uns",
+                    "href": "/contact"
+                }
+            ]
+        },
+        "ourGroup": {
+            "title": "Unsere Gruppe",
+            "entities": [
+                {
+                    "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla für Rechtsberatungen",
+                    "href": "#"
+                },
+                {
+                    "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla für Allgemeine Beratungen",
+                    "href": "#"
+                },
+                {
+                    "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla für Künstliche Intelligenz und Forschung",
+                    "href": "#"
+                },
+                {
+                    "name": "Al Sarh Al Shamekh für Seeschifffahrtslinien-Agentur",
+                    "href": "#"
+                },
+                {
+                    "name": "84 Star Capital für Immobilieninvestitionen",
+                    "href": "#"
+                },
+                {
+                    "name": "KIB für Schadensregulierungsdienste",
+                    "href": "#"
+                },
+                {
+                    "name": "KIB für Geschäftsleute-Dienste",
+                    "href": "#"
+                },
+                {
+                    "name": "KIB für Finanzierung",
+                    "href": "#"
+                },
+                {
+                    "name": "KIB für Handel",
+                    "href": "#"
+                }
+            ]
+        },
+        "description": "Rechtsexzellenz mit Goldstandards in den Vereinigten Arabischen Emiraten mit unerschütterlichem Engagement für den Erfolg unserer Kunden.",
+        "copyright": "© 2024 Sheikh Abdul Aziz Bin Abdullah Al Mualla Rechtsberatung. Alle Rechte vorbehalten.",
+        "socialMedia": {
+            "linkedin": "LinkedIn",
+            "twitter": "Twitter",
+            "instagram": "Instagram",
+            "facebook": "Facebook"
+        }
+    },
+    "services": {
+        "showing": "Anzeigen",
+        "of": "von",
+        "services": "Dienstleistungen",
+        "title": "Unsere Dienstleistungen",
+        "subtitle": "Entdecken Sie unsere umfassenden rechtlichen und administrativen Sammlungen.",
+        "searchPlaceholder": "Dienstleistungen suchen...",
+        "searchButton": "Suchen",
+        "bookButton": "Buchung",
+        "loading": "Dienstleistungen werden geladen...",
+        "noResults": "Keine Dienstleistungen gefunden",
+        "resultsFound": "Ergebnisse gefunden",
+        "noServices": "Keine Dienstleistungen verfügbar",
+        "viewAll": "Alle Dienstleistungen anzeigen"
+    },
+    "servicesShowcase": {
+        "title": "Unsere Dienstleistungen",
+        "subtitle": "Entdecken Sie die Palette der Dienstleistungen, die wir anbieten, um Ihnen zum Erfolg zu verhelfen.",
+        "viewAll": "Alle Dienstleistungen anzeigen",
+        "loading": "Dienstleistungen werden geladen..."
+    },
+    "customerCare": {
+        "title": "Jeder",
+        "titleHighlight": "Kunde ist wichtig",
+        "subtitle": ", wir kümmern uns um Ihr Geschäft",
+        "cards": {
+            "information": {
+                "title": "Information",
+                "subtitle": "Erhalten Sie Expertenrat",
+                "buttonText": "Mehr erfahren"
+            },
+            "consultation": {
+                "title": "Beratung",
+                "subtitle": "Professionelle Dienstleistungen",
+                "buttonText": "Kontaktieren Sie uns"
+            },
+            "virtual": {
+                "title": "Rechtsberatungen",
+                "subtitle": "Immer verfügbar",
+                "buttonText": "Jetzt buchen"
+            },
+            "support": {
+                "title": "Support",
+                "subtitle": "Wir sind hier, um zu helfen",
+                "buttonText": "Hilfe erhalten"
+            }
+        }
+    },
+    "whyChooseUs": {
+        "title": "Warum uns wählen!",
+        "subtitle": "Exzellenz, Expertise, Integrität und unerschütterliches Engagement für den Erfolg.",
+        "features": {
+            "freeConsultation": "Kostenlose Beratung",
+            "support24": "24/7 Support",
+            "confidential": "Vertraulich"
+        },
+        "slides": {
+            "expertTeam": {
+                "title": "Expertenteam für Recht",
+                "description": "Multi-Spezialität",
+                "stats": "50+ Anwälte"
+            },
+            "provenApproach": {
+                "title": "Bewährter Erster Ansatz",
+                "description": "Erfolgsquote",
+                "stats": "98% Gewinnquote"
+            },
+            "clientSatisfaction": {
+                "title": "Kundenzufriedenheit",
+                "description": "Zufriedene Kunden",
+                "stats": "50+ Fälle"
+            }
+        }
+    },
+    "ourProcess": {
+        "title": "Unser Prozess",
+        "headline": "Ein reibungsloser Prozess mit starken Ergebnissen.",
+        "stepLabel": "Schritt",
+        "steps": {
+            "consultation": "Beratung.",
+            "caseEvaluation": "Fallbewertung.",
+            "strategicPlanning": "Strategische Planung.",
+            "representation": "Vertretung.",
+            "caseFollowUp": "Fallnachverfolgung."
+        },
+        "descriptions": {
+            "consultation": "Im ersten Schritt verstehen wir Ihre individuellen geschäftlichen Bedürfnisse und Ziele.",
+            "caseEvaluation": "Wir analysieren Ihren Fall im Detail und definieren die beste Strategie.",
+            "strategicPlanning": "Wir entwickeln einen fokussierten, umsetzbaren Plan, der genau auf Ihre Situation zugeschnitten ist."
+        }
+    },
+    "legal": {
+        "title": "Rechtsinnovation",
+        "titleHighlight": "Zentrum",
+        "subtitle": "Pionierarbeit für die Zukunft von Rechtsdienstleistungen mit modernster Technologie",
+        "services": {
+            "contractReview": {
+                "title": "Vertrags",
+                "titleRest": "prüfung",
+                "description": "Verwendung von KI-Technologie zur schnellen Analyse und Bewertung von Vertragsrisiken."
+            },
+            "smartContracts": {
+                "title": "Smart",
+                "titleRest": "Contracts",
+                "description": "Sichere und transparente Ausführung von Verträgen mit fortschrittlicher Blockchain-Technologie."
+            },
+            "legalConsults": {
+                "title": "Rechts",
+                "titleRest": "beratungen",
+                "description": "Bequeme Fernbesprechungen mit unserem Expertenteam für Recht für schnelle und zuverlässige Beratung."
+            },
+            "caseStrategy": {
+                "title": "Fall",
+                "titleRest": "strategie",
+                "description": "Verwendung von Analysen, Erkenntnissen und datengestützter Planung, um die besten Fallergebnisse zu erzielen."
+            }
+        }
+    },
+    "practiceAreas": {
+        "title": "Bereiche der",
+        "titleHighlight": "Praxis",
+        "subtitle": "Expertenvertretung in verschiedenen Bereichen. Jahrzehnte des Engagements für Exzellenz.",
+        "areas": {
+            "commercial": {
+                "title": "Handelsrecht",
+                "items": {
+                    "maAdvice": "Händlerverpflichtungen",
+                    "contractLaw": "Handelsgeschäfte",
+                    "businessLaw": "Unternehmensregulierung",
+                    "bankingLaw": "Handelspapiere",
+                    "intellectualProperty": "Digitaler Handel",
+                    "laborLaw": "Lösung von Handelsstreitigkeiten"
+                }
+            },
+            "familyLaw": {
+                "title": "Familienrecht",
+                "items": {
+                    "divorceLaw": "Ehe",
+                    "childCustody": "Scheidung",
+                    "adoptionCases": "Erbschaften und Nachlass",
+                    "inheritanceLaw": "Rechtsfähigkeit und Vormundschaft",
+                    "guardianshipLaw": "Sorgerecht",
+                    "adoptionLaw": "Personenstand für Nicht-Muslime"
+                }
+            },
+            "advocacy": {
+                "title": "Verteidigung",
+                "items": {
+                    "whiteCrimes": "Straf- und Zivilrecht",
+                    "duiDefense": "Handels- und Verwaltungsrecht",
+                    "judicialAppeals": "Vollstreckung",
+                    "arbitration": "Arbeitsrecht",
+                    "familyLaw": "Eilfälle",
+                    "criminalLaw": "Elektronisches Recht"
+                }
+            },
+            "protection": {
+                "title": "Schutz",
+                "items": {
+                    "financialCrime": "Verträge",
+                    "drivingCrimes": "Strafrecht",
+                    "legalAppeals": "Institutionelles Recht",
+                    "criminalLaw": "Digitales Recht",
+                    "civilLaw": "Rechtliches",
+                    "internationalLaw": "Finanzrecht"
+                }
+            }
+        }
+    },
+    "servicesSlider": {
+        "title": "Sektor",
+        "titleHighlight": "Expertise",
+        "subtitle": "Umfassende rechtliche Expertise in wichtigen Sektoren",
+        "services": {
+            "fintechPermit": {
+                "title": "FinTech-Genehmigung",
+                "description": "FinTech-Regulierungsberatung in den VAE"
+            },
+            "amlRules": {
+                "title": "AML-Regeln",
+                "description": "AML-Compliance und CTF-Regelumfang"
+            },
+            "offPlanRules": {
+                "title": "Off-Plan-Regeln",
+                "description": "Off-Plan-Verkäufe & Immobilien"
+            },
+            "buildingLaw": {
+                "title": "Baurecht",
+                "description": "FIDIC-Vertragsplan-Expertise"
+            },
+            "medLiab": {
+                "title": "Medizinische Haftung",
+                "description": "Medizinische Rechtsunterstützung"
+            },
+            "medicalData": {
+                "title": "Medizinische Daten",
+                "description": "Gewährleistung der regulatorischen Einhaltung von Patientendaten"
+            },
+            "techPermit": {
+                "title": "Technologie-Genehmigung",
+                "description": "Unternehmensberatung und -unterstützung"
+            },
+            "dataPrivacy": {
+                "title": "Datenschutz",
+                "description": "Datenschutz in den VAE, regulatorisch"
+            }
+        }
+    },
+    "cardDetails": {
+        "sub": "Unterdienstleistungen",
+        "chat": "Chat",
+        "noDescription": "Keine Beschreibung"
+    },
+    "categoriesModal": {
+        "noSubServices": "Keine Unterdienstleistungen verfügbar"
+    },
+    "timeWeather": {
+        "loading": "Wird geladen..."
+    },
+    "localeSwitcher": {
+        "searchPlaceholder": "Nach einer Sprache suchen"
+    }
+}
+

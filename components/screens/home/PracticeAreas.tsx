@@ -15,6 +15,9 @@ export default function PracticeAreas() {
         t("areas.commercial.items.maAdvice"),
         t("areas.commercial.items.contractLaw"),
         t("areas.commercial.items.businessLaw"),
+        t("areas.commercial.items.bankingLaw"),
+        t("areas.commercial.items.intellectualProperty"),
+        t("areas.commercial.items.laborLaw"),
       ],
     },
     {
@@ -25,6 +28,9 @@ export default function PracticeAreas() {
         t("areas.familyLaw.items.divorceLaw"),
         t("areas.familyLaw.items.childCustody"),
         t("areas.familyLaw.items.adoptionCases"),
+        t("areas.familyLaw.items.inheritanceLaw"),
+        t("areas.familyLaw.items.guardianshipLaw"),
+        t("areas.familyLaw.items.adoptionLaw"),
       ],
     },
     {
@@ -35,6 +41,9 @@ export default function PracticeAreas() {
         t("areas.advocacy.items.whiteCrimes"),
         t("areas.advocacy.items.duiDefense"),
         t("areas.advocacy.items.judicialAppeals"),
+        t("areas.advocacy.items.arbitration"),
+        t("areas.advocacy.items.familyLaw"),
+        t("areas.advocacy.items.criminalLaw"),
       ],
     },
     {
@@ -45,6 +54,9 @@ export default function PracticeAreas() {
         t("areas.protection.items.financialCrime"),
         t("areas.protection.items.drivingCrimes"),
         t("areas.protection.items.legalAppeals"),
+        t("areas.protection.items.criminalLaw"),
+        t("areas.protection.items.civilLaw"),
+        t("areas.protection.items.internationalLaw"),
       ],
     },
   ];

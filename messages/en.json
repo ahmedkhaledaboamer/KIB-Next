@@ -10,7 +10,7 @@
                 "href": "/"
             },
             {
-                "label": "Department",
+                "label": "Our Department",
                 "href": "/department"
             },
             {
@@ -18,7 +18,7 @@
                 "href": "/contact"
             },
             {
-                "label": "Services",
+                "label": "Our Services",
                 "href": "/services"
             },
             {
@@ -201,12 +201,19 @@
     },
     "ourProcess": {
         "title": "Our Process",
+        "headline": "Seamless Process and Great Results.",
+        "stepLabel": "Step",
         "steps": {
             "consultation": "Consultation.",
             "caseEvaluation": "Case Evaluation.",
             "strategicPlanning": "Strategic Planning.",
             "representation": "Representation.",
             "caseFollowUp": "Case Follow-Up."
+        },
+        "descriptions": {
+            "consultation": "The first step in our process is understanding your unique business needs and objectives.",
+            "caseEvaluation": "We perform a detailed evaluation to map out the best strategy for your case.",
+            "strategicPlanning": "We build a focused, actionable plan tailored specifically to your situation."
         }
     },
     "legal": {
@@ -244,33 +251,45 @@
             "commercial": {
                 "title": "Commercial",
                 "items": {
-                    "maAdvice": "M&A Advice",
-                    "contractLaw": "Contract Law",
-                    "businessLaw": "Business Law"
+                    "maAdvice": "Merchant Obligations",
+                    "contractLaw": "Commercial Transactions",
+                    "businessLaw": "Corporate Regulation",
+                    "bankingLaw": "Commercial Papers",
+                    "intellectualProperty": "Digital Commerce",
+                    "laborLaw": "Commercial Dispute Resolution"
                 }
             },
             "familyLaw": {
                 "title": "Family Law",
                 "items": {
-                    "divorceLaw": "Divorce Law",
-                    "childCustody": "Child Custody",
-                    "adoptionCases": "Adoption Cases"
+                    "divorceLaw": "Marriage",
+                    "childCustody": "Divorce",
+                    "adoptionCases": "Inheritances and Estates",
+                    "inheritanceLaw": "Legal Capacity and Guardianship",
+                    "guardianshipLaw": "Child Custody",
+                    "adoptionLaw": "Personal Status for Non-Muslims"
                 }
             },
             "advocacy": {
                 "title": "Advocacy",
                 "items": {
-                    "whiteCrimes": "White Crimes",
-                    "duiDefense": "DUI Defense",
-                    "judicialAppeals": "Judicial appeals"
+                    "whiteCrimes": "Criminal and Civil",
+                    "duiDefense": "Commercial and Administrative",
+                    "judicialAppeals": "Enforcement",
+                    "arbitration": "Labor Law",
+                    "familyLaw": "Urgent Cases",
+                    "criminalLaw": "Electronic Law"
                 }
             },
             "protection": {
                 "title": "Protection",
                 "items": {
-                    "financialCrime": "Financial Crime",
-                    "drivingCrimes": "Driving Crimes",
-                    "legalAppeals": "Legal Appeals"
+                    "financialCrime": "Contracts",
+                    "drivingCrimes": "Criminal Law",
+                    "legalAppeals": "Institutional Law",
+                    "criminalLaw": "Digital Law",
+                    "civilLaw": "Legal",
+                    "internationalLaw": "Financial Law"
                 }
             }
         }
@@ -278,7 +297,41 @@
     "servicesSlider": {
         "title": "Sector",
         "titleHighlight": "Expertise",
-        "subtitle": "Comprehensive legal expertise across key sectors"
+        "subtitle": "Comprehensive legal expertise across key sectors",
+        "services": {
+            "fintechPermit": {
+                "title": "FinTech Permit",
+                "description": "FinTech regulatory guidance in UAE"
+            },
+            "amlRules": {
+                "title": "AML Rules",
+                "description": "AML compliance and CTF rules Scope"
+            },
+            "offPlanRules": {
+                "title": "Off-Plan Rules",
+                "description": "Off-Plan Sales & Property"
+            },
+            "buildingLaw": {
+                "title": "Building Law",
+                "description": "FIDIC Contract Plan Expertise"
+            },
+            "medLiab": {
+                "title": "Med-Liab",
+                "description": "Medical legal support"
+            },
+            "medicalData": {
+                "title": "Medical Data",
+                "description": "Ensuring patient data regulatory"
+            },
+            "techPermit": {
+                "title": "Tech Permit",
+                "description": "Company guidance and support"
+            },
+            "dataPrivacy": {
+                "title": "Data Privacy",
+                "description": "UAE data protection, regulatory"
+            }
+        }
     },
     "cardDetails": {
         "sub": "Sub Services",

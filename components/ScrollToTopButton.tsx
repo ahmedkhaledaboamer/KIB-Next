@@ -5,11 +5,16 @@ import { ArrowUp } from 'lucide-react';
 
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const toggleVisibility = () => {
       setIsVisible(window.scrollY > 500);
     };
+
+    // Check initial scroll position
+    toggleVisibility();
 
     window.addEventListener('scroll', toggleVisibility);
 
@@ -24,6 +29,11 @@ export default function ScrollToTopButton() {
       behavior: 'smooth',
     });
   };
+
+  // Don't render until mounted to avoid hydration mismatch
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <button

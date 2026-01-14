@@ -17,14 +17,18 @@ const Pagination: React.FC<PaginationProps> = ({
   searchTerm = "",
 }) => {
   const [internalCurrentPage, setInternalCurrentPage] = useState<number>(1);
-  const [windowWidth, setWindowWidth] = useState<number>(0);
+  // Use a default width that matches typical desktop (1024px) to avoid hydration mismatch
+  // This ensures server and client render the same initially
+  const [windowWidth, setWindowWidth] = useState<number>(1024);
+  const [isMounted, setIsMounted] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
   const currentPage = externalCurrentPage ?? internalCurrentPage;
 
-  // Handle window resize
+  // Mark as mounted and set actual window width
   useEffect(() => {
+    setIsMounted(true);
     const handleResize = () => setWindowWidth(window.innerWidth);
     handleResize();
     window.addEventListener("resize", handleResize);
