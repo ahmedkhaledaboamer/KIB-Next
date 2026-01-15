@@ -1,45 +1,125 @@
-import { getSectors } from "@/utils/getSectors";
-import { Suspense } from "react";
-import SectorSliderContent from "./SectorSliderContent";
+'use client';
 
-interface ApiSector {
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import SectorCardSkeleton from '@/components/SectorCardSkeleton';
+
+import 'swiper/css';
+
+interface Sector {
   id: string;
   title: string;
   description: string;
   image: string;
 }
 
-interface ApiResponse {
-  header: string;
-  sectors: ApiSector[];
+interface SectorSliderContentProps {
+  sectors: Sector[];
+  isLoading?: boolean;
 }
 
-function SectorSliderSkeleton() {
-  return <SectorSliderContent sectors={[]} isLoading={true} />;
-}
-
-async function SectorsContent() {
-  const apiData = (await getSectors()) as ApiResponse[];
-
-  if (!apiData || !Array.isArray(apiData) || apiData.length === 0 || !apiData[0]?.sectors) {
-    return (
-      <section className="w-full bg-gray-50 p-[5%]">
-        <div className="mx-auto flex items-center justify-center min-h-[400px]">
-          <p className="text-gray-500">No sectors data available</p>
-        </div>
-      </section>
-    );
-  }
-
-  const sectors = apiData[0].sectors;
-
-  return <SectorSliderContent sectors={sectors} isLoading={false} />;
-}
-
-export default async function SectorSlider() {
+function SectorCard({ sector }: { sector: Sector }) {
   return (
-    <Suspense fallback={<SectorSliderSkeleton />}>
-      <SectorsContent />
-    </Suspense>
+    <div className="group bg-white p-[3%] rounded-2xl overflow-hidden shadow-md transition-all duration-300 flex flex-row h-full">
+      {/* Image */}
+      <div className="relative rounded-2xl w-1/2 min-w-[200px] flex-shrink-0">
+        <Image
+          src={sector.image}
+          alt={sector.title}
+          fill
+          className="object-cover shadow-lg bg-center rounded-2xl"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="p-5 flex-grow flex flex-col justify-center">
+        <h3 className="text-[clamp(1.5rem,2.5vw,3.5rem)] font-bold text-gray-900 mb-2">
+          {sector.title}
+        </h3>
+        <p className="text-[clamp(1rem,2vw,2rem)] text-gray-700 leading-relaxed line-clamp-3 md:line-clamp-4">
+          {sector.description}
+        </p>
+      </div>
+    </div>
   );
 }
+
+export default function SectorSliderContent({ sectors, isLoading = false }: SectorSliderContentProps) {
+  const t = useTranslations("servicesSlider");
+
+  return (
+    <section className="w-full bg-gray-50 p-[5%]">
+      <div className="mx-auto">
+        {/* Header */}
+        <div className="flex flex-row flex-wrap items-center justify-between mb-12 gap-4">
+          {/* Title & Subtitle */}
+          <div className="flex-1 min-w-[200px]">
+            <h2 className="text-[clamp(2rem,5vw,6rem)] font-bold text-gray-900">
+              {t("title")} <span className="text-[#0e9185]">{t("titleHighlight")}</span>
+            </h2>
+            <p className="mt-2 text-[clamp(1rem,2.5vw,3rem)] text-gray-900">
+              {t("subtitle")}
+            </p>
+          </div>
+
+        </div>
+
+        {/* Rows Swipers */}
+        <div className="space-y-8">
+          {/* Row 1 - Left to Right */}
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={16}
+            loop
+            allowTouchMove={false}
+            autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false }}
+            speed={8000}
+            slidesPerView={1}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              640: { slidesPerView: 1.2 },
+              1024: { slidesPerView: 1.5 },
+              1280: { slidesPerView: 2 },
+              1600: { slidesPerView: 2.5 },
+              1920: { slidesPerView: 3 },
+            }}
+          >
+            {(isLoading ? Array.from({ length: 6 }) : sectors)?.map((item, index) => (
+              <SwiperSlide key={isLoading ? `skeleton-row1-${index}` : `row1-${(item as Sector).id}`} className="p-2">
+                {isLoading ? <SectorCardSkeleton /> : <SectorCard sector={item as Sector} />}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Row 2 - Right to Left */}
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={16}
+            loop
+            allowTouchMove={false}
+            autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false, reverseDirection: true }}
+            speed={8000}
+            slidesPerView={1}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              640: { slidesPerView: 1.2 },
+              1024: { slidesPerView: 1.5 },
+              1280: { slidesPerView: 2 },
+              1600: { slidesPerView: 2.5 },
+              1920: { slidesPerView: 3 },
+            }}
+          >
+            {(isLoading ? Array.from({ length: 6 }) : [...sectors].reverse())?.map((item, index) => (
+              <SwiperSlide key={isLoading ? `skeleton-row2-${index}` : `row2-${(item as Sector).id}`} className="p-2">
+                {isLoading ? <SectorCardSkeleton /> : <SectorCard sector={item as Sector} />}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </section>
+  );
+}
+

@@ -213,7 +213,8 @@
         "descriptions": {
             "consultation": "The first step in our process is understanding your unique business needs and objectives.",
             "caseEvaluation": "We perform a detailed evaluation to map out the best strategy for your case.",
-            "strategicPlanning": "We build a focused, actionable plan tailored specifically to your situation."
+            "strategicPlanning": "We build a focused, actionable plan tailored specifically to your situation.",
+            "implementation": "We execute the plan with precision and expertise to deliver results."
         },
         "footerText": "Your personal advisor for VIPs and entrepreneurs"
     },

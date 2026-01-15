@@ -12,7 +12,16 @@ async function getSectors() {
       throw new Error(`Failed to fetch sectors: ${res.status}`);
     }
 
-    return await res.json();
+    const data = await res.json();
+    // API returns array with object containing sectors array
+    // Extract sectors from response[0].sectors or data.sectors
+    if (Array.isArray(data) && data.length > 0 && data[0].sectors) {
+      return data[0].sectors;
+    }
+    if (data.sectors) {
+      return data.sectors;
+    }
+    return [];
   } catch (error: unknown) {
     isLoading = false;
     if (error instanceof Error) {
@@ -26,4 +35,6 @@ async function getSectors() {
 }
 
 export { isLoading, getSectors, errorMessage };
+
+
 

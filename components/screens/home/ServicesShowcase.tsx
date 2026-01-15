@@ -30,7 +30,7 @@ export default async function ServicesShowcase() {
     <section
       className="
         min-h-screen 
-        bg-gray-100
+        bg-white
         px-[clamp(1rem,5vw,6rem)]
         py-[clamp(2rem,6vw,6rem)]
         max-w-fall
