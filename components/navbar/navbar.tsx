@@ -53,8 +53,8 @@ export default function Navbar() {
         "flex justify-between items-center",
         "shadow-lg shadow-black/20",
         "transition-all duration-300 ease-in-out",
-        "w-full top-0 rounded-none fixed",
-        'px-4 py-4'
+        "w-full rounded-none  ",
+        'px-6 py-4'
       )}
       role="navigation"
       aria-label="Main navigation"

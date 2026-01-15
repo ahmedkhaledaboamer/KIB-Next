@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Send, ChevronLeft, ChevronRight, CheckCircle, AlertCircle } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 interface Testimonial {
   rating: number;
@@ -24,6 +24,8 @@ interface CommentResponse {
 
 export default function CommentsSection() {
   const t = useTranslations('commentsSection');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
   const [currentSlide, setCurrentSlide] = useState(0);
   const [formData, setFormData] = useState({
     name: '',
@@ -256,7 +258,7 @@ export default function CommentsSection() {
               backgroundColor: 'rgba(253, 153, 8, 0.05)'
             }}>
               <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#FD9908' }} />
-              <span className="text-sm font-semibold" style={{ color: '#FD9908' }}>{t('badge')}</span>
+              <span className="text-2xl font-semibold" style={{ color: '#FD9908' }}>{t('badge')}</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-2" style={{ color: '#181d27' }}>
               {t('title')}
@@ -432,7 +434,11 @@ export default function CommentsSection() {
                         onClick={prevSlide}
                         className="w-10 h-10 bg-gray-100 cursor-pointer hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors"
                       >
-                        <ChevronLeft className="w-5 h-5" style={{ color: '#181d27' }} />
+                        {isRTL ? (
+                          <ChevronRight className="w-5 h-5" style={{ color: '#181d27' }} />
+                        ) : (
+                          <ChevronLeft className="w-5 h-5" style={{ color: '#181d27' }} />
+                        )}
                       </button>
                       <button
                         type="button"
@@ -440,7 +446,11 @@ export default function CommentsSection() {
                         className="w-10 h-10 rounded-full cursor-pointer flex items-center justify-center transition-colors text-white"
                         style={{ backgroundColor: '#181d27' }}
                       >
-                        <ChevronRight className="w-5 h-5" />
+                        {isRTL ? (
+                          <ChevronLeft className="w-5 h-5" />
+                        ) : (
+                          <ChevronRight className="w-5 h-5" />
+                        )}
                       </button>
                     </div>
                   </div>

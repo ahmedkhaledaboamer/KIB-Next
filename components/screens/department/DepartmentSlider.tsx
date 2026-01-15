@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import { Users, Briefcase, TrendingUp, HeadphonesIcon, Shield, Truck, FileText, Scale, ArrowLeft, ArrowRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -34,6 +34,8 @@ interface Props {
 
 function DepartmentSlider({ title, titleColor, members, icon, isLoading = false }: Props) {
   const t = useTranslations('departmentSlider');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
 
@@ -78,7 +80,11 @@ function DepartmentSlider({ title, titleColor, members, icon, isLoading = false 
         cursor-pointer
       `}
     >
-      <ArrowLeft className="w-[clamp(1rem,3vw,1.25rem)] h-[clamp(1rem,3vw,1.25rem)]" />
+      {isRTL ? (
+        <ArrowRight className="w-[clamp(1rem,3vw,1.25rem)] h-[clamp(1rem,3vw,1.25rem)]" />
+      ) : (
+        <ArrowLeft className="w-[clamp(1rem,3vw,1.25rem)] h-[clamp(1rem,3vw,1.25rem)]" />
+      )}
     </button>
     <button
       ref={nextRef}
@@ -96,7 +102,11 @@ function DepartmentSlider({ title, titleColor, members, icon, isLoading = false 
         cursor-pointer
       `}
     >
-      <ArrowRight className="w-[clamp(1rem,3vw,1.25rem)] h-[clamp(1rem,3vw,1.25rem)]" />
+      {isRTL ? (
+        <ArrowLeft className="w-[clamp(1rem,3vw,1.25rem)] h-[clamp(1rem,3vw,1.25rem)]" />
+      ) : (
+        <ArrowRight className="w-[clamp(1rem,3vw,1.25rem)] h-[clamp(1rem,3vw,1.25rem)]" />
+      )}
     </button>
   </div>
 </div>

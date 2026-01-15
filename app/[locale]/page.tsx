@@ -24,9 +24,10 @@ export default async function Page() {
       <OurProcess />
       <ServicesShowcase />
       <Legal />
+      <CommentsSection />
       <WhyChooseUs />
       {/* <CustomerCare/> */}
-      <CommentsSection />
+      
       <SectorSlider sectors={sectors} isLoading={false} />
       <LegalCTASection />
     </section>

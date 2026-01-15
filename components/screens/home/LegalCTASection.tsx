@@ -23,25 +23,18 @@ export default function LegalCTASection() {
 
     {/* Content Wrapper */}
     <div className="relative z-10   mx-auto bg-white/70 backdrop-blur-md shadow-2xl rounded-2xl p-6 sm:p-10 lg:p-14">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-
+ 
         {/* Left Content */}
         <div className="space-y-6 sm:space-y-8">
 
           {/* Title */}
           <div className="space-y-2">
-            <h2
-              className="font-bold text-gray-900 leading-tight"
-              style={{ fontSize: 'clamp(1.8rem, 4vw, 5rem)' }}
-            >
-              {t('title')}
-            </h2>
-
+         
             <h3
-              className="font-bold bg-gradient-to-r from-yellow-500 via-green-500 to-cyan-500 bg-clip-text text-transparent leading-tight"
+              className="font-bold bg-gradient-to-r from-yellow-600 via-green-700 to-orange-500 bg-clip-text text-transparent leading-tight"
               style={{ fontSize: 'clamp(1.8rem, 4vw, 6rem)' }}
             >
-              {t('titleHighlight')}
+               {t('titleHighlight')}  <span className="font-bold text-gray-900 leading-tight">{t('title')}</span>
             </h3>
           </div>
 
@@ -81,8 +74,7 @@ export default function LegalCTASection() {
 </div>
         </div>
 
-      </div>
-    </div>
+     </div>
   </section>
   );
 }

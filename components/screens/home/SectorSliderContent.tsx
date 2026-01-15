@@ -34,7 +34,7 @@ export default function SectorSliderContent({ sectors, isLoading = false }: Sect
           {/* Title & Subtitle */}
           <div className="flex-1 min-w-[200px]">
             <h2 className="text-[clamp(2rem,5vw,6rem)] font-bold text-gray-900">
-              {t("title")} <span className="text-[#0e9185]">{t("titleHighlight")}</span>
+              {t("title")} <span className="text-[#1c4a75]">{t("titleHighlight")}</span>
             </h2>
             <p className="mt-2 text-[clamp(1rem,2.5vw,3rem)] text-gray-900">
               {t("subtitle")}

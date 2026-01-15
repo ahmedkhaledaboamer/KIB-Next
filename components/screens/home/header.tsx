@@ -40,10 +40,22 @@ export default async function Header() {
             {t("title")}
           </h1>
           <h2
-            className="font-bold text-white text-center lg:text-start"
+            className="font-bold text-primary text-center lg:text-start"
             style={{ fontSize: "clamp(1.25rem, 2.5vw, 3.5rem)", lineHeight: "1.2" }}
           >
-            {t("subtitle")}
+            <span className="text-white">{t("subtitle")}</span>
+          </h2>
+          <h2
+            className="font-bold text-white text-center lg:text-start"
+            style={{ fontSize: "clamp(1.25rem, 2.5vw, 2.5rem)", lineHeight: "1.2" }}
+          >
+            {t("subtitle2")}
+          </h2>
+          <h2
+            className="font-bold text-white text-center lg:text-start"
+            style={{ fontSize: "clamp(1.25rem, 2.5vw, 2.5rem)", lineHeight: "1.2" }}
+          >
+            {t("subtitle3")}
           </h2>
 
           <div className="flex flex-row items-center justify-center lg:justify-start flex-wrap gap-[clamp(1rem,1.5vw,2rem)]">

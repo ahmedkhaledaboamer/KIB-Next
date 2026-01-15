@@ -44,15 +44,15 @@ export default function FlagList({
         speed={1000}
         breakpoints={{
           320: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 8,
           },
           480: {
-            slidesPerView: 4,
+            slidesPerView: 5,
             spaceBetween: 10,
           },
           640: {
-            slidesPerView: 5,
+            slidesPerView: 6,
             spaceBetween: 10,
           },
           768: {
