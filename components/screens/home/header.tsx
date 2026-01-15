@@ -47,13 +47,13 @@ export default async function Header() {
           </h2>
 
           <div className="flex flex-row items-center justify-center lg:justify-start flex-wrap gap-[clamp(1rem,1.5vw,2rem)]">
-            <Button variant="primary" size="sm" className="font-extrabold">
+            <Button variant="primary" size="md" className="font-extrabold">
               
               {t("cta.bookConsultation")}
             </Button>
 
             <Link href={`/${locale}/services`}>
-              <Button variant="secondary" size="sm" className="font-extrabold">
+              <Button variant="secondary" size="md" className="font-extrabold">
                 {t("cta.exploreServices")}
               </Button>
             </Link>

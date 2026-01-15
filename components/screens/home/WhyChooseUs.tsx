@@ -128,7 +128,7 @@ const WhyChooseUs = () => {
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`transition-all duration-300 ${
+                  className={`transition-all cursor-pointer duration-300 ${
                     currentSlide === index
                       ? 'w-8 h-3 bg-orange-500 rounded-md'
                       : 'w-3 h-3 bg-gray-400 rounded-full hover:bg-gray-600'

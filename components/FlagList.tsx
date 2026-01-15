@@ -53,19 +53,19 @@ export default function FlagList({
           },
           640: {
             slidesPerView: 5,
-            spaceBetween: 12,
+            spaceBetween: 10,
           },
           768: {
             slidesPerView: 6,
-            spaceBetween: 14,
+            spaceBetween: 10,
           },
           1024: {
             slidesPerView: 8,
-            spaceBetween: 16,
+            spaceBetween: 10,
           },
           1280: {
-            slidesPerView: 10,
-            spaceBetween: 18,
+            slidesPerView: 12,
+            spaceBetween: 10,
           },
           1536: {
             slidesPerView: 12,
@@ -81,7 +81,7 @@ export default function FlagList({
             key={index}
             className="flex items-center justify-center"
           >
-            <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-20 xl:w-32 xl:h-20 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl    ">
+            <div className="relative w-10 h-8 sm:w-10 sm:h-8 md:w-12 md:h-8 lg:w-18 lg:h-12 xl:w-18 xl:h-12 2xl:w-32 2xl:h-20 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl    ">
               <img
                 src={flag.src}
                 alt={flag.alt}

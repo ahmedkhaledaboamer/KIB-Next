@@ -6,7 +6,7 @@ let errorMessage = null;
 async function getSectors() {
   try {
     const locale = await getLocale();
-    const res = await fetch(`https://shazmlc.cloud/webhook/Sector-task?lang=${locale}`);
+    const res = await fetch(`https://shazmlc.cloud/webhook/sectors?lang=${locale}`);
 
     if (!res.ok) {
       throw new Error(`Failed to fetch sectors: ${res.status}`);

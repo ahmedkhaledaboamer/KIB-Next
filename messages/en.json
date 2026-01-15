@@ -206,15 +206,16 @@
         "steps": {
             "consultation": "Consultation.",
             "caseEvaluation": "Case Evaluation.",
-            "strategicPlanning": "Strategic Planning.",
-            "representation": "Representation.",
+            "strategicPlanning": "Strategic .",
+            "implementation": "implementation.",
             "caseFollowUp": "Case Follow-Up."
         },
         "descriptions": {
             "consultation": "The first step in our process is understanding your unique business needs and objectives.",
             "caseEvaluation": "We perform a detailed evaluation to map out the best strategy for your case.",
             "strategicPlanning": "We build a focused, actionable plan tailored specifically to your situation."
-        }
+        },
+        "footerText": "Your personal advisor for VIPs and entrepreneurs"
     },
     "legal": {
         "title": "Legal Innovation",

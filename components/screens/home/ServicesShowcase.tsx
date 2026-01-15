@@ -23,8 +23,9 @@ export default async function ServicesShowcase() {
 
   // Fetch services
   const services = await getServices();
-  const displayedServices = services.slice(0, 8);
-
+  const displayedServices = Array.isArray(services)
+  ? services.slice(0, 8)
+  : [];
   return (
     <section
       className="
@@ -68,7 +69,7 @@ export default async function ServicesShowcase() {
       >
         {isLoading
           ? Array.from({ length: 8 }).map((_, i) => <CardDetailsSkeleton key={i} />)
-          : displayedServices.map((service: Iservices) => (
+          : displayedServices?.map((service: Iservices) => (
               <CardDetails
                 key={service.id}
                 btn={t("bookButton")}

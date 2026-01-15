@@ -6,7 +6,7 @@ let errorMessage = null;
 async function getDepartments() {
   try {
     const locale = await getLocale();
-    const res = await fetch(`https://shazmlc.cloud/webhook/Department-task?lang=${locale}`);
+    const res = await fetch(`https://shazmlc.cloud/webhook/departments?lang=${locale}`);
 
     if (!res.ok) {
       throw new Error(`Failed to fetch departments: ${res.status}`);

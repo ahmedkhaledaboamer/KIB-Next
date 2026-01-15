@@ -3,6 +3,7 @@ import CommentsSection from "@/components/screens/home/CommentsSection";
 import Legal from "@/components/screens/home/Legal";
 import LegalCTASection from "@/components/screens/home/LegalCTASection";
 import OurProcess from "@/components/screens/home/OurProcess";
+import PartnersSection from "@/components/screens/home/PartnersSection";
 import PracticeAreas from "@/components/screens/home/PracticeAreas";
 import SectorSlider from "@/components/screens/home/SectorSlider";
 import ServicesShowcase from "@/components/screens/home/ServicesShowcase";
@@ -15,9 +16,9 @@ export default async function Page() {
   return (
     <section>
       <Header />
+      <PartnersSection/>
       <ServicesShowcase/>
-      <PracticeAreas/>
-      <Legal/>
+       <Legal/>
       <OurProcess/>
       <WhyChooseUs/>
       {/* <CustomerCare/> */}

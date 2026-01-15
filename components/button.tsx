@@ -38,14 +38,14 @@ export const buttonVariants = cva(
 export default function Button({ children, className, variant, size = "md", ...props }: ButtonProps) {
   const sizeStyles = {
     sm: {
-      fontSize: "clamp(1rem, 2vw, 1.5rem)",
+      fontSize: "clamp(0.5rem, 1vw, 3rem)",
       paddingTop: "clamp(0.5rem, 0.75vw, 0.75rem)",
       paddingBottom: "clamp(0.5rem, 0.75vw, 0.75rem)",
       paddingLeft: "clamp(0.75rem, 1.25vw, 1.25rem)",
       paddingRight: "clamp(0.75rem, 1.25vw, 1.25rem)",
     },
     md: {
-      fontSize: "clamp(2rem, 2.25vw, 1.25rem)",
+      fontSize: "clamp(1rem, 2.25vw, 2rem)",
       paddingTop: "clamp(0.5rem, 0.75vw, 1rem)",
       paddingBottom: "clamp(0.5rem, 0.75vw, 1rem)",
       paddingLeft: "clamp(1rem, 1.5vw, 1.5rem)",
