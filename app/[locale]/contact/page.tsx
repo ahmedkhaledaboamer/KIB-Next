@@ -2,8 +2,10 @@
 
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function ContactUsSection() {
+  const t = useTranslations('contactPage');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -42,7 +44,7 @@ export default function ContactUsSection() {
     <div className="absolute inset-0">
       <img
         src="/images/dd.webp"
-        alt="Contact Background"
+        alt={t('altText.background')}
         className="w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/85 to-teal-900/80" />
@@ -65,7 +67,7 @@ export default function ContactUsSection() {
       className="font-black tracking-tight"
       style={{ fontSize: 'clamp(2rem, 5vw, 5rem)' }}
     >
-      CONTACT US
+      {t('title')}
     </h1>
     <div className="w-24 h-1.5 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full" />
   </div>
@@ -75,7 +77,7 @@ export default function ContactUsSection() {
     className="text-gray-300 leading-relaxed"
     style={{ fontSize: 'clamp(1rem, 2.5vw, 2.5rem)' }}
   >
-    Reach out to our team for professional guidance and support
+    {t('subtitle')}
   </p>
 
   {/* Description */}
@@ -83,7 +85,7 @@ export default function ContactUsSection() {
     className="text-gray-400 leading-relaxed"
     style={{ fontSize: 'clamp(0.875rem, 2vw, 2.5rem)' }}
   >
-    We're here to support you every step of the way. Whether you have questions, need expert guidance, or are ready to start your business journey in the UAE, our team is always available to assist you.
+    {t('description')}
   </p>
 
   {/* Contact Info Cards */}
@@ -98,7 +100,7 @@ export default function ContactUsSection() {
           className="text-gray-400 mb-1"
           style={{ fontSize: 'clamp(0.75rem, 1.5vw, 1.5rem)' }}
         >
-          Call Us
+          {t('contactInfo.callUs')}
         </p>
         <a
           href="tel:+971521068882"
@@ -120,7 +122,7 @@ export default function ContactUsSection() {
           className="text-gray-400 mb-1"
           style={{ fontSize: 'clamp(0.75rem, 1.5vw, 1.5rem)' }}
         >
-          Email Us
+          {t('contactInfo.emailUs')}
         </p>
         <a
           href="mailto:info@shazmlc.com"
@@ -142,13 +144,13 @@ export default function ContactUsSection() {
           className="text-gray-400 mb-1"
           style={{ fontSize: 'clamp(0.75rem, 1.5vw, 1.5rem)' }}
         >
-          Location
+          {t('contactInfo.location')}
         </p>
         <p
           className="font-bold text-white"
           style={{ fontSize: 'clamp(1rem, 2vw, 1.5rem)' }}
         >
-          United Arab Emirates
+          {t('contactInfo.unitedArabEmirates')}
         </p>
       </div>
     </div>
@@ -170,7 +172,7 @@ export default function ContactUsSection() {
         className="font-bold text-white mb-8 text-center"
         style={{ fontSize: 'clamp(1.75rem, 4vw, 3rem)' }}
       >
-        Contact Us
+        {t('form.title')}
       </h2>
 
       {/* Success Message */}
@@ -181,7 +183,7 @@ export default function ContactUsSection() {
             className="text-green-400 font-semibold"
             style={{ fontSize: 'clamp(0.875rem, 2vw, 2rem)' }}
           >
-            Message sent successfully!
+            {t('form.successMessage')}
           </p>
         </div>
       )}
@@ -194,14 +196,14 @@ export default function ContactUsSection() {
             className="block font-semibold text-white mb-2"
             style={{ fontSize: 'clamp(0.875rem, 2vw, 2rem)' }}
           >
-            Name
+            {t('form.fields.name')}
           </label>
           <input
             type="text"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Your name"
+            placeholder={t('form.fields.namePlaceholder')}
             className="w-full px-5 py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-400/50 transition-all"
             style={{ fontSize: 'clamp(0.875rem, 2vw, 1.5rem)' }}
           />
@@ -213,14 +215,14 @@ export default function ContactUsSection() {
             className="block font-semibold text-white mb-2"
             style={{ fontSize: 'clamp(0.875rem, 2vw, 2rem)' }}
           >
-            Email
+            {t('form.fields.email')}
           </label>
           <input
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="your.email@example.com"
+            placeholder={t('form.fields.emailPlaceholder')}
             className="w-full px-5 py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition-all"
             style={{ fontSize: 'clamp(0.875rem, 2vw, 1.5rem)' }}
           />
@@ -232,13 +234,13 @@ export default function ContactUsSection() {
             className="block font-semibold text-white mb-2"
             style={{ fontSize: 'clamp(0.875rem, 2vw, 2rem)' }}
           >
-            Message
+            {t('form.fields.message')}
           </label>
           <textarea
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Tell us how we can help you..."
+            placeholder={t('form.fields.messagePlaceholder')}
             rows={5}
             className="w-full px-5 py-4 bg-white/5 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 transition-all resize-none"
             style={{ fontSize: 'clamp(0.875rem, 2vw, 1.35rem)' }}
@@ -251,7 +253,7 @@ export default function ContactUsSection() {
           className="w-full py-4 bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-teal-500/50 transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 group"
           style={{ fontSize: 'clamp(1rem, 2.5vw, 3rem)' }}
         >
-          <span>Send Message</span>
+          <span>{t('form.sendMessage')}</span>
           <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </button>
       </div>

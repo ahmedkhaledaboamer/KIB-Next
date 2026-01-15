@@ -213,7 +213,8 @@
         "descriptions": {
             "consultation": "Im ersten Schritt verstehen wir Ihre individuellen geschäftlichen Bedürfnisse und Ziele.",
             "caseEvaluation": "Wir analysieren Ihren Fall im Detail und definieren die beste Strategie.",
-            "strategicPlanning": "Wir entwickeln einen fokussierten, umsetzbaren Plan, der genau auf Ihre Situation zugeschnitten ist."
+            "strategicPlanning": "Wir entwickeln einen fokussierten, umsetzbaren Plan, der genau auf Ihre Situation zugeschnitten ist.",
+            "implementation": "Wir setzen den Plan mit Präzision und Expertise um, um Ergebnisse zu erzielen."
         }
     },
     "legal": {
@@ -346,6 +347,104 @@
     },
     "localeSwitcher": {
         "searchPlaceholder": "Nach einer Sprache suchen"
+    },
+    "legalCTA": {
+        "title": "Bereit, die",
+        "titleHighlight": "Gold-Standard Rechts-Exzellenz zu erleben?",
+        "description": "Erhalten Sie noch heute personalisierte Rechtslösungen. Unser Expertenteam ist bereit, Sie durch jeden Schritt zu führen.",
+        "features": {
+            "freeConsultation": "Kostenlose Beratung",
+            "support24": "24/7 Support",
+            "confidential": "Vertraulich"
+        },
+        "buttons": {
+            "bookConsultation": "Beratung buchen",
+            "callNow": "Jetzt anrufen"
+        }
+    },
+    "commentsSection": {
+        "badge": "KONTAKTIEREN SIE UNS",
+        "title": "Hinterlassen Sie uns eine Nachricht.",
+        "form": {
+            "fullName": "Vollständiger Name *",
+            "emailAddress": "E-Mail-Adresse *",
+            "message": "Nachricht hier... *",
+            "namePlaceholder": "Max Mustermann",
+            "emailPlaceholder": "max@example.com",
+            "messagePlaceholder": "Ihre Nachricht hier...",
+            "sendMessage": "Nachricht senden",
+            "sending": "Wird gesendet...",
+            "validation": {
+                "nameRequired": "Name ist erforderlich",
+                "nameMinLength": "Name muss mindestens 2 Zeichen lang sein",
+                "emailRequired": "E-Mail ist erforderlich",
+                "emailInvalid": "Ungültiges E-Mail-Format",
+                "messageRequired": "Nachricht ist erforderlich",
+                "messageMinLength": "Nachricht muss mindestens 10 Zeichen lang sein"
+            },
+            "success": "Vielen Dank! Ihr Feedback wurde erfolgreich gesendet.",
+            "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+        },
+        "testimonials": {
+            "title": "Kundenfeedback",
+            "rating": "von",
+            "noComments": "Noch keine Kommentare verfügbar.",
+            "loading": "Kommentare werden geladen..."
+        }
+    },
+    "partnersSection": {
+        "title": "Bereiche der Praxis",
+        "subtitle": "Expertenvertretung in verschiedenen Bereichen. Jahrzehnte des Engagements für Exzellenz."
+    },
+    "departmentsHero": {
+        "title": "Unsere",
+        "titleHighlight": "Abteilungen",
+        "subtitle": "Erkunden Sie unsere Organisationsstruktur und verbinden Sie sich mit dem richtigen Team",
+        "buttons": {
+            "exploreTeams": "Teams erkunden",
+            "contactUs": "Kontaktieren Sie uns"
+        }
+    },
+    "departmentSlider": {
+        "label": "Abteilung",
+        "navigation": {
+            "previous": "Zurück",
+            "next": "Weiter"
+        }
+    },
+    "quickContact": {
+        "title": "Der Digitale Direktor",
+        "contacts": {
+            "call": "Anrufen",
+            "whatsapp": "WhatsApp"
+        }
+    },
+    "contactPage": {
+        "title": "KONTAKTIEREN SIE UNS",
+        "subtitle": "Wenden Sie sich an unser Team für professionelle Beratung und Unterstützung",
+        "description": "Wir sind hier, um Sie in jedem Schritt zu unterstützen. Ob Sie Fragen haben, Expertenberatung benötigen oder bereit sind, Ihre Geschäftsreise in den VAE zu beginnen, unser Team steht Ihnen immer zur Verfügung.",
+        "contactInfo": {
+            "callUs": "Rufen Sie uns an",
+            "emailUs": "E-Mail an uns",
+            "location": "Standort",
+            "unitedArabEmirates": "Vereinigte Arabische Emirate"
+        },
+        "form": {
+            "title": "Kontaktieren Sie uns",
+            "successMessage": "Nachricht erfolgreich gesendet!",
+            "fields": {
+                "name": "Name",
+                "namePlaceholder": "Ihr Name",
+                "email": "E-Mail",
+                "emailPlaceholder": "ihre.email@beispiel.com",
+                "message": "Nachricht",
+                "messagePlaceholder": "Teilen Sie uns mit, wie wir Ihnen helfen können..."
+            },
+            "sendMessage": "Nachricht senden"
+        },
+        "altText": {
+            "background": "Kontakt-Hintergrund"
+        }
     }
 }
 

@@ -35,7 +35,7 @@ function SectorCard({ sector }: { sector: Sector }) {
 
       {/* Content */}
       <div className="p-5 flex-grow flex flex-col justify-center">
-        <h3 className="text-[clamp(1.5rem,2.5vw,3.5rem)] font-bold text-gray-900 mb-2">
+        <h3 className="text-[clamp(1.5rem,2.5vw,2.5rem)] font-bold text-gray-900 mb-2">
           {sector.title}
         </h3>
         <p className="text-[clamp(1rem,2vw,2rem)] text-gray-700 leading-relaxed line-clamp-3 md:line-clamp-4">

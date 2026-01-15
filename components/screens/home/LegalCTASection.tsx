@@ -1,9 +1,11 @@
 'use client';
 
 import Button from '@/components/button';
- import { CheckCircle, Phone } from 'lucide-react';
+import { CheckCircle, Phone } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function LegalCTASection() {
+  const t = useTranslations('legalCTA');
   return (
     <section
     className="
@@ -32,14 +34,14 @@ export default function LegalCTASection() {
               className="font-bold text-gray-900 leading-tight"
               style={{ fontSize: 'clamp(1.8rem, 4vw, 5rem)' }}
             >
-              Ready to Experience
+              {t('title')}
             </h2>
 
             <h3
               className="font-bold bg-gradient-to-r from-yellow-500 via-green-500 to-cyan-500 bg-clip-text text-transparent leading-tight"
               style={{ fontSize: 'clamp(1.8rem, 4vw, 6rem)' }}
             >
-              Gold-Standard Legal Excellence?
+              {t('titleHighlight')}
             </h3>
           </div>
 
@@ -48,12 +50,12 @@ export default function LegalCTASection() {
             className="text-gray-700  "
             style={{ fontSize: 'clamp(1rem, 2vw, 3rem)' }}
           >
-            Get personalized legal solutions today. Our expert team is ready to guide you through every step.
+            {t('description')}
           </p>
 
           {/* Features */}
           <div className="flex flex-wrap gap-4">
-            {['Free Consultation', '24/7 Support', 'Confidential'].map((item) => (
+            {[t('features.freeConsultation'), t('features.support24'), t('features.confidential')].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <div className="w-10 h-10  bg-yellow-500 rounded-full flex items-center justify-center">
                   <CheckCircle className="w-6 h-6     text-white" />
@@ -71,10 +73,10 @@ export default function LegalCTASection() {
   className="flex flex-row items-center justify-center lg:justify-start flex-wrap gap-[clamp(1rem,1.5vw,2rem)]"
 >
   <Button variant="yellow" size="sm" className="font-extrabold">
-  Book Consultation
+  {t('buttons.bookConsultation')}
   </Button>
   <Button variant="dark" size="sm" className="font-extrabold">
-  Call Now
+  {t('buttons.callNow')}
   </Button>
 </div>
         </div>

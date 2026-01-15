@@ -51,19 +51,19 @@ const WhyChooseUs = () => {
 
   return (
     <div className="min-h-screen p-[5%] flex justify-center items-center">
-    <div className="grid grid-cols-1  xl:grid-cols-2 lg:grid-cols-1 gap-[clamp(1rem,2vw,4rem)] items-center flex-col-reverse lg:flex-row">
+    <div className="grid grid-cols-1  2xl:grid-cols-2 lg:grid-cols-1 gap-[clamp(1rem,2vw,4rem)] items-center flex-col-reverse lg:flex-row">
       {/* Right - Content */}
         <div className="space-y-[clamp(1rem,2vw,2rem)]">
           {/* Title */}
           <div>
             <h2 
-              className="font-bold mb-4 text-center lg:text-left text-[#005e57]" 
+              className={`font-bold mb-4 text-center ${isRTL ? 'lg:text-right' : 'lg:text-left'} text-[#005e57]`}
               style={{ fontSize: "clamp(2rem,4vw,7rem)" }}
             >
               {t("title")}
             </h2>
             <p 
-              className="text-center lg:text-left text-gray-800 font-light" 
+              className={`text-center ${isRTL ? 'lg:text-right' : 'lg:text-left'} text-gray-800 font-light`}
               style={{ fontSize: "clamp(1.2rem,2vw,3.5rem)" }}
             >
               {t("subtitle")}
@@ -71,7 +71,7 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Features List */}
-          <div className="flex flex-row sm:flex-row flex-wrap gap-4 justify-center lg:justify-start">
+          <div className="flex flex-row  gap-4 justify-center lg:justify-start">
   {[t("features.freeConsultation"), t("features.support24"), t("features.confidential")].map((feat, i) => (
     <div 
       key={i} 
@@ -155,3 +155,5 @@ const WhyChooseUs = () => {
 };
 
 export default WhyChooseUs;
+
+

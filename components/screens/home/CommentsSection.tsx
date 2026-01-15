@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Send, ChevronLeft, ChevronRight, CheckCircle, AlertCircle } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface Testimonial {
   rating: number;
@@ -22,6 +23,7 @@ interface CommentResponse {
 }
 
 export default function CommentsSection() {
+  const t = useTranslations('commentsSection');
   const [currentSlide, setCurrentSlide] = useState(0);
   const [formData, setFormData] = useState({
     name: '',
@@ -139,16 +141,16 @@ export default function CommentsSection() {
   const validateField = (name: string, value: string): string => {
     switch (name) {
       case 'name':
-        if (!value.trim()) return 'Name is required';
-        if (value.trim().length < 2) return 'Name must be at least 2 characters';
+        if (!value.trim()) return t('form.validation.nameRequired');
+        if (value.trim().length < 2) return t('form.validation.nameMinLength');
         return '';
       case 'email':
-        if (!value.trim()) return 'Email is required';
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'Invalid email format';
+        if (!value.trim()) return t('form.validation.emailRequired');
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return t('form.validation.emailInvalid');
         return '';
       case 'message':
-        if (!value.trim()) return 'Message is required';
-        if (value.trim().length < 10) return 'Message must be at least 10 characters';
+        if (!value.trim()) return t('form.validation.messageRequired');
+        if (value.trim().length < 10) return t('form.validation.messageMinLength');
         return '';
       default:
         return '';
@@ -234,7 +236,7 @@ export default function CommentsSection() {
         setIsSubmitted(false);
       }, 3000);
     } catch (error) {
-      setSubmitError(error instanceof Error ? error.message : 'An error occurred. Please try again.');
+      setSubmitError(error instanceof Error ? error.message : t('form.error'));
       console.error('Error submitting feedback:', error);
     } finally {
       setIsSubmitting(false);
@@ -254,10 +256,10 @@ export default function CommentsSection() {
               backgroundColor: 'rgba(253, 153, 8, 0.05)'
             }}>
               <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#FD9908' }} />
-              <span className="text-sm font-semibold" style={{ color: '#FD9908' }}>GET IN TOUCH</span>
+              <span className="text-sm font-semibold" style={{ color: '#FD9908' }}>{t('badge')}</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-2" style={{ color: '#181d27' }}>
-              Drop us a Line Here.
+              {t('title')}
             </h2>
           </div>
 
@@ -266,7 +268,7 @@ export default function CommentsSection() {
             {/* Name & Email Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-2xl font-medium mb-2" style={{ color: '#181d27' }}>Full Name *</label>
+                <label className="block text-2xl font-medium mb-2" style={{ color: '#181d27' }}>{t('form.fullName')}</label>
                 <input
                   type="text"
                   name="name"
@@ -279,7 +281,7 @@ export default function CommentsSection() {
                       : 'border-gray-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-100'
                   }`}
                   style={{ color: '#181d27' }}
-                  placeholder="John Doe"
+                  placeholder={t('form.namePlaceholder')}
                 />
                 {touched.name && errors.name && (
                   <p className="mt-1 text-xl text-red-500 flex items-center gap-1">
@@ -289,7 +291,7 @@ export default function CommentsSection() {
                 )}
               </div>
               <div>
-                <label className="block text-2xl font-medium mb-2" style={{ color: '#181d27' }}>Email Address *</label>
+                <label className="block text-2xl font-medium mb-2" style={{ color: '#181d27' }}>{t('form.emailAddress')}</label>
                 <input
                   type="email"
                   name="email"
@@ -302,7 +304,7 @@ export default function CommentsSection() {
                       : 'border-gray-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-100'
                   }`}
                   style={{ color: '#181d27' }}
-                  placeholder="john@example.com"
+                  placeholder={t('form.emailPlaceholder')}
                 />
                 {touched.email && errors.email && (
                   <p className="mt-1 text-xl text-red-500 flex items-center gap-1">
@@ -315,7 +317,7 @@ export default function CommentsSection() {
 
             {/* Message */}
             <div>
-              <label className="block text-2xl font-medium mb-2" style={{ color: '#181d27' }}>Message here... *</label>
+              <label className="block text-2xl font-medium mb-2" style={{ color: '#181d27' }}>{t('form.message')}</label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -328,7 +330,7 @@ export default function CommentsSection() {
                     : 'border-gray-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-100'
                 }`}
                 style={{ color: '#181d27' }}
-                placeholder="Your message here..."
+                placeholder={t('form.messagePlaceholder')}
               />
               {touched.message && errors.message && (
                 <p className="mt-1 text-xl text-red-500 flex items-center gap-1">
@@ -350,7 +352,7 @@ export default function CommentsSection() {
             {isSubmitted && (
               <div className="p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 flex items-center gap-2">
                 <CheckCircle className="w-5 h-5" />
-                <span className="text-xl">Thank you! Your feedback has been sent successfully.</span>
+                <span className="text-xl">{t('form.success')}</span>
               </div>
             )}
 
@@ -363,12 +365,12 @@ export default function CommentsSection() {
             >
               {isSubmitting ? (
                 <>
-                  <span>Sending...</span>
+                  <span>{t('form.sending')}</span>
                   <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                 </>
               ) : (
                 <>
-                  <span>Send Message</span>
+                  <span>{t('form.sendMessage')}</span>
                   <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </>
               )}
@@ -393,9 +395,9 @@ export default function CommentsSection() {
                   {/* Header */}
                   <div className="mb-6">
                     <h3 className="text-4xl font-semibold mb-2" style={{ color: '#181d27' }}>
-                      Client Feedback 
+                      {t('testimonials.title')} 
                       <span className="ml-2" style={{ color: '#FD9908' }}>
-                        ({testimonials[currentSlide].rating}/out of {testimonials[currentSlide].total})
+                        ({testimonials[currentSlide].rating}/{t('testimonials.rating')} {testimonials[currentSlide].total})
                       </span>
                     </h3>
                   </div>
@@ -460,7 +462,7 @@ export default function CommentsSection() {
                 </div>
               ) : (
                 <div className="text-center py-12 text-gray-400">
-                  <p>No comments available yet.</p>
+                  <p>{t('testimonials.noComments')}</p>
                 </div>
               )}
             </div>

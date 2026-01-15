@@ -3,7 +3,7 @@
     "title": "الصفحة الرئيسية"
   },
   "navbar": {
-    "cta": " احجز استشارة ",
+    "cta": " جلسة تقييم استراتيجية ",
     "routes": [
       {
         "label": "الرئيسية",
@@ -174,12 +174,12 @@
     }
   },
   "whyChooseUs": {
-    "title": "لماذا تختارنا!",
+    "title": "  لماذا SHAZMLC ؟",
     "subtitle": "ليه تختارنا؟ لأننا مش شركة… إحنا قوة تشغيل",
     "features": {
-      "freeConsultation": "استشارة مجانية",
-      "support24": "دعم على مدار الساعة",
-      "confidential": "سري"
+      "freeConsultation": "  إدارة ملفات قانونية واستراتيجية معقدة",
+      "support24": "خبرة في قرارات الشركات والمعاملات الكبرى",
+      "confidential": "سرية تامة – قرارات محسوبة – تنفيذ هادئ"
     },
     "slides": {
       "expertTeam": {
@@ -213,7 +213,8 @@
     "descriptions": {
       "consultation": "نبدأ بفهم احتياجاتك وطبيعة عملك لتحديد ما يناسبك.",
       "caseEvaluation": "نراجع وضعك القانوني بالتفصيل ونحدد نقاط القوة والتحديات.",
-      "strategicPlanning": "نضع لك خطة عملية مخصصة تناسب رؤيتك كصاحب قرار أو رجل أعمال."
+      "strategicPlanning": "نضع لك خطة عملية مخصصة تناسب رؤيتك كصاحب قرار أو رجل أعمال.",
+      "implementation": "ننفذ الخطة بدقة وخبرة لتقديم النتائج المرجوة."
     },
     "footerText": "مستشارك الخاص لكبار الشخصيات ورواد الأعمال"
   },
@@ -350,5 +351,103 @@
   },
   "localeSwitcher": {
     "searchPlaceholder": "ابحث عن لغة"
+  },
+  "legalCTA": {
+    "title": "هل أنت مستعد لتجربة",
+    "titleHighlight": "التميز القانوني بمعايير ذهبية؟",
+    "description": "احصل على حلول قانونية مخصصة اليوم. فريقنا الخبير جاهز لإرشادك في كل خطوة.",
+    "features": {
+      "freeConsultation": "استشارة مجانية",
+      "support24": "دعم على مدار الساعة",
+      "confidential": "سرية تامة"
+    },
+    "buttons": {
+      "bookConsultation": "احجز استشارة",
+      "callNow": "اتصل الآن"
+    }
+  },
+  "commentsSection": {
+    "badge": "تواصل معنا",
+    "title": "اترك لنا رسالة هنا.",
+    "form": {
+      "fullName": "الاسم الكامل *",
+      "emailAddress": "عنوان البريد الإلكتروني *",
+      "message": "الرسالة هنا... *",
+      "namePlaceholder": "أحمد محمد",
+      "emailPlaceholder": "ahmed@example.com",
+      "messagePlaceholder": "رسالتك هنا...",
+      "sendMessage": "إرسال الرسالة",
+      "sending": "جاري الإرسال...",
+      "validation": {
+        "nameRequired": "الاسم مطلوب",
+        "nameMinLength": "يجب أن يكون الاسم على الأقل حرفين",
+        "emailRequired": "البريد الإلكتروني مطلوب",
+        "emailInvalid": "صيغة البريد الإلكتروني غير صحيحة",
+        "messageRequired": "الرسالة مطلوبة",
+        "messageMinLength": "يجب أن تكون الرسالة على الأقل 10 أحرف"
+      },
+      "success": "شكراً لك! تم إرسال ملاحظاتك بنجاح.",
+      "error": "حدث خطأ. يرجى المحاولة مرة أخرى."
+    },
+    "testimonials": {
+      "title": "تعليقات العملاء",
+      "rating": "من أصل",
+      "noComments": "لا توجد تعليقات متاحة بعد.",
+      "loading": "جاري تحميل التعليقات..."
+    }
+  },
+  "partnersSection": {
+    "title": "مجالات الممارسة",
+    "subtitle": "تمثيل خبير عبر المجالات. عقود من الالتزام بالتميز."
+  },
+  "departmentsHero": {
+    "title": "أقسامنا",
+    "titleHighlight": "",
+    "subtitle": "استكشف هيكلنا التنظيمي وتواصل مع الفريق المناسب",
+    "buttons": {
+      "exploreTeams": "استكشف الفرق",
+      "contactUs": "تواصل معنا"
+    }
+  },
+  "departmentSlider": {
+    "label": "القسم",
+    "navigation": {
+      "previous": "السابق",
+      "next": "التالي"
+    }
+  },
+  "quickContact": {
+    "title": "المدير الرقمي",
+    "contacts": {
+      "call": "اتصل",
+      "whatsapp": "واتساب"
+    }
+  },
+  "contactPage": {
+    "title": "تواصل معنا",
+    "subtitle": "تواصل مع فريقنا للحصول على التوجيه والدعم المهني",
+    "description": "نحن هنا لدعمك في كل خطوة على الطريق. سواء كان لديك أسئلة، أو تحتاج إلى إرشاد خبير، أو أنك مستعد لبدء رحلتك التجارية في الإمارات العربية المتحدة، فريقنا متاح دائماً لمساعدتك.",
+    "contactInfo": {
+      "callUs": "اتصل بنا",
+      "emailUs": "راسلنا",
+      "location": "الموقع",
+      "unitedArabEmirates": "الإمارات العربية المتحدة"
+    },
+    "form": {
+      "title": "تواصل معنا",
+      "successMessage": "تم إرسال الرسالة بنجاح!",
+      "fields": {
+        "name": "الاسم",
+        "namePlaceholder": "اسمك",
+        "email": "البريد الإلكتروني",
+        "emailPlaceholder": "بريدك@example.com",
+        "message": "الرسالة",
+        "messagePlaceholder": "أخبرنا كيف يمكننا مساعدتك..."
+      },
+      "sendMessage": "إرسال الرسالة"
+    },
+    "altText": {
+      "background": "خلفية صفحة الاتصال"
+    }
   }
 }

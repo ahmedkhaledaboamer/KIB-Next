@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import { Users, Briefcase, TrendingUp, HeadphonesIcon, Shield, Truck, FileText, Scale, ArrowLeft, ArrowRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { useTranslations } from 'next-intl';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -32,6 +33,7 @@ interface Props {
 }
 
 function DepartmentSlider({ title, titleColor, members, icon, isLoading = false }: Props) {
+  const t = useTranslations('departmentSlider');
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
 
@@ -48,8 +50,8 @@ function DepartmentSlider({ title, titleColor, members, icon, isLoading = false 
         <div className="p-[clamp(0.5rem,1.5vw,1rem)] rounded-xl bg-slate-900 shadow-lg text-white">
           {icon}
         </div>
-        <span className="uppercase tracking-widest text-[clamp(1rem,1.5vw,1rem)] text-gray-400">
-          Department
+        <span className="uppercase tracking-widest text-[clamp(1rem,1.5vw,3rem)] text-gray-400">
+          {t('label')}
         </span>
       </div>
       <h2 className={`font-bold text-[clamp(1.5rem,5vw,4rem)] bg-gradient-to-r ${titleColor} text-transparent bg-clip-text`}>
@@ -62,7 +64,7 @@ function DepartmentSlider({ title, titleColor, members, icon, isLoading = false 
   <div className="flex gap-[clamp(0.5rem,2vw,1rem)]">
     <button
       ref={prevRef}
-      aria-label="Previous"
+      aria-label={t('navigation.previous')}
       className={`
         w-[clamp(2.5rem,6vw,3rem)]
         h-[clamp(2.5rem,6vw,3rem)]
@@ -80,7 +82,7 @@ function DepartmentSlider({ title, titleColor, members, icon, isLoading = false 
     </button>
     <button
       ref={nextRef}
-      aria-label="Next"
+      aria-label={t('navigation.next')}
       className={`
         w-[clamp(2.5rem,6vw,3rem)]
         h-[clamp(2.5rem,6vw,3rem)]

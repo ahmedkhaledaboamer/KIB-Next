@@ -213,7 +213,8 @@
     "descriptions": {
       "consultation": "La première étape consiste à comprendre vos besoins et objectifs uniques.",
       "caseEvaluation": "Nous analysons votre dossier en détail pour définir la meilleure stratégie.",
-      "strategicPlanning": "Nous élaborons un plan ciblé et concret, adapté à votre situation."
+      "strategicPlanning": "Nous élaborons un plan ciblé et concret, adapté à votre situation.",
+      "implementation": "Nous exécutons le plan avec précision et expertise pour obtenir des résultats."
     }
   },
   "legal": {
@@ -346,6 +347,104 @@
   },
   "localeSwitcher": {
     "searchPlaceholder": "Rechercher une langue"
+  },
+  "legalCTA": {
+    "title": "Prêt à découvrir",
+    "titleHighlight": "l'Excellence Juridique de Niveau Or ?",
+    "description": "Obtenez des solutions juridiques personnalisées dès aujourd'hui. Notre équipe d'experts est prête à vous guider à chaque étape.",
+    "features": {
+      "freeConsultation": "Consultation gratuite",
+      "support24": "Support 24/7",
+      "confidential": "Confidentiel"
+    },
+    "buttons": {
+      "bookConsultation": "Réserver une consultation",
+      "callNow": "Appeler maintenant"
+    }
+  },
+  "commentsSection": {
+    "badge": "CONTACTEZ-NOUS",
+    "title": "Laissez-nous un message ici.",
+    "form": {
+      "fullName": "Nom complet *",
+      "emailAddress": "Adresse e-mail *",
+      "message": "Message ici... *",
+      "namePlaceholder": "Jean Dupont",
+      "emailPlaceholder": "jean@example.com",
+      "messagePlaceholder": "Votre message ici...",
+      "sendMessage": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "validation": {
+        "nameRequired": "Le nom est requis",
+        "nameMinLength": "Le nom doit contenir au moins 2 caractères",
+        "emailRequired": "L'e-mail est requis",
+        "emailInvalid": "Format d'e-mail invalide",
+        "messageRequired": "Le message est requis",
+        "messageMinLength": "Le message doit contenir au moins 10 caractères"
+      },
+      "success": "Merci ! Votre commentaire a été envoyé avec succès.",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "testimonials": {
+      "title": "Commentaires clients",
+      "rating": "sur",
+      "noComments": "Aucun commentaire disponible pour le moment.",
+      "loading": "Chargement des commentaires..."
+    }
+  },
+  "partnersSection": {
+    "title": "Domaines de pratique",
+    "subtitle": "Représentation experte dans tous les domaines. Des décennies d'engagement envers l'excellence."
+  },
+  "departmentsHero": {
+    "title": "Nos",
+    "titleHighlight": "Départements",
+    "subtitle": "Explorez notre structure organisationnelle et connectez-vous avec la bonne équipe",
+    "buttons": {
+      "exploreTeams": "Explorer les équipes",
+      "contactUs": "Contactez-nous"
+    }
+  },
+  "departmentSlider": {
+    "label": "Département",
+    "navigation": {
+      "previous": "Précédent",
+      "next": "Suivant"
+    }
+  },
+  "quickContact": {
+    "title": "Le Directeur Numérique",
+    "contacts": {
+      "call": "Appeler",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "contactPage": {
+    "title": "CONTACTEZ-NOUS",
+    "subtitle": "Contactez notre équipe pour des conseils et un soutien professionnels",
+    "description": "Nous sommes là pour vous soutenir à chaque étape. Que vous ayez des questions, besoin de conseils d'experts ou que vous soyez prêt à commencer votre parcours commercial aux EAU, notre équipe est toujours disponible pour vous aider.",
+    "contactInfo": {
+      "callUs": "Appelez-nous",
+      "emailUs": "Envoyez-nous un e-mail",
+      "location": "Emplacement",
+      "unitedArabEmirates": "Émirats arabes unis"
+    },
+    "form": {
+      "title": "Contactez-nous",
+      "successMessage": "Message envoyé avec succès !",
+      "fields": {
+        "name": "Nom",
+        "namePlaceholder": "Votre nom",
+        "email": "E-mail",
+        "emailPlaceholder": "votre.email@exemple.com",
+        "message": "Message",
+        "messagePlaceholder": "Dites-nous comment nous pouvons vous aider..."
+      },
+      "sendMessage": "Envoyer le message"
+    },
+    "altText": {
+      "background": "Arrière-plan de contact"
+    }
   }
 }
 

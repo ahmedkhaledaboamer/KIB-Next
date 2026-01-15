@@ -1,8 +1,10 @@
 'use client';
 
 import { ChevronDown } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function DepartmentsHero() {
+  const t = useTranslations('departmentsHero');
   const scrollToSection = () => {
     const section = document.getElementById('departments-section');
     section?.scrollIntoView({ behavior: 'smooth' });
@@ -24,19 +26,25 @@ export default function DepartmentsHero() {
           className="font-bold text-white max-w-5xl"
           style={{ fontSize: 'clamp(2rem, 6vw, 8rem)' }}
         >
-          Our{' '}
-          <span
-            className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text"
-          >
-            Departments
-          </span>
+          {t('titleHighlight') ? (
+            <>
+              {t('title')}{' '}
+              <span
+                className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text"
+              >
+                {t('titleHighlight')}
+              </span>
+            </>
+          ) : (
+            t('title')
+          )}
         </h1>
 
         <p
           className="mt-6 text-gray-300  "
           style={{ fontSize: 'clamp(1rem, 2.5vw, 4rem)' }}
         >
-          Explore our organizational structure and connect with the right team
+          {t('subtitle')}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
@@ -48,7 +56,7 @@ export default function DepartmentsHero() {
               fontSize: 'clamp(1rem, 2.5vw, 1.5rem)',
             }}
           >
-            Explore Teams
+            {t('buttons.exploreTeams')}
           </button>
 
           <button
@@ -58,7 +66,7 @@ export default function DepartmentsHero() {
               fontSize: 'clamp(1rem, 2.5vw, 1.5rem)',
             }}
           >
-            Contact Us
+            {t('buttons.contactUs')}
           </button>
         </div>
 

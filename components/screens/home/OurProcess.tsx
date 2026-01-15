@@ -39,7 +39,7 @@ export default function OurProcess() {
       <div className="absolute inset-0 bg-[#0a1f1f]" aria-hidden="true">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url(/images/aa.webp)" }}
+          style={{ backgroundImage: "url(/images/process.webp)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/60 via-slate-900/60 to-slate-900/60" />
         <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-teal-900/20 to-transparent" />
@@ -108,7 +108,9 @@ export default function OurProcess() {
                         {step.title}
                       </h3>
 
-                     
+                      <p className="text-gray-300 leading-relaxed text-[clamp(1rem,1.5vw,2rem)]">
+                        {step.description}
+                      </p>
                     </div>
                   </article>
                 </div>

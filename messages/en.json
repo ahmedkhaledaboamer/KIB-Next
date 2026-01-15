@@ -348,5 +348,103 @@
     },
     "localeSwitcher": {
         "searchPlaceholder": "Search for a language"
+    },
+    "legalCTA": {
+        "title": "Ready to Experience",
+        "titleHighlight": "Gold-Standard Legal Excellence?",
+        "description": "Get personalized legal solutions today. Our expert team is ready to guide you through every step.",
+        "features": {
+            "freeConsultation": "Free Consultation",
+            "support24": "24/7 Support",
+            "confidential": "Confidential"
+        },
+        "buttons": {
+            "bookConsultation": "Book Consultation",
+            "callNow": "Call Now"
+        }
+    },
+    "commentsSection": {
+        "badge": "GET IN TOUCH",
+        "title": "Drop us a Line Here.",
+        "form": {
+            "fullName": "Full Name *",
+            "emailAddress": "Email Address *",
+            "message": "Message here... *",
+            "namePlaceholder": "John Doe",
+            "emailPlaceholder": "john@example.com",
+            "messagePlaceholder": "Your message here...",
+            "sendMessage": "Send Message",
+            "sending": "Sending...",
+            "validation": {
+                "nameRequired": "Name is required",
+                "nameMinLength": "Name must be at least 2 characters",
+                "emailRequired": "Email is required",
+                "emailInvalid": "Invalid email format",
+                "messageRequired": "Message is required",
+                "messageMinLength": "Message must be at least 10 characters"
+            },
+            "success": "Thank you! Your feedback has been sent successfully.",
+            "error": "An error occurred. Please try again."
+        },
+        "testimonials": {
+            "title": "Client Feedback",
+            "rating": "out of",
+            "noComments": "No comments available yet.",
+            "loading": "Loading comments..."
+        }
+    },
+    "partnersSection": {
+        "title": "Areas of Practice",
+        "subtitle": "Expert representation across fields. Decades of excellence commitment."
+    },
+    "departmentsHero": {
+        "title": "Our",
+        "titleHighlight": "Departments",
+        "subtitle": "Explore our organizational structure and connect with the right team",
+        "buttons": {
+            "exploreTeams": "Explore Teams",
+            "contactUs": "Contact Us"
+        }
+    },
+    "departmentSlider": {
+        "label": "Department",
+        "navigation": {
+            "previous": "Previous",
+            "next": "Next"
+        }
+    },
+    "quickContact": {
+        "title": "The Digital Director",
+        "contacts": {
+            "call": "Call",
+            "whatsapp": "WhatsApp"
+        }
+    },
+    "contactPage": {
+        "title": "CONTACT US",
+        "subtitle": "Reach out to our team for professional guidance and support",
+        "description": "We're here to support you every step of the way. Whether you have questions, need expert guidance, or are ready to start your business journey in the UAE, our team is always available to assist you.",
+        "contactInfo": {
+            "callUs": "Call Us",
+            "emailUs": "Email Us",
+            "location": "Location",
+            "unitedArabEmirates": "United Arab Emirates"
+        },
+        "form": {
+            "title": "Contact Us",
+            "successMessage": "Message sent successfully!",
+            "fields": {
+                "name": "Name",
+                "namePlaceholder": "Your name",
+                "email": "Email",
+                "emailPlaceholder": "your.email@example.com",
+                "message": "Message",
+                "messagePlaceholder": "Tell us how we can help you..."
+            },
+            "sendMessage": "Send Message"
+        },
+        "altText": {
+            "background": "Contact Background"
+        }
     }
 }

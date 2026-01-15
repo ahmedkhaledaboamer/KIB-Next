@@ -31,8 +31,7 @@ export default async function ServicesShowcase() {
       className="
         min-h-screen 
         bg-white
-        px-[clamp(1rem,5vw,6rem)]
-        py-[clamp(2rem,6vw,6rem)]
+         p-[5%]
         max-w-fall
         mx-auto
       "
