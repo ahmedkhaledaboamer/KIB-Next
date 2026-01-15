@@ -7,6 +7,7 @@ import SearchBar from "@/components/screens/services/SearchBar";
 import { getServices, isLoading } from "@/utils/getServices";
 import { getLocale, getTranslations } from "next-intl/server";
 import { sendBookingToAPI } from "@/utils/saveBooking";
+import LegalCTASection from "@/components/screens/home/LegalCTASection";
 
 const ITEMS_PER_PAGE = 12;
 // https://shazmlc.cloud/webhook/web-services-booking
@@ -141,6 +142,7 @@ export default async function ServicesPage({
           {t("loading") || "Loading services..."}
         </p>
       )}
+      <LegalCTASection />
     </div>
   );
 }

@@ -10,6 +10,8 @@ const localeToCountry: Record<string, string> = {
   en: "US",
   fr: "FR",
   de: "DE",
+  es: "ES",
+  it: "IT",
 };
 
 // Map country codes to locale codes
@@ -18,6 +20,8 @@ const countryToLocale: Record<string, string> = {
   US: "en",
   FR: "fr",
   DE: "de",
+  ES: "es",
+  IT: "it",
 };
 
 const LocaleSwitcher = () => {
@@ -42,12 +46,14 @@ const LocaleSwitcher = () => {
       selectedSize={20}
       optionsSize={20}
       onSelect={(code) => handleChange(code)}
-      countries={["AE", "US", "FR", "DE"]}
+      countries={["AE", "US", "FR", "DE", "ES", "IT"]}
       customLabels={{
         AE: "العربية",
         US: "English",
         FR: "Français",
         DE: "Deutsch",
+        ES: "Español",
+        IT: "Italiano",
       }}
       showSelectedLabel={true}
       showOptionLabel={true}

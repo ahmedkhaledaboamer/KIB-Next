@@ -1,0 +1,453 @@
+{
+    "page": {
+        "title": "Pagina Principale"
+    },
+    "navbar": {
+        "cta": "Prenota Consultazione",
+        "routes": [
+            {
+                "label": "Home",
+                "href": "/"
+            },
+            {
+                "label": "Il Nostro Dipartimento",
+                "href": "/department"
+            },
+            {
+                "label": "Contatti",
+                "href": "/contact"
+            },
+            {
+                "label": "I Nostri Servizi",
+                "href": "/services"
+            },
+            {
+                "label": "Articoli",
+                "href": "/articles"
+            }
+        ]
+    },
+    "content": {
+        "title": "Il Mio Componente",
+        "description": "Descrizione del Mio Componente"
+    },
+    "header": {
+        "title": "Consulenza Legale Premium",
+        "subtitle": "Competenza Legale Affidabile con Standard d'Oro",
+        "subtitle2": "Serviamo solo leader aziendali, grandi corporazioni e transazioni ad alto valore",
+        "subtitle3": "I nostri servizi sono personalizzati per transazioni strategiche e casi con un impatto finanziario e legale significativo.",
+        "cta": {
+            "bookConsultation": "Prenota Consultazione",
+            "exploreServices": "Esplora i Nostri Servizi"
+        }
+    },
+    "footer": {
+        "contact": {
+            "title": "Contattaci",
+            "phone": "+971 521068882",
+            "email": "info@shazmlc.com",
+            "location": "Emirati Arabi Uniti"
+        },
+        "quickLinks": {
+            "title": "Link Rapidi",
+            "links": [
+                {
+                    "label": "Home",
+                    "href": "/"
+                },
+                {
+                    "label": "I Nostri Servizi",
+                    "href": "/services"
+                },
+                {
+                    "label": "Dipartimenti",
+                    "href": "/department"
+                },
+                {
+                    "label": "FAQ",
+                    "href": "/faq"
+                },
+                {
+                    "label": "Politica sulla Privacy",
+                    "href": "/privacy"
+                },
+                {
+                    "label": "Contattaci",
+                    "href": "/contact"
+                }
+            ]
+        },
+        "ourGroup": {
+            "title": "Il Nostro Gruppo",
+            "entities": [
+                {
+                    "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla per Consulenze Legali",
+                    "href": "#"
+                },
+                {
+                    "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla per Consulenze Generali",
+                    "href": "#"
+                },
+                {
+                    "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla per Intelligenza Artificiale e Ricerca",
+                    "href": "#"
+                },
+                {
+                    "name": "Al Sarh Al Shamekh per Agenzia di Linee Marittime",
+                    "href": "#"
+                },
+                {
+                    "name": "84 Star Capital per Investimenti Immobiliari",
+                    "href": "#"
+                },
+                {
+                    "name": "KIB per Servizi di Liquidazione Reclami",
+                    "href": "#"
+                },
+                {
+                    "name": "KIB per Servizi Imprenditoriali",
+                    "href": "#"
+                },
+                {
+                    "name": "KIB per Finanza",
+                    "href": "#"
+                },
+                {
+                    "name": "KIB per Commercio",
+                    "href": "#"
+                }
+            ]
+        },
+        "description": "Fornendo eccellenza legale con standard d'oro in tutti gli Emirati Arabi Uniti con un impegno incrollabile per il successo dei nostri clienti.",
+        "copyright": "©+2008Tutti i Diritti Riservati.",
+        "socialMedia": {
+            "linkedin": "LinkedIn",
+            "twitter": "Twitter",
+            "instagram": "Instagram",
+            "facebook": "Facebook"
+        }
+    },
+    "services": {
+        "showing": "Mostrando",
+        "of": "di",
+        "services": "servizi",
+        "title": "I Nostri Servizi",
+        "subtitle": "Esplora le nostre collezioni legali e amministrative complete.",
+        "searchPlaceholder": "Cerca servizi...",
+        "searchButton": "Cerca",
+        "bookButton": "Prenota",
+        "loading": "Caricamento servizi...",
+        "noResults": "Nessun servizio trovato",
+        "resultsFound": "risultati trovati",
+        "noServices": "Nessun servizio disponibile",
+        "viewAll": "Visualizza Tutti i Servizi"
+    },
+    "servicesShowcase": {
+        "title": "I Nostri Servizi",
+        "subtitle": "Esplora la gamma di servizi che offriamo per aiutarti a raggiungere il successo.",
+        "viewAll": "Visualizza Tutti i Servizi",
+        "loading": "Caricamento servizi..."
+    },
+    "customerCare": {
+        "title": "Ogni",
+        "titleHighlight": "cliente è importante",
+        "subtitle": ", ci prendiamo cura della tua attività",
+        "cards": {
+            "information": {
+                "title": "Informazioni",
+                "subtitle": "Ottieni Consulenza Esperta",
+                "buttonText": "Scopri di Più"
+            },
+            "consultation": {
+                "title": "Consultazione",
+                "subtitle": "Servizi Professionali",
+                "buttonText": "Contattaci"
+            },
+            "virtual": {
+                "title": "Consulenze Legali",
+                "subtitle": "Sempre Disponibile",
+                "buttonText": "Prenota Ora"
+            },
+            "support": {
+                "title": "Supporto",
+                "subtitle": "Siamo Qui per Aiutare",
+                "buttonText": "Ottieni Aiuto"
+            }
+        }
+    },
+    "whyChooseUs": {
+        "title": "Perché Sceglierci!",
+        "subtitle": "Eccellenza, competenza, integrità e dedizione incrollabile al successo.",
+        "features": {
+            "freeConsultation": "Consultazione Gratuita",
+            "support24": "Supporto 24/7",
+            "confidential": "Confidenziale"
+        },
+        "slides": {
+            "expertTeam": {
+                "title": "Team Legale Esperto",
+                "description": "Multi-Specialità",
+                "stats": "50+ Avvocati"
+            },
+            "provenApproach": {
+                "title": "Approccio Primo Provato",
+                "description": "Tasso di Successo",
+                "stats": "98% Tasso di Vittoria"
+            },
+            "clientSatisfaction": {
+                "title": "Soddisfazione del Cliente",
+                "description": "Clienti Felici",
+                "stats": "50+ Casi"
+            }
+        }
+    },
+    "ourProcess": {
+        "title": "Il Nostro Processo",
+        "headline": "Processo Senza Interruzioni e Grandi Risultati.",
+        "stepLabel": "Passo",
+        "steps": {
+            "consultation": "Consultazione.",
+            "caseEvaluation": "Valutazione del Caso.",
+            "strategicPlanning": "Pianificazione Strategica.",
+            "implementation": "Implementazione.",
+            "caseFollowUp": "Follow-Up del Caso."
+        },
+        "descriptions": {
+            "consultation": "Il primo passo nel nostro processo è comprendere le tue esigenze aziendali uniche e gli obiettivi.",
+            "caseEvaluation": "Eseguiamo una valutazione dettagliata per tracciare la migliore strategia per il tuo caso.",
+            "strategicPlanning": "Costruiamo un piano mirato e attuabile su misura specificamente per la tua situazione.",
+            "implementation": "Eseguiamo il piano con precisione e competenza per fornire risultati."
+        },
+        "footerText": "Il tuo consulente personale per VIP e imprenditori"
+    },
+    "legal": {
+        "title": "Hub di",
+        "titleHighlight": "Innovazione Legale",
+        "subtitle": "Pionieristico nel futuro dei servizi legali con tecnologia all'avanguardia",
+        "services": {
+            "contractReview": {
+                "title": "Revisione",
+                "titleRest": "Contratti",
+                "description": "Utilizzando la tecnologia AI per analizzare e valutare rapidamente i rischi contrattuali."
+            },
+            "smartContracts": {
+                "title": "Contratti",
+                "titleRest": "Intelligenti",
+                "description": "Esecuzione sicura e trasparente dei contratti utilizzando tecnologia blockchain avanzata."
+            },
+            "legalConsults": {
+                "title": "Consulenze",
+                "titleRest": "Legali",
+                "description": "Riunioni remote convenienti con il nostro team legale esperto per una guida rapida e affidabile."
+            },
+            "caseStrategy": {
+                "title": "Strategia del",
+                "titleRest": "Caso",
+                "description": "Utilizzando analisi, approfondimenti e pianificazione basata sui dati per ottenere i migliori risultati del caso."
+            }
+        }
+    },
+    "practiceAreas": {
+        "title": "Aree di",
+        "titleHighlight": "Pratica",
+        "subtitle": "Rappresentanza esperta in tutti i campi. Decenni di impegno per l'eccellenza.",
+        "areas": {
+            "commercial": {
+                "title": "Commerciale",
+                "items": {
+                    "maAdvice": "Obblighi del Commerciante",
+                    "contractLaw": "Transazioni Commerciali",
+                    "businessLaw": "Regolamentazione Aziendale",
+                    "bankingLaw": "Titoli Commerciali",
+                    "intellectualProperty": "Commercio Digitale",
+                    "laborLaw": "Risoluzione Dispute Commerciali"
+                }
+            },
+            "familyLaw": {
+                "title": "Diritto di Famiglia",
+                "items": {
+                    "divorceLaw": "Matrimonio",
+                    "childCustody": "Divorzio",
+                    "adoptionCases": "Eredità e Patrimoni",
+                    "inheritanceLaw": "Capacità Legale e Tutela",
+                    "guardianshipLaw": "Affidamento Minori",
+                    "adoptionLaw": "Stato Personale per Non Musulmani"
+                }
+            },
+            "advocacy": {
+                "title": "Avvocatura",
+                "items": {
+                    "whiteCrimes": "Penale e Civile",
+                    "duiDefense": "Commerciale e Amministrativo",
+                    "judicialAppeals": "Esecuzione",
+                    "arbitration": "Diritto del Lavoro",
+                    "familyLaw": "Casi Urgenti",
+                    "criminalLaw": "Diritto Elettronico"
+                }
+            },
+            "protection": {
+                "title": "Protezione",
+                "items": {
+                    "financialCrime": "Contratti",
+                    "drivingCrimes": "Diritto Penale",
+                    "legalAppeals": "Diritto Istituzionale",
+                    "criminalLaw": "Diritto Digitale",
+                    "civilLaw": "Legale",
+                    "internationalLaw": "Diritto Finanziario"
+                }
+            }
+        }
+    },
+    "servicesSlider": {
+        "title": "Competenza",
+        "titleHighlight": "Settoriale",
+        "subtitle": "Competenza legale completa nei settori chiave",
+        "services": {
+            "fintechPermit": {
+                "title": "Permesso FinTech",
+                "description": "Guida normativa FinTech negli EAU"
+            },
+            "amlRules": {
+                "title": "Regole AML",
+                "description": "Conformità AML e ambito regole CTF"
+            },
+            "offPlanRules": {
+                "title": "Regole Off-Plan",
+                "description": "Vendite Off-Plan e Proprietà"
+            },
+            "buildingLaw": {
+                "title": "Legge Edilizia",
+                "description": "Competenza Piano Contratto FIDIC"
+            },
+            "medLiab": {
+                "title": "Med-Liab",
+                "description": "Supporto legale medico"
+            },
+            "medicalData": {
+                "title": "Dati Medici",
+                "description": "Garantire la regolamentazione dei dati del paziente"
+            },
+            "techPermit": {
+                "title": "Permesso Tecnologico",
+                "description": "Guida e supporto aziendale"
+            },
+            "dataPrivacy": {
+                "title": "Privacy dei Dati",
+                "description": "Protezione dati EAU, normativa"
+            }
+        }
+    },
+    "cardDetails": {
+        "sub": "Sub Servizi",
+        "chat": "Chat",
+        "noDescription": "Nessuna descrizione"
+    },
+    "categoriesModal": {
+        "noSubServices": "Nessun sub-servizio disponibile"
+    },
+    "timeWeather": {
+        "loading": "Caricamento..."
+    },
+    "localeSwitcher": {
+        "searchPlaceholder": "Cerca una lingua"
+    },
+    "legalCTA": {
+        "title": "Pronto a Sperimentare",
+        "titleHighlight": "Eccellenza Legale Standard d'Oro?",
+        "description": "Ottieni soluzioni legali personalizzate oggi. Il nostro team esperto è pronto a guidarti in ogni passo.",
+        "features": {
+            "freeConsultation": "Consultazione Gratuita",
+            "support24": "Supporto 24/7",
+            "confidential": "Confidenziale"
+        },
+        "buttons": {
+            "bookConsultation": "Prenota Consultazione",
+            "callNow": "Chiama Ora"
+        }
+    },
+    "commentsSection": {
+        "badge": "METTITI IN CONTATTO",
+        "title": "Lasciaci un Messaggio Qui.",
+        "form": {
+            "fullName": "Nome Completo *",
+            "emailAddress": "Indirizzo Email *",
+            "message": "Messaggio qui... *",
+            "namePlaceholder": "Mario Rossi",
+            "emailPlaceholder": "mario@esempio.com",
+            "messagePlaceholder": "Il tuo messaggio qui...",
+            "sendMessage": "Invia Messaggio",
+            "sending": "Invio in corso...",
+            "validation": {
+                "nameRequired": "Il nome è obbligatorio",
+                "nameMinLength": "Il nome deve contenere almeno 2 caratteri",
+                "emailRequired": "L'email è obbligatoria",
+                "emailInvalid": "Formato email non valido",
+                "messageRequired": "Il messaggio è obbligatorio",
+                "messageMinLength": "Il messaggio deve contenere almeno 10 caratteri"
+            },
+            "success": "Grazie! Il tuo feedback è stato inviato con successo.",
+            "error": "Si è verificato un errore. Per favore, riprova."
+        },
+        "testimonials": {
+            "title": "Feedback dei Clienti",
+            "rating": "su",
+            "noComments": "Nessun commento disponibile ancora.",
+            "loading": "Caricamento commenti..."
+        }
+    },
+    "partnersSection": {
+        "title": "Aree di Pratica",
+        "subtitle": "Rappresentanza esperta in tutti i campi. Decenni di impegno per l'eccellenza."
+    },
+    "departmentsHero": {
+        "title": "I Nostri",
+        "titleHighlight": "Dipartimenti",
+        "subtitle": "Esplora la nostra struttura organizzativa e connettiti con il team giusto",
+        "buttons": {
+            "exploreTeams": "Esplora Team",
+            "contactUs": "Contattaci"
+        }
+    },
+    "departmentSlider": {
+        "label": "Dipartimento",
+        "navigation": {
+            "previous": "Precedente",
+            "next": "Successivo"
+        }
+    },
+    "quickContact": {
+        "title": "Il Direttore Digitale",
+        "contacts": {
+            "call": "Chiama",
+            "whatsapp": "WhatsApp"
+        }
+    },
+    "contactPage": {
+        "title": "CONTATTACI",
+        "subtitle": "Contatta il nostro team per supporto e guida professionale",
+        "description": "Siamo qui per supportarti in ogni passo del percorso. Che tu abbia domande, bisogno di guida esperta o sia pronto per iniziare il tuo viaggio imprenditoriale negli EAU, il nostro team è sempre disponibile per assisterti.",
+        "contactInfo": {
+            "callUs": "Chiamaci",
+            "emailUs": "Inviaci un'Email",
+            "location": "Posizione",
+            "unitedArabEmirates": "Emirati Arabi Uniti"
+        },
+        "form": {
+            "title": "Contattaci",
+            "successMessage": "Messaggio inviato con successo!",
+            "fields": {
+                "name": "Nome",
+                "namePlaceholder": "Il tuo nome",
+                "email": "Email",
+                "emailPlaceholder": "tua.email@esempio.com",
+                "message": "Messaggio",
+                "messagePlaceholder": "Raccontaci come possiamo aiutarti..."
+            },
+            "sendMessage": "Invia Messaggio"
+        },
+        "altText": {
+            "background": "Sfondo Contatti"
+        }
+    }
+}
+
