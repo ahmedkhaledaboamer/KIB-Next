@@ -51,10 +51,20 @@
       "title": "Contactez-nous",
       "phone": "+971 521068882",
       "email": "info@shazmlc.com",
-      "location": "Émirats arabes unis"
+      "location": "Émirats arabes unis",
+      "executiveChannel": "Canal de communication exécutif pour les clients VIP et les investisseurs. Nous recevons votre communication via un chemin dédié pour les clients premium, les hommes d'affaires et les partenaires stratégiques.",
+      "services": {
+        "evaluation": "Session d'Évaluation Spéciale",
+        "business": "Session Dédiée pour les Hommes d'Affaires",
+        "consultant": "Rencontre Privée avec le Consultant"
+      }
     },
     "quickLinks": {
       "title": "Liens rapides",
+      "commitment": {
+        "title": "Notre Engagement",
+        "description": "Toutes les demandes sont traitées avec une confidentialité totale, conformément aux normes les plus élevées de gouvernance et de conformité, garantissant une réponse rapide et un suivi de qualité."
+      },
       "links": [
         {
           "label": "Accueil",
@@ -84,6 +94,7 @@
     },
     "ourGroup": {
       "title": "Notre groupe",
+      "description": "SHAZMLC – Centre de Leadership et de Gestion des Affaires et des Décisions Stratégiques.",
       "entities": [
         {
           "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla pour consultations juridiques",
@@ -507,6 +518,13 @@
     "noArticles": "Aucun article disponible",
     "fetchError": "Échec de la récupération des articles",
     "errorMessage": "Une erreur s'est produite lors de la récupération des articles",
+    "loading": "Chargement...",
+    "errorTitle": "Erreur",
+    "articleNotFound": "Article introuvable",
+    "backToArticles": "Retour aux Articles",
+    "noContent": "Aucun contenu disponible",
+    "shareArticle": "Partager l'Article",
+    "comments": "commentaire",
     "minute": "minute",
     "minutes": "minutes",
     "author": "Fondation de Conseil Juridique Sheikh Abdul Aziz Bin Abdullah Al Mualla",

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Calendar, User, ArrowLeft, Filter, Loader2, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 
 // API Response Interface
 interface ApiArticle {
@@ -245,7 +246,7 @@ const ArticlesPage: React.FC = () => {
                   filteredArticles.map(article => (
                 <article
                   key={article.id}
-                  className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer"
+                  className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group"
                 >
                   <div className="relative overflow-hidden h-92">
                     <img
@@ -287,10 +288,13 @@ const ArticlesPage: React.FC = () => {
                         <User size={16} className="text-slate-400" />
                         <span className="text-xl text-slate-600">{article.author}</span>
                       </div>
-                      <button className="text-teal-600 cursor-pointer text-2xl font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                      <Link
+                        href={`/articles/${article.id}`}
+                        className="text-teal-600 cursor-pointer text-2xl font-semibold flex items-center gap-2 hover:gap-3 transition-all"
+                      >
                         {t('readMore')}
                         <ArrowLeft size={16} />
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </article>

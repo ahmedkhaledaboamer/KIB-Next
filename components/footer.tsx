@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/routing";
 import { cn } from "@/utils/cn";
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import { ChartGantt, ChartPie, Facebook, Instagram, Linkedin, Mail, MapPin, Pencil, Phone, Twitter } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
 import Logo from "./logo";
 
@@ -88,7 +88,7 @@ export default async function Footer() {
       className="bg-secondary text-white"
       style={{
         paddingTop: "clamp(3rem, 4vw, 6rem)",
-        paddingBottom: "clamp(3rem, 4vw, 6rem)",
+        paddingBottom: "clamp(3rem, 4vw, 3rem)",
       }}
       dir={isRTL ? "rtl" : "ltr"}
     >
@@ -106,9 +106,9 @@ export default async function Footer() {
             <Logo className=" transition-transform duration-300 hover:scale-105 w-fit" size={300} />
             {t("description") && (
               <p
-                className="text-white/80 leading-relaxed text-center   max-w-full"
+                className="text-white leading-relaxed text-center   max-w-full"
                 style={{
-                  fontSize: "clamp(0.875rem, 1vw, 4rem)",
+                  fontSize: "clamp(0.875rem, 1.5vw, 6rem)",
                 }}
               >
                 {t("description")}
@@ -126,18 +126,19 @@ export default async function Footer() {
             >
               {t("ourGroup.title")}
             </h3>
+            <p className="text-white leading-relaxed text-center   max-w-full" style={{ fontSize: "clamp(0.875rem, 1vw, 2.5rem)" }}>{t("ourGroup.description")}</p>
             <div
               className="flex flex-col overflow-y-auto custom-scrollbar"
               style={{
                 gap: "clamp(0.5rem, 0.75vw, 1rem)",
-                maxHeight: "clamp(20rem, 25vw, 30rem)",
+                maxHeight: "clamp(20rem, 25vw, 36rem)",
               }}
             >
               {groupEntities.map((entity, index) => (
                 <a
                   key={index}
                   href={entity.href}
-                  className="bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-lg text-white/90 hover:text-primary transition-all duration-200 font-medium"
+                  className="bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-lg text-white  hover:text-primary transition-all duration-200 font-medium"
                   style={{
                     padding: "clamp(0.75rem, 1vw, 1.25rem) clamp(1rem, 1.5vw, 2rem)",
                     fontSize: "clamp(0.875rem, 1vw, 2rem)",
@@ -151,7 +152,7 @@ export default async function Footer() {
           </div>
 
           {/* Column 3: Quick Links */}
-          <div className="flex flex-col text-center"  style={{ gap: "clamp(1rem, 1.5vw, 2rem)" }}>
+          <div className="flex flex-col text-center"  style={{ gap: "clamp(1rem, 1.5vw, 1rem)" }}>
             <h3
               className="text-primary font-bold"
               style={{
@@ -160,7 +161,7 @@ export default async function Footer() {
             >
               {t("quickLinks.title")}
             </h3>
-            <ul className="flex flex-col" style={{ gap: "clamp(0.75rem, 1vw, 1.25rem)" }}>
+            <ul className="flex flex-col" style={{ gap: "clamp(0.75rem, 1vw, 0.75rem)" }}>
               {quickLinks.map((link) => (
                 <li key={link.href} role="none">
                   <Link
@@ -178,13 +179,15 @@ export default async function Footer() {
                 </li>
               ))}
             </ul>
+            <h2 className="text-primary font-bold" style={{ fontSize: "clamp(1.25rem, 1.75vw, 4rem)" }}>{t("quickLinks.commitment.title")}</h2>
+            <p className="text-white leading-relaxed text-center   max-w-full" style={{ fontSize: "clamp(0.875rem, 1vw, 2.5rem)" }}>{t("quickLinks.commitment.description")}</p>
           </div>
 
           {/* Column 4: Contact Information */}
           <div className="flex flex-col" style={{ gap: "clamp(1rem, 1.5vw, 2rem)" }}>
             <p  style={{
                 fontSize: "clamp(1.25rem, 1.75vw, 2rem)",
-              }}>قناة الاتصال التنفيذية لكبار العملاء والمستثمرين نستقبل تواصلك عبر مسار مخصص للعملاء المميزين، رجال الأعمال، والشركاء الاستراتيجيين.</p>
+              }}>{t("contact.executiveChannel")}</p>
             <h3
               className="text-primary font-bold"
               style={{
@@ -268,7 +271,72 @@ export default async function Footer() {
                   {contact.location}
                 </span>
               </div>
-
+              <div
+                className="flex items-start text-white/90"
+                style={{
+                  gap: "clamp(0.75rem, 1vw, 1.25rem)",
+                }}
+              >
+                <Pencil 
+                  className="text-primary shrink-0"
+                  style={{
+                    width: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                    height: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                    marginTop: "clamp(0.25rem, 0.5vw, 0.5rem)",
+                  }}
+                />
+                <span
+                  style={{
+                    fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                  }}
+                >
+                 {t("contact.services.evaluation")}
+                </span>
+              </div>
+              <div
+                className="flex items-start text-white/90"
+                style={{
+                  gap: "clamp(0.75rem, 1vw, 1.25rem)",
+                }}
+              >
+                <ChartPie 
+                  className="text-primary shrink-0"
+                  style={{
+                    width: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                    height: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                    marginTop: "clamp(0.25rem, 0.5vw, 0.5rem)",
+                  }}
+                />
+                <span
+                  style={{
+                    fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                  }}
+                >
+                 {t("contact.services.business")}
+                </span>
+              </div>
+              <div
+                className="flex items-start text-white/90"
+                style={{
+                  gap: "clamp(0.75rem, 1vw, 1.25rem)",
+                }}
+              >
+                <ChartGantt 
+                  className="text-primary shrink-0"
+                  style={{
+                    width: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                    height: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                    marginTop: "clamp(0.25rem, 0.5vw, 0.5rem)",
+                  }}
+                />
+                <span
+                  style={{
+                    fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                  }}
+                >
+                  {t("contact.services.consultant")}
+                </span>
+              </div>
               {/* Social Media Icons */}
               <div
                 className="flex items-center"

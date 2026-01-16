@@ -51,10 +51,20 @@
             "title": "Contact Us",
             "phone": "+971 521068882",
             "email": "info@shazmlc.com",
-            "location": "United Arab Emirates"
+            "location": "United Arab Emirates",
+            "executiveChannel": "Executive communication channel for VIP clients and investors. We receive your communication through a dedicated path for premium clients, businessmen, and strategic partners.",
+            "services": {
+                "evaluation": "Special Evaluation Session",
+                "business": "Dedicated Session for Businessmen",
+                "consultant": "Private Meeting with Consultant"
+            }
         },
         "quickLinks": {
             "title": "Quick Links",
+            "commitment": {
+                "title": "Our Commitment",
+                "description": "All requests are processed with complete confidentiality, in accordance with the highest standards of governance and compliance, ensuring rapid response and quality follow-up."
+            },
             "links": [
                 {
                     "label": "Home",
@@ -84,6 +94,7 @@
         },
         "ourGroup": {
             "title": "Our Group",
+            "description": "SHAZMLC – Leadership Center and Business Management and Strategic Decisions.",
             "entities": [
                 {
                     "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla for Legal Consultations",
@@ -508,6 +519,13 @@
         "noArticles": "No articles available",
         "fetchError": "Failed to fetch articles",
         "errorMessage": "An error occurred while fetching articles",
+        "loading": "Loading...",
+        "errorTitle": "Error",
+        "articleNotFound": "Article not found",
+        "backToArticles": "Back to Articles",
+        "noContent": "No content available",
+        "shareArticle": "Share Article",
+        "comments": "comment",
         "minute": "minute",
         "minutes": "minutes",
         "author": "Sheikh Abdul Aziz Bin Abdullah Al Mualla Legal Consultancy Foundation",

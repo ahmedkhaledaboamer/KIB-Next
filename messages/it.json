@@ -51,10 +51,20 @@
             "title": "Contattaci",
             "phone": "+971 521068882",
             "email": "info@shazmlc.com",
-            "location": "Emirati Arabi Uniti"
+            "location": "Emirati Arabi Uniti",
+            "executiveChannel": "Canale di comunicazione esecutivo per clienti VIP e investitori. Riceviamo la tua comunicazione attraverso un percorso dedicato per clienti premium, uomini d'affari e partner strategici.",
+            "services": {
+                "evaluation": "Sessione di Valutazione Speciale",
+                "business": "Sessione Dedicata per Uomini d'Affari",
+                "consultant": "Incontro Privato con il Consulente"
+            }
         },
         "quickLinks": {
             "title": "Link Rapidi",
+            "commitment": {
+                "title": "Il Nostro Impegno",
+                "description": "Tutte le richieste vengono elaborate con la massima riservatezza, in conformità con i più alti standard di governance e conformità, garantendo una risposta rapida e un follow-up di qualità."
+            },
             "links": [
                 {
                     "label": "Home",
@@ -84,6 +94,7 @@
         },
         "ourGroup": {
             "title": "Il Nostro Gruppo",
+            "description": "SHAZMLC – Centro di Leadership e Gestione Aziendale e Decisioni Strategiche.",
             "entities": [
                 {
                     "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla per Consulenze Legali",
@@ -508,6 +519,13 @@
         "noArticles": "Nessun articolo disponibile",
         "fetchError": "Errore nel recupero degli articoli",
         "errorMessage": "Si è verificato un errore durante il recupero degli articoli",
+        "loading": "Caricamento...",
+        "errorTitle": "Errore",
+        "articleNotFound": "Articolo non trovato",
+        "backToArticles": "Torna agli Articoli",
+        "noContent": "Nessun contenuto disponibile",
+        "shareArticle": "Condividi Articolo",
+        "comments": "commento",
         "minute": "minuto",
         "minutes": "minuti",
         "author": "Fondazione di Consulenza Legale Sheikh Abdul Aziz Bin Abdullah Al Mualla",

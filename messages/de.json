@@ -51,10 +51,20 @@
             "title": "Kontaktieren Sie uns",
             "phone": "+971 521068882",
             "email": "info@shazmlc.com",
-            "location": "Vereinigte Arabische Emirate"
+            "location": "Vereinigte Arabische Emirate",
+            "executiveChannel": "Exekutiver Kommunikationskanal für VIP-Kunden und Investoren. Wir empfangen Ihre Kommunikation über einen speziellen Weg für Premium-Kunden, Geschäftsleute und strategische Partner.",
+            "services": {
+                "evaluation": "Spezielle Bewertungssitzung",
+                "business": "Dedizierte Sitzung für Geschäftsleute",
+                "consultant": "Privates Treffen mit Berater"
+            }
         },
         "quickLinks": {
             "title": "Schnelllinks",
+            "commitment": {
+                "title": "Unser Engagement",
+                "description": "Alle Anfragen werden mit vollständiger Vertraulichkeit bearbeitet, in Übereinstimmung mit den höchsten Standards von Governance und Compliance, mit garantierter schneller Reaktion und qualitativ hochwertiger Nachverfolgung."
+            },
             "links": [
                 {
                     "label": "Startseite",
@@ -84,6 +94,7 @@
         },
         "ourGroup": {
             "title": "Unsere Gruppe",
+            "description": "SHAZMLC – Führungszentrum und Geschäftsführung und Strategische Entscheidungen.",
             "entities": [
                 {
                     "name": "Sheikh Abdul Aziz Bin Abdullah Al Mualla für Rechtsberatungen",
@@ -507,6 +518,13 @@
         "noArticles": "Keine Artikel verfügbar",
         "fetchError": "Fehler beim Abrufen der Artikel",
         "errorMessage": "Beim Abrufen der Artikel ist ein Fehler aufgetreten",
+        "loading": "Laden...",
+        "errorTitle": "Fehler",
+        "articleNotFound": "Artikel nicht gefunden",
+        "backToArticles": "Zurück zu den Artikeln",
+        "noContent": "Kein Inhalt verfügbar",
+        "shareArticle": "Artikel teilen",
+        "comments": "Kommentar",
         "minute": "Minute",
         "minutes": "Minuten",
         "author": "Sheikh Abdul Aziz Bin Abdullah Al Mualla Rechtsberatungsstiftung",
