@@ -74,7 +74,7 @@
                 },
                 {
                     "label": "Datenschutzrichtlinie",
-                    "href": "/privacy"
+                    "href": "/privacy-policy"
                 },
                 {
                     "label": "Kontaktieren Sie uns",
@@ -125,6 +125,7 @@
         },
         "description": "Rechtsexzellenz mit Goldstandards in den Vereinigten Arabischen Emiraten mit unerschütterlichem Engagement für den Erfolg unserer Kunden.",
         "copyright": "© 2024 Sheikh Abdul Aziz Bin Abdullah Al Mualla Rechtsberatung. Alle Rechte vorbehalten.",
+        "privacyPolicy": "Datenschutzrichtlinie",
         "socialMedia": {
             "linkedin": "LinkedIn",
             "twitter": "Twitter",
@@ -522,6 +523,57 @@
             "twitter": "Twitter",
             "instagram": "Instagram",
             "linkedin": "LinkedIn"
+        }
+    },
+    "privacyPolicy": {
+        "title": "Datenschutzrichtlinie",
+        "subtitle": "Wir verpflichten uns, Ihre Privatsphäre zu schützen und die Sicherheit Ihrer persönlichen Daten zu gewährleisten. Diese Richtlinie erklärt, wie wir Ihre Informationen sammeln, verwenden und schützen, wenn Sie unsere Website nutzen.",
+        "lastUpdated": "Zuletzt aktualisiert: 2024",
+        "sections": {
+            "about": {
+                "title": "Über Uns",
+                "content": "Die Adresse unserer Website ist: https://shazmlc.com"
+            },
+            "comments": {
+                "title": "Kommentare",
+                "content": "Wenn Besucher Kommentare auf der Website hinterlassen, sammeln wir die im Kommentarformular angezeigten Daten, die IP-Adresse des Besuchers und die Browser-User-Agent-Zeichenfolge, um Spam-Erkennung zu unterstützen.\n\nEine aus Ihrer E-Mail-Adresse erstellte anonymisierte Zeichenfolge (auch Hash genannt) kann an den Gravatar-Dienst übergeben werden, um zu sehen, ob Sie ihn verwenden. Die Datenschutzrichtlinie des Gravatar-Dienstes ist hier verfügbar: https://automattic.com/privacy/. Nach der Genehmigung Ihres Kommentars ist Ihr Profilbild öffentlich im Kontext Ihres Kommentars sichtbar."
+            },
+            "media": {
+                "title": "Medien",
+                "content": "Wenn Sie Bilder auf die Website hochladen, sollten Sie vermeiden, Bilder mit eingebetteten Standortdaten (EXIF GPS) hochzuladen. Besucher der Website können alle Standortdaten aus Bildern auf der Website herunterladen und extrahieren."
+            },
+            "cookies": {
+                "title": "Cookies",
+                "content": "Wenn Sie einen Kommentar auf unserer Website hinterlassen, können Sie wählen, Ihren Namen, Ihre E-Mail-Adresse und Ihre Website in Cookies zu speichern. Diese dienen Ihrer Bequemlichkeit, damit Sie Ihre Daten nicht erneut eingeben müssen, wenn Sie einen weiteren Kommentar hinterlassen. Diese Cookies bleiben ein Jahr lang bestehen.\n\nWenn Sie unsere Anmeldeseite besuchen, setzen wir ein temporäres Cookie, um zu bestimmen, ob Ihr Browser Cookies akzeptiert. Dieses Cookie enthält keine persönlichen Daten und wird verworfen, wenn Sie Ihren Browser schließen.\n\nWenn Sie sich anmelden, richten wir auch mehrere Cookies ein, um Ihre Anmeldeinformationen und Ihre Bildschirmanzeigeoptionen zu speichern. Anmelde-Cookies bleiben zwei Tage lang bestehen, und Bildschirmoptionen-Cookies bleiben ein Jahr lang bestehen. Wenn Sie \"Angemeldet bleiben\" auswählen, bleibt Ihre Anmeldung zwei Wochen lang bestehen. Wenn Sie sich von Ihrem Konto abmelden, werden die Anmelde-Cookies entfernt.\n\nWenn Sie einen Artikel bearbeiten oder veröffentlichen, wird ein zusätzliches Cookie in Ihrem Browser gespeichert. Dieses Cookie enthält keine persönlichen Daten und zeigt einfach die Post-ID des Artikels an, den Sie gerade bearbeitet haben. Es läuft nach 1 Tag ab."
+            },
+            "embedded": {
+                "title": "Eingebetteter Inhalt von Anderen Websites",
+                "content": "Artikel auf dieser Website können eingebettete Inhalte enthalten (z. B. Videos, Bilder, Artikel usw.). Eingebetteter Inhalt von anderen Websites verhält sich genau so, als ob der Besucher die andere Website besucht hätte.\n\nDiese Websites können Daten über Sie sammeln, Cookies verwenden, zusätzliches Tracking von Drittanbietern einbetten und Ihre Interaktion mit diesem eingebetteten Inhalt überwachen, einschließlich der Verfolgung Ihrer Interaktion mit dem eingebetteten Inhalt, wenn Sie ein Konto haben und bei dieser Website angemeldet sind."
+            },
+            "dataSharing": {
+                "title": "Mit Wem Wir Ihre Daten Teilen",
+                "content": "Wenn Sie eine Passwort-Zurücksetzung anfordern, wird Ihre IP-Adresse in der Zurücksetzungs-E-Mail enthalten sein."
+            },
+            "dataRetention": {
+                "title": "Wie Lange Wir Ihre Daten Aufbewahren",
+                "content": "Wenn Sie einen Kommentar hinterlassen, werden der Kommentar und seine Metadaten auf unbestimmte Zeit aufbewahrt. Dies ist so, dass wir Folgekommentare automatisch erkennen und genehmigen können, anstatt sie in einer Moderationswarteschlange zu halten.\n\nFür Benutzer, die sich auf unserer Website registrieren (falls vorhanden), speichern wir auch die persönlichen Informationen, die sie in ihrem Benutzerprofil angeben. Alle Benutzer können ihre persönlichen Informationen jederzeit anzeigen, bearbeiten oder löschen (außer dass sie ihren Benutzernamen nicht ändern können). Website-Administratoren können diese Informationen auch anzeigen und bearbeiten."
+            },
+            "userRights": {
+                "title": "Welche Rechte Sie Über Ihre Daten Haben",
+                "content": "Wenn Sie ein Konto auf dieser Website haben oder Kommentare hinterlassen haben, können Sie anfordern, eine exportierte Datei der persönlichen Daten zu erhalten, die wir über Sie speichern, einschließlich aller Daten, die Sie uns zur Verfügung gestellt haben. Sie können auch anfordern, dass wir alle persönlichen Daten löschen, die wir über Sie speichern. Dies umfasst keine Daten, die wir aus administrativen, rechtlichen oder Sicherheitsgründen aufbewahren müssen."
+            },
+            "dataLocation": {
+                "title": "Wohin Ihre Daten Gesendet Werden",
+                "content": "Besucherkommentare können durch einen automatisierten Spam-Erkennungsdienst überprüft werden."
+            },
+            "dataDeletion": {
+                "title": "Anfrage zur Löschung Persönlicher Daten",
+                "content": "Sie haben das Recht, die Löschung Ihrer gespeicherten persönlichen Daten anzufordern.\n\nUm eine Löschung anzufordern, müssen Sie eine offizielle E-Mail an senden: ai@shazmlc.com\n\nDie E-Mail muss alle registrierten Benutzerdaten enthalten und muss eindeutig das Hashtag delete# im Betreff oder im Text der Nachricht enthalten.\n\nWenn innerhalb von drei Werktagen keine Antwort erhalten wird, kann die Anfrage über WhatsApp mit demselben Hashtag delete# eingereicht werden.\n\nAlle Löschanfragen werden gemäß den geltenden Gesetzen bearbeitet, mit einer Bestätigung, die nach Abschluss des Prozesses gesendet wird."
+            }
+        },
+        "disclaimer": {
+            "title": "Wichtiger Hinweis",
+            "content": "Unsere Dienstleistungen richten sich an strategische Dateien und Transaktionen mit hohem Wert. Wir entschuldigen uns dafür, dass wir keine allgemeinen oder nicht spezialisierten Anfragen akzeptieren."
         }
     },
     "aboutUs": {

@@ -92,7 +92,7 @@ export default async function Footer() {
       }}
       dir={isRTL ? "rtl" : "ltr"}
     >
-      <div className="container">
+      <div className="px-[5%]">
         {/* Main Footer Content */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
@@ -102,13 +102,13 @@ export default async function Footer() {
           }}
         >
           {/* Column 1: Logo and Mission Statement */}
-          <div className="flex flex-col" style={{ gap: "clamp(1rem, 1.5vw, 2rem)" }}>
-            <Logo className=" transition-transform duration-300 hover:scale-105 w-fit" size={120} />
+          <div className="flex items-center   flex-col" style={{ gap: "clamp(1rem, 1.5vw, 2rem)" }}>
+            <Logo className=" transition-transform duration-300 hover:scale-105 w-fit" size={300} />
             {t("description") && (
               <p
-                className="text-white/80 leading-relaxed text-center md:text-start max-w-full"
+                className="text-white/80 leading-relaxed text-center   max-w-full"
                 style={{
-                  fontSize: "clamp(0.875rem, 1vw, 1.125rem)",
+                  fontSize: "clamp(0.875rem, 1vw, 4rem)",
                 }}
               >
                 {t("description")}
@@ -121,7 +121,7 @@ export default async function Footer() {
             <h3
               className="text-primary font-bold"
               style={{
-                fontSize: "clamp(1.25rem, 1.75vw, 2rem)",
+                fontSize: "clamp(1.25rem, 1.75vw, 4rem)",
               }}
             >
               {t("ourGroup.title")}
@@ -140,7 +140,7 @@ export default async function Footer() {
                   className="bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-lg text-white/90 hover:text-primary transition-all duration-200 font-medium"
                   style={{
                     padding: "clamp(0.75rem, 1vw, 1.25rem) clamp(1rem, 1.5vw, 2rem)",
-                    fontSize: "clamp(0.875rem, 1vw, 1.125rem)",
+                    fontSize: "clamp(0.875rem, 1vw, 2rem)",
                   }}
                   aria-label={entity.name}
                 >
@@ -151,11 +151,11 @@ export default async function Footer() {
           </div>
 
           {/* Column 3: Quick Links */}
-          <div className="flex flex-col" style={{ gap: "clamp(1rem, 1.5vw, 2rem)" }}>
+          <div className="flex flex-col text-center"  style={{ gap: "clamp(1rem, 1.5vw, 2rem)" }}>
             <h3
               className="text-primary font-bold"
               style={{
-                fontSize: "clamp(1.25rem, 1.75vw, 2rem)",
+                fontSize: "clamp(1.25rem, 1.75vw, 4rem)",
               }}
             >
               {t("quickLinks.title")}
@@ -167,7 +167,7 @@ export default async function Footer() {
                     href={link.href}
                     className="text-white/80 hover:text-primary transition-colors font-medium block"
                     style={{
-                      fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                      fontSize: "clamp(1rem, 1.25vw, 2rem)",
                       paddingTop: "clamp(0.25rem, 0.5vw, 0.5rem)",
                       paddingBottom: "clamp(0.25rem, 0.5vw, 0.5rem)",
                     }}
@@ -182,10 +182,13 @@ export default async function Footer() {
 
           {/* Column 4: Contact Information */}
           <div className="flex flex-col" style={{ gap: "clamp(1rem, 1.5vw, 2rem)" }}>
+            <p  style={{
+                fontSize: "clamp(1.25rem, 1.75vw, 2rem)",
+              }}>قناة الاتصال التنفيذية لكبار العملاء والمستثمرين نستقبل تواصلك عبر مسار مخصص للعملاء المميزين، رجال الأعمال، والشركاء الاستراتيجيين.</p>
             <h3
               className="text-primary font-bold"
               style={{
-                fontSize: "clamp(1.25rem, 1.75vw, 2rem)",
+                fontSize: "clamp(1.25rem, 1.75vw, 4rem)",
               }}
             >
               {contact.title}
@@ -209,7 +212,7 @@ export default async function Footer() {
                 />
                 <span
                   style={{
-                    fontSize: "clamp(1rem, 1.25vw, 1.5rem)",
+                    fontSize: "clamp(1rem, 1.25vw, 2rem)",
                   }}
                 >
                   {contact.phone}
@@ -287,8 +290,8 @@ export default async function Footer() {
                     >
                       <Icon
                         style={{
-                          width: "clamp(1.25rem, 1.5vw, 1.75rem)",
-                          height: "clamp(1.25rem, 1.5vw, 1.75rem)",
+                          width: "clamp(1.25rem, 1.5vw, 2rem)",
+                          height: "clamp(1.25rem, 1.5vw, 2rem)",
                         }}
                       />
                     </Link>
@@ -303,14 +306,23 @@ export default async function Footer() {
         <div
           className={cn(
             "border-t border-white/10 text-white/60",
-            isRTL ? "text-right" : "text-left md:text-center"
+            isRTL ? "text-center" : "text-center md:text-center"
           )}
           style={{
             paddingTop: "clamp(1.5rem, 2vw, 2.5rem)",
-            fontSize: "clamp(0.875rem, 1vw, 1.125rem)",
+            fontSize: "clamp(0.875rem, 1vw, 3rem)",
           }}
         >
-          <p>{t("copyright")}</p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
+            <p>{t("copyright")}</p>
+            <span className="hidden md:inline text-white/40">|</span>
+            <Link
+              href="/privacy-policy"
+              className="text-white/80 hover:text-primary transition-colors underline underline-offset-4 hover:underline-offset-2"
+            >
+              {t("privacyPolicy")}
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

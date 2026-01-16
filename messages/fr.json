@@ -74,7 +74,7 @@
         },
         {
           "label": "Politique de confidentialité",
-          "href": "/privacy"
+          "href": "/privacy-policy"
         },
         {
           "label": "Contactez-nous",
@@ -125,6 +125,7 @@
     },
     "description": "Offrir l'excellence juridique avec des normes d'or dans tous les Émirats arabes unis avec un engagement inébranlable envers le succès de nos clients.",
     "copyright": "© 2024 Sheikh Abdul Aziz Bin Abdullah Al Mualla Legal Consultancy. Tous droits réservés.",
+    "privacyPolicy": "Politique de Confidentialité",
     "socialMedia": {
       "linkedin": "LinkedIn",
       "twitter": "Twitter",
@@ -522,6 +523,57 @@
       "twitter": "Twitter",
       "instagram": "Instagram",
       "linkedin": "LinkedIn"
+    }
+  },
+  "privacyPolicy": {
+    "title": "Politique de Confidentialité",
+    "subtitle": "Nous nous engageons à protéger votre vie privée et à assurer la sécurité de vos données personnelles. Cette politique explique comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez notre site web.",
+    "lastUpdated": "Dernière mise à jour : 2024",
+    "sections": {
+      "about": {
+        "title": "À Propos de Nous",
+        "content": "L'adresse de notre site web est : https://shazmlc.com"
+      },
+      "comments": {
+        "title": "Commentaires",
+        "content": "Lorsque les visiteurs laissent des commentaires sur le site, nous collectons les données affichées dans le formulaire de commentaires, l'adresse IP du visiteur et la chaîne de l'agent utilisateur du navigateur pour aider à la détection du spam.\n\nUne chaîne anonymisée créée à partir de votre adresse e-mail (également appelée hash) peut être fournie au service Gravatar pour voir si vous l'utilisez. La politique de confidentialité du service Gravatar est disponible ici : https://automattic.com/privacy/. Après l'approbation de votre commentaire, votre photo de profil est visible par le public dans le contexte de votre commentaire."
+      },
+      "media": {
+        "title": "Médias",
+        "content": "Si vous téléchargez des images sur le site web, vous devez éviter de télécharger des images avec des données de localisation intégrées (EXIF GPS). Les visiteurs du site web peuvent télécharger et extraire toutes les données de localisation des images sur le site web."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "Si vous laissez un commentaire sur notre site, vous pouvez choisir d'enregistrer votre nom, votre adresse e-mail et votre site web dans des cookies. Ceux-ci sont pour votre commodité afin que vous n'ayez pas à remplir à nouveau vos détails lorsque vous laissez un autre commentaire. Ces cookies dureront un an.\n\nSi vous visitez notre page de connexion, nous définirons un cookie temporaire pour déterminer si votre navigateur accepte les cookies. Ce cookie ne contient aucune donnée personnelle et est supprimé lorsque vous fermez votre navigateur.\n\nLorsque vous vous connectez, nous définirons également plusieurs cookies pour enregistrer vos informations de connexion et vos choix d'affichage d'écran. Les cookies de connexion durent deux jours et les cookies d'options d'écran durent un an. Si vous sélectionnez \"Se souvenir de moi\", votre connexion persistera pendant deux semaines. Si vous vous déconnectez de votre compte, les cookies de connexion seront supprimés.\n\nSi vous modifiez ou publiez un article, un cookie supplémentaire sera enregistré dans votre navigateur. Ce cookie ne contient aucune donnée personnelle et indique simplement l'ID de l'article que vous venez de modifier. Il expire après 1 jour."
+      },
+      "embedded": {
+        "title": "Contenu Intégré d'Autres Sites Web",
+        "content": "Les articles sur ce site peuvent inclure du contenu intégré (par exemple, vidéos, images, articles, etc.). Le contenu intégré d'autres sites web se comporte exactement de la même manière que si le visiteur avait visité l'autre site web.\n\nCes sites web peuvent collecter des données sur vous, utiliser des cookies, intégrer un suivi tiers supplémentaire et surveiller votre interaction avec ce contenu intégré, y compris le suivi de votre interaction avec le contenu intégré si vous avez un compte et êtes connecté à ce site web."
+      },
+      "dataSharing": {
+        "title": "Avec Qui Nous Partageons Vos Données",
+        "content": "Si vous demandez une réinitialisation de mot de passe, votre adresse IP sera incluse dans l'e-mail de réinitialisation."
+      },
+      "dataRetention": {
+        "title": "Combien de Temps Nous Conservons Vos Données",
+        "content": "Si vous laissez un commentaire, le commentaire et ses métadonnées sont conservés indéfiniment. C'est pour que nous puissions reconnaître et approuver automatiquement tout commentaire de suivi au lieu de les conserver dans une file d'attente de modération.\n\nPour les utilisateurs qui s'inscrivent sur notre site web (le cas échéant), nous stockons également les informations personnelles qu'ils fournissent dans leur profil utilisateur. Tous les utilisateurs peuvent voir, modifier ou supprimer leurs informations personnelles à tout moment (sauf qu'ils ne peuvent pas changer leur nom d'utilisateur). Les administrateurs du site web peuvent également voir et modifier ces informations."
+      },
+      "userRights": {
+        "title": "Quels Droits Vous Avez sur Vos Données",
+        "content": "Si vous avez un compte sur ce site ou avez laissé des commentaires, vous pouvez demander à recevoir un fichier exporté des données personnelles que nous détenons sur vous, y compris toutes les données que vous nous avez fournies. Vous pouvez également demander que nous effacions toutes les données personnelles que nous détenons sur vous. Cela ne comprend pas les données que nous sommes obligés de conserver à des fins administratives, légales ou de sécurité."
+      },
+      "dataLocation": {
+        "title": "Où Vos Données Sont Envoyées",
+        "content": "Les commentaires des visiteurs peuvent être vérifiés par un service automatisé de détection du spam."
+      },
+      "dataDeletion": {
+        "title": "Demande de Suppression des Données Personnelles",
+        "content": "Vous avez le droit de demander la suppression de vos données personnelles stockées.\n\nPour demander la suppression, vous devez envoyer un e-mail officiel à : ai@shazmlc.com\n\nL'e-mail doit inclure toutes les données utilisateur enregistrées et doit clairement contenir le hashtag delete# dans l'objet ou le corps du message.\n\nSi aucune réponse n'est reçue dans les trois jours ouvrables, la demande peut être soumise via WhatsApp en utilisant le même hashtag delete#.\n\nToutes les demandes de suppression seront traitées conformément aux lois applicables, avec une confirmation envoyée à la fin du processus."
+      }
+    },
+    "disclaimer": {
+      "title": "Avis Important",
+      "content": "Nos services sont orientés vers les dossiers stratégiques et les transactions à haute valeur. Nous nous excusons de ne pas accepter les demandes générales ou non spécialisées."
     }
   },
   "aboutUs": {
