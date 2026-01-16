@@ -25,6 +25,10 @@
             {
                 "label": "Artículos",
                 "href": "/articles"
+            },
+            {
+                "label": "Sobre Nosotros",
+                "href": "/about-us"
             }
         ]
     },
@@ -519,6 +523,75 @@
             "twitter": "Twitter",
             "instagram": "Instagram",
             "linkedin": "LinkedIn"
+        }
+    },
+    "aboutUs": {
+        "hero": {
+            "title": "Sobre Nosotros",
+            "subtitle": "Su socio legal de confianza en Dubái para el éxito y la protección legal"
+        },
+        "achievements": {
+            "satisfiedClients": "Clientes Satisfechos",
+            "yearsExperience": "Años de Experiencia",
+            "successRate": "Tasa de Éxito",
+            "expertLawyers": "Abogados Expertos"
+        },
+        "story": {
+            "title": "Nuestra Historia",
+            "paragraph1": "La Fundación de Consultoría Legal Sheikh Abdul Aziz Bin Abdullah se estableció en Dubái en 2008, con el objetivo de proporcionar servicios legales distinguidos que combinen la experiencia local y los estándares internacionales.",
+            "paragraph2": "Durante más de 15 años, hemos construido exitosamente una sólida reputación como una de las principales firmas de consultoría legal en los Emiratos Árabes Unidos, proporcionando soluciones legales innovadoras que satisfacen las necesidades de nuestros clientes corporativos e individuales.",
+            "paragraph3": "Estamos orgullosos de nuestro equipo especializado de abogados y consultores legales que tienen una amplia experiencia en diversos campos del derecho, y nos comprometemos a proporcionar servicios caracterizados por la profesionalidad, la integridad y la excelencia.",
+            "imageAlt": "Oficina de Consultoría Legal"
+        },
+        "visionMissionValues": {
+            "vision": "Nuestra Visión",
+            "mission": "Nuestra Misión",
+            "values": "Nuestros Valores",
+            "visionText": "Ser la primera y más confiable opción para servicios legales en los Emiratos Árabes Unidos y la región, proporcionando soluciones legales innovadoras que contribuyan al éxito y la sostenibilidad de los negocios de nuestros clientes.",
+            "missionText": "Nos comprometemos a proporcionar consultas legales distinguidas que combinen la profundidad de la experiencia local y los estándares legales internacionalmente reconocidos, garantizando a nuestros clientes los más altos niveles de calidad y profesionalismo en todos los servicios proporcionados.",
+            "valuesList": [
+                "Integridad y transparencia en todas nuestras transacciones",
+                "Excelencia y profesionalismo en la prestación de servicios",
+                "Compromiso con los más altos estándares de confidencialidad",
+                "Innovación en soluciones legales",
+                "Construir relaciones a largo plazo con nuestros clientes",
+                "Compromiso con los valores profesionales y éticos",
+                "Entender las necesidades del cliente y proporcionar soluciones personalizadas",
+                "Responsabilidad y rendición de cuentas en todo nuestro trabajo"
+            ]
+        },
+        "services": {
+            "title": "Nuestros Servicios Legales",
+            "subtitle": "Soluciones legales integradas para todas sus necesidades",
+            "legalConsultations": {
+                "title": "Consultas Legales",
+                "description": "Proporcionamos consultas legales integrales para todos los tipos de empresas e individuos"
+            },
+            "contractDrafting": {
+                "title": "Redacción de Contratos",
+                "description": "Redacción y revisión de contratos comerciales e internacionales con alta precisión"
+            },
+            "litigationArbitration": {
+                "title": "Litigios y Arbitraje",
+                "description": "Representación legal profesional ante tribunales y órganos de arbitraje"
+            },
+            "intellectualProperty": {
+                "title": "Propiedad Intelectual",
+                "description": "Protección de los derechos de propiedad intelectual y marcas"
+            }
+        },
+        "team": {
+            "title": "Nuestro Equipo Legal",
+            "subtitle": "Expertos legales especializados para servirle"
+        },
+        "cta": {
+            "title": "¿Necesita consulta legal?",
+            "subtitle": "Contáctenos hoy y obtenga una consulta gratuita de nuestros expertos legales",
+            "callUs": "Llámenos Ahora",
+            "emailUs": "Envíenos un Correo",
+            "location": "Dubái, Emiratos Árabes Unidos",
+            "phone": "+971 4 XXX XXXX",
+            "email": "info@legal-consultancy.ae"
         }
     }
 }

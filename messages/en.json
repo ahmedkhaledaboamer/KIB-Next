@@ -25,6 +25,10 @@
             {
                 "label": "Articles",
                 "href": "/articles"
+            },
+            {
+                "label": "About Us",
+                "href": "/about-us"
             }
         ]
     },
@@ -519,6 +523,75 @@
             "twitter": "Twitter",
             "instagram": "Instagram",
             "linkedin": "LinkedIn"
+        }
+    },
+    "aboutUs": {
+        "hero": {
+            "title": "About Us",
+            "subtitle": "Your trusted legal partner in Dubai for success and legal protection"
+        },
+        "achievements": {
+            "satisfiedClients": "Satisfied Clients",
+            "yearsExperience": "Years of Experience",
+            "successRate": "Success Rate",
+            "expertLawyers": "Expert Lawyers"
+        },
+        "story": {
+            "title": "Our Story",
+            "paragraph1": "Sheikh Abdul Aziz Bin Abdullah Legal Consultancy Foundation was established in Dubai in 2008, with the aim of providing distinguished legal services that combine local expertise and international standards.",
+            "paragraph2": "Over more than 15 years, we have successfully built a strong reputation as one of the leading legal consultancy firms in the UAE, providing innovative legal solutions that meet the needs of our corporate and individual clients.",
+            "paragraph3": "We are proud of our specialized team of lawyers and legal consultants who have extensive experience in various fields of law, and we are committed to providing services characterized by professionalism, integrity, and excellence.",
+            "imageAlt": "Legal Consultancy Office"
+        },
+        "visionMissionValues": {
+            "vision": "Our Vision",
+            "mission": "Our Mission",
+            "values": "Our Values",
+            "visionText": "To be the first and most trusted choice for legal services in the UAE and the region, by providing innovative legal solutions that contribute to the success and sustainability of our clients' businesses.",
+            "missionText": "We are committed to providing distinguished legal consultations that combine the depth of local expertise and internationally recognized legal standards, ensuring our clients the highest levels of quality and professionalism in all services provided.",
+            "valuesList": [
+                "Integrity and transparency in all our dealings",
+                "Excellence and professionalism in service delivery",
+                "Commitment to the highest standards of confidentiality",
+                "Innovation in legal solutions",
+                "Building long-term relationships with our clients",
+                "Commitment to professional and ethical values",
+                "Understanding client needs and providing customized solutions",
+                "Responsibility and accountability in all our work"
+            ]
+        },
+        "services": {
+            "title": "Our Legal Services",
+            "subtitle": "Integrated legal solutions for all your needs",
+            "legalConsultations": {
+                "title": "Legal Consultations",
+                "description": "We provide comprehensive legal consultations for all types of companies and individuals"
+            },
+            "contractDrafting": {
+                "title": "Contract Drafting",
+                "description": "Drafting and reviewing commercial and international contracts with high precision"
+            },
+            "litigationArbitration": {
+                "title": "Litigation & Arbitration",
+                "description": "Professional legal representation before courts and arbitration bodies"
+            },
+            "intellectualProperty": {
+                "title": "Intellectual Property",
+                "description": "Protection of intellectual property rights and trademarks"
+            }
+        },
+        "team": {
+            "title": "Our Legal Team",
+            "subtitle": "Specialized legal experts to serve you"
+        },
+        "cta": {
+            "title": "Do you need legal consultation?",
+            "subtitle": "Contact us today and get a free consultation from our legal experts",
+            "callUs": "Call Us Now",
+            "emailUs": "Email Us",
+            "location": "Dubai, United Arab Emirates",
+            "phone": "+971 4 XXX XXXX",
+            "email": "info@legal-consultancy.ae"
         }
     }
 }

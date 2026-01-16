@@ -25,6 +25,10 @@
       {
         "label": "Articles",
         "href": "/articles"
+      },
+      {
+        "label": "À Propos de Nous",
+        "href": "/about-us"
       }
     ]
   },
@@ -518,6 +522,75 @@
       "twitter": "Twitter",
       "instagram": "Instagram",
       "linkedin": "LinkedIn"
+    }
+  },
+  "aboutUs": {
+    "hero": {
+      "title": "À Propos de Nous",
+      "subtitle": "Votre partenaire juridique de confiance à Dubaï pour le succès et la protection juridique"
+    },
+    "achievements": {
+      "satisfiedClients": "Clients Satisfaits",
+      "yearsExperience": "Années d'Expérience",
+      "successRate": "Taux de Réussite",
+      "expertLawyers": "Avocats Experts"
+    },
+    "story": {
+      "title": "Notre Histoire",
+      "paragraph1": "La Fondation de Conseil Juridique Sheikh Abdul Aziz Bin Abdullah a été établie à Dubaï en 2008, dans le but de fournir des services juridiques distingués qui combinent l'expertise locale et les normes internationales.",
+      "paragraph2": "Sur plus de 15 ans, nous avons réussi à construire une solide réputation comme l'une des principales firmes de conseil juridique aux Émirats Arabes Unis, fournissant des solutions juridiques innovantes qui répondent aux besoins de nos clients entreprises et particuliers.",
+      "paragraph3": "Nous sommes fiers de notre équipe spécialisée d'avocats et de conseillers juridiques qui ont une vaste expérience dans divers domaines du droit, et nous nous engageons à fournir des services caractérisés par le professionnalisme, l'intégrité et l'excellence.",
+      "imageAlt": "Bureau de Conseil Juridique"
+    },
+    "visionMissionValues": {
+      "vision": "Notre Vision",
+      "mission": "Notre Mission",
+      "values": "Nos Valeurs",
+      "visionText": "Être le premier choix et le plus fiable pour les services juridiques aux Émirats Arabes Unis et dans la région, en fournissant des solutions juridiques innovantes qui contribuent au succès et à la durabilité des entreprises de nos clients.",
+      "missionText": "Nous nous engageons à fournir des consultations juridiques distinguées qui combinent la profondeur de l'expertise locale et les normes juridiques internationales reconnues, garantissant à nos clients les plus hauts niveaux de qualité et de professionnalisme dans tous les services fournis.",
+      "valuesList": [
+        "Intégrité et transparence dans toutes nos transactions",
+        "Excellence et professionnalisme dans la prestation de services",
+        "Engagement envers les normes les plus élevées de confidentialité",
+        "Innovation dans les solutions juridiques",
+        "Construire des relations à long terme avec nos clients",
+        "Engagement envers les valeurs professionnelles et éthiques",
+        "Comprendre les besoins des clients et fournir des solutions personnalisées",
+        "Responsabilité et responsabilisation dans tout notre travail"
+      ]
+    },
+    "services": {
+      "title": "Nos Services Juridiques",
+      "subtitle": "Solutions juridiques intégrées pour tous vos besoins",
+      "legalConsultations": {
+        "title": "Consultations Juridiques",
+        "description": "Nous fournissons des consultations juridiques complètes pour tous types d'entreprises et d'individus"
+      },
+      "contractDrafting": {
+        "title": "Rédaction de Contrats",
+        "description": "Rédaction et révision de contrats commerciaux et internationaux avec une grande précision"
+      },
+      "litigationArbitration": {
+        "title": "Contentieux et Arbitrage",
+        "description": "Représentation juridique professionnelle devant les tribunaux et les organes d'arbitrage"
+      },
+      "intellectualProperty": {
+        "title": "Propriété Intellectuelle",
+        "description": "Protection des droits de propriété intellectuelle et des marques"
+      }
+    },
+    "team": {
+      "title": "Notre Équipe Juridique",
+      "subtitle": "Experts juridiques spécialisés à votre service"
+    },
+    "cta": {
+      "title": "Avez-vous besoin d'une consultation juridique ?",
+      "subtitle": "Contactez-nous aujourd'hui et obtenez une consultation gratuite de nos experts juridiques",
+      "callUs": "Appelez-nous Maintenant",
+      "emailUs": "Envoyez-nous un Email",
+      "location": "Dubaï, Émirats Arabes Unis",
+      "phone": "+971 4 XXX XXXX",
+      "email": "info@legal-consultancy.ae"
     }
   }
 }

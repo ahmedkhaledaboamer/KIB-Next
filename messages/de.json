@@ -25,6 +25,10 @@
             {
                 "label": "Artikel",
                 "href": "/articles"
+            },
+            {
+                "label": "Über Uns",
+                "href": "/about-us"
             }
         ]
     },
@@ -518,6 +522,75 @@
             "twitter": "Twitter",
             "instagram": "Instagram",
             "linkedin": "LinkedIn"
+        }
+    },
+    "aboutUs": {
+        "hero": {
+            "title": "Über Uns",
+            "subtitle": "Ihr vertrauenswürdiger Rechtspartner in Dubai für Erfolg und Rechtsschutz"
+        },
+        "achievements": {
+            "satisfiedClients": "Zufriedene Kunden",
+            "yearsExperience": "Jahre Erfahrung",
+            "successRate": "Erfolgsquote",
+            "expertLawyers": "Expertenanwälte"
+        },
+        "story": {
+            "title": "Unsere Geschichte",
+            "paragraph1": "Die Sheikh Abdul Aziz Bin Abdullah Rechtsberatungsstiftung wurde 2008 in Dubai gegründet, mit dem Ziel, herausragende Rechtsdienstleistungen anzubieten, die lokale Expertise und internationale Standards kombinieren.",
+            "paragraph2": "Über mehr als 15 Jahre hinweg haben wir erfolgreich einen starken Ruf als eine der führenden Rechtsberatungsfirmen in den VAE aufgebaut und bieten innovative Rechtslösungen, die den Bedürfnissen unserer Unternehmens- und Privatkunden entsprechen.",
+            "paragraph3": "Wir sind stolz auf unser spezialisiertes Team von Anwälten und Rechtsberatern, die umfangreiche Erfahrung in verschiedenen Rechtsbereichen haben, und verpflichten uns, Dienstleistungen zu erbringen, die durch Professionalität, Integrität und Exzellenz gekennzeichnet sind.",
+            "imageAlt": "Rechtsberatungsbüro"
+        },
+        "visionMissionValues": {
+            "vision": "Unsere Vision",
+            "mission": "Unsere Mission",
+            "values": "Unsere Werte",
+            "visionText": "Die erste und vertrauenswürdigste Wahl für Rechtsdienstleistungen in den VAE und der Region zu sein, durch die Bereitstellung innovativer Rechtslösungen, die zum Erfolg und zur Nachhaltigkeit der Geschäfte unserer Kunden beitragen.",
+            "missionText": "Wir verpflichten uns, herausragende Rechtsberatungen anzubieten, die die Tiefe der lokalen Expertise und international anerkannte Rechtsstandards kombinieren und unseren Kunden die höchsten Qualitäts- und Professionalitätsstandards in allen angebotenen Dienstleistungen gewährleisten.",
+            "valuesList": [
+                "Integrität und Transparenz in all unseren Geschäften",
+                "Exzellenz und Professionalität in der Dienstleistungserbringung",
+                "Verpflichtung zu den höchsten Vertraulichkeitsstandards",
+                "Innovation in Rechtslösungen",
+                "Aufbau langfristiger Beziehungen zu unseren Kunden",
+                "Verpflichtung zu beruflichen und ethischen Werten",
+                "Verständnis der Kundenbedürfnisse und Bereitstellung maßgeschneiderter Lösungen",
+                "Verantwortung und Rechenschaftspflicht in all unserer Arbeit"
+            ]
+        },
+        "services": {
+            "title": "Unsere Rechtsdienstleistungen",
+            "subtitle": "Integrierte Rechtslösungen für alle Ihre Bedürfnisse",
+            "legalConsultations": {
+                "title": "Rechtsberatungen",
+                "description": "Wir bieten umfassende Rechtsberatungen für alle Arten von Unternehmen und Einzelpersonen"
+            },
+            "contractDrafting": {
+                "title": "Vertragsgestaltung",
+                "description": "Entwurf und Überprüfung von Handels- und internationalen Verträgen mit hoher Präzision"
+            },
+            "litigationArbitration": {
+                "title": "Rechtsstreitigkeiten & Schiedsverfahren",
+                "description": "Professionelle Rechtsvertretung vor Gerichten und Schiedsstellen"
+            },
+            "intellectualProperty": {
+                "title": "Geistiges Eigentum",
+                "description": "Schutz von Rechten des geistigen Eigentums und Marken"
+            }
+        },
+        "team": {
+            "title": "Unser Rechtsteam",
+            "subtitle": "Spezialisierte Rechtsexperten zu Ihren Diensten"
+        },
+        "cta": {
+            "title": "Benötigen Sie eine Rechtsberatung?",
+            "subtitle": "Kontaktieren Sie uns noch heute und erhalten Sie eine kostenlose Beratung von unseren Rechtsexperten",
+            "callUs": "Rufen Sie uns Jetzt an",
+            "emailUs": "Senden Sie uns eine E-Mail",
+            "location": "Dubai, Vereinigte Arabische Emirate",
+            "phone": "+971 4 XXX XXXX",
+            "email": "info@legal-consultancy.ae"
         }
     }
 }

@@ -56,16 +56,26 @@ const ArticlesPage: React.FC = () => {
   const apiLang = localeMap[locale] || 'ar';
 
   // Convert API date format (DD-MM-YYYY) to Date object
-  const parseDate = (dateString: string): string => {
-    const [day, month, year] = dateString.split('-');
+  const parseDate = (dateString: string | undefined): string => {
+    if (!dateString) {
+      return new Date().toISOString().split('T')[0]; // Return today's date if undefined
+    }
+    const parts = dateString.split('-');
+    if (parts.length !== 3) {
+      return new Date().toISOString().split('T')[0]; // Return today's date if invalid format
+    }
+    const [day, month, year] = parts;
     return `${year}-${month}-${day}`;
   };
 
   // Calculate read time based on description length
-  const calculateReadTime = (description: string): string => {
+  const calculateReadTime = (description: string | undefined): string => {
+    if (!description) {
+      return `1 ${t('minute')}`;
+    }
     const wordsPerMinute = 200;
-    const words = description.split(/\s+/).length;
-    const minutes = Math.ceil(words / wordsPerMinute);
+    const words = description.split(/\s+/).filter(word => word.length > 0).length;
+    const minutes = Math.max(1, Math.ceil(words / wordsPerMinute));
     return `${minutes} ${minutes === 1 ? t('minute') : t('minutes')}`;
   };
 
@@ -85,19 +95,23 @@ const ArticlesPage: React.FC = () => {
         const apiArticles: ApiArticle[] = await response.json();
 
         // Transform API data to component format
-        const transformedArticles: Article[] = apiArticles.map((apiArticle) => ({
-          id: apiArticle.id,
-          title: apiArticle.title,
-          excerpt: apiArticle.description,
-          category: apiArticle.category,
-          image: apiArticle.image.startsWith('http') 
-            ? apiArticle.image 
-            : `https://shazmlc.cloud${apiArticle.image}`,
-          date: parseDate(apiArticle.createdAt),
-          author: t('author'),
-          readTime: calculateReadTime(apiArticle.description),
-          comments: apiArticle.comments,
-        }));
+        const transformedArticles: Article[] = apiArticles
+          .filter((apiArticle) => apiArticle && apiArticle.id && apiArticle.title) // Filter out invalid articles
+          .map((apiArticle) => ({
+            id: apiArticle.id,
+            title: apiArticle.title || '',
+            excerpt: apiArticle.description || '',
+            category: apiArticle.category || '',
+            image: apiArticle.image && apiArticle.image.startsWith('http') 
+              ? apiArticle.image 
+              : apiArticle.image 
+                ? `https://shazmlc.cloud${apiArticle.image}`
+                : 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80', // Fallback image
+            date: parseDate(apiArticle.createdAt),
+            author: t('author'),
+            readTime: calculateReadTime(apiArticle.description),
+            comments: apiArticle.comments || 0,
+          }));
 
         setArticles(transformedArticles);
 
@@ -233,11 +247,11 @@ const ArticlesPage: React.FC = () => {
                   key={article.id}
                   className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer"
                 >
-                  <div className="relative overflow-hidden h-56">
+                  <div className="relative overflow-hidden h-92">
                     <img
                       src={article.image}
                       alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full bg-cover   group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute top-4 right-4">
                       <span className="bg-teal-600  text-white px-4 py-1 rounded-full text-sm">
