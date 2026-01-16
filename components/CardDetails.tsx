@@ -8,6 +8,7 @@ import CategoriesModal from "./CategoriesModal";
 import { Iservices } from "./screens/home/ServicesShowcase";
 import Button from "./button";
 import Image from "next/image";
+import { openChatwoot } from "./ChatwootWidget";
 
 interface CardDetailsProps {
   link: string;
@@ -78,6 +79,7 @@ export default function CardDetails({
             variant="lineBlue"
             size="sm"
             className="flex-1 min-w-[120px] justify-center gap-2"
+            onClick={openChatwoot}
           >
             <MessageCircle className="w-5 h-5" />
             {t("chat")}

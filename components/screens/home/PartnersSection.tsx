@@ -27,12 +27,12 @@ export default function PartnersSection({ fields, repeatCount = 3 }: PartnersSec
         {/* Header Section */}
         <div className="text-center mb-[clamp(2rem,8vw,4rem)]">
           <div className="flex items-center justify-center gap-2 mb-[clamp(1rem,3vw,1.5rem)]">
-             <span className="text-[clamp(1.5rem,4vw,3.125rem)] font-bold uppercase tracking-wide font-semibold" style={{ color: '#FD9908' }}>
+             <span className="text-[clamp(1.5rem,4vw,7rem)] font-bold uppercase tracking-wide font-semibold" style={{ color: '#FD9908' }}>
             {t('title')}
             </span>
           </div>
           
-          <h2 className="text-[clamp(1.5rem,3.5vw,3.125rem)] font-bold mb-[clamp(1rem,4vw,2rem)] leading-tight px-4" style={{ color: '#181d27' }}>
+          <h2 className="text-[clamp(1.5rem,3.5vw,5rem)] font-bold mb-[clamp(1rem,4vw,2rem)] leading-tight px-4" style={{ color: '#181d27' }}>
           {t('subtitle')}
           </h2>
         </div>

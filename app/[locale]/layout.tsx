@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar/navbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { PopupModalProvider } from "@/components/PopupModalProvider";
+import ChatwootWidget from "@/components/ChatwootWidget";
 
 export default async function LocaleLayout({
   children,
@@ -28,6 +29,7 @@ export default async function LocaleLayout({
         </section>
         <ScrollToTopButton />
         <Footer />
+        <ChatwootWidget />
       </PopupModalProvider>
     </NextIntlClientProvider>
   );

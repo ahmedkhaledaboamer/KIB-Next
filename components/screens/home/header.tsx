@@ -43,13 +43,14 @@ export default async function Header() {
             className="font-bold text-primary text-center lg:text-start"
             style={{ fontSize: "clamp(1.25rem, 2.5vw, 3.5rem)", lineHeight: "1.2" }}
           >
-            <span className="text-white">{t("subtitle")}</span>
+             <span className="text-primary font-bold text-7xl">"</span>  {t("subtitle")} <span className="text-primary font-bold text-7xl">"</span>
+
           </h2>
           <h2
             className="font-bold text-white text-center lg:text-start"
             style={{ fontSize: "clamp(1.25rem, 2.5vw, 2.5rem)", lineHeight: "1.2" }}
           >
-            {t("subtitle2")}
+            {t("subtitle2")}  
           </h2>
           <h2
             className="font-bold text-white text-center lg:text-start"
