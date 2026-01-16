@@ -1,11 +1,12 @@
 "use client";
 import { cn } from "@/utils/cn";
 import { Link, usePathname } from "@/i18n/routing";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ListMinus } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Button from "../button";
 import LocaleSwitcher from "../locale-switcher";
+import { usePopupModal } from "../PopupModalProvider";
 
 interface Route {
   href: string;
@@ -19,6 +20,7 @@ const MobileNavbar = () => {
   const routesRaw = t.raw("routes");
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const { openModal, isOpen: isModalOpen, closeModal } = usePopupModal();
 
   // Memoize routes processing
   const routes = useMemo<Route[]>(() => {
@@ -45,17 +47,37 @@ const MobileNavbar = () => {
     [pathname, locale]
   );
 
+  // Close modal when mobile menu opens
+  useEffect(() => {
+    if (isOpen && isModalOpen) {
+      closeModal();
+    }
+  }, [isOpen, isModalOpen, closeModal]);
+
+  // Close mobile menu when modal opens
+  useEffect(() => {
+    if (isModalOpen && isOpen) {
+      setIsOpen(false);
+    }
+  }, [isModalOpen, isOpen]);
+
   // Prevent body scroll when menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "";
+      // Only reset overflow if modal is not open
+      if (!isModalOpen) {
+        document.body.style.overflow = "";
+      }
     }
     return () => {
-      document.body.style.overflow = "";
+      // Only reset overflow if modal is not open
+      if (!isModalOpen) {
+        document.body.style.overflow = "";
+      }
     };
-  }, [isOpen]);
+  }, [isOpen, isModalOpen]);
 
   // Close menu on escape key
   useEffect(() => {
@@ -118,7 +140,7 @@ const MobileNavbar = () => {
       {isOpen && (
         <div
           className={cn(
-            "fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 z-30",
+            "fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 z-[10000]",
             isOpen ? "opacity-100 visible" : "opacity-0 invisible"
           )}
           onClick={handleBackdropClick}
@@ -130,7 +152,7 @@ const MobileNavbar = () => {
       <div
         id="mobile-menu"
         className={cn(
-          "fixed top-0 h-screen w-full bg-secondary z-40",
+          "fixed top-0 h-screen w-full bg-secondary z-[10001]",
           "transition-transform duration-300 ease-in-out",
           "shadow-2xl",
           isRTL ? "right-0" : "left-0",
@@ -229,8 +251,38 @@ const MobileNavbar = () => {
                 </li>
               ))}
             </ul>
-            <div className="flex ">
-              <LocaleSwitcher />
+            <div className="flex flex-col gap-4 px-4 mt-4">
+              <button
+                onClick={() => {
+                  openModal();
+                  handleLinkClick();
+                }}
+                className={cn(
+                  "flex items-center justify-center gap-2 rounded-lg text-white font-semibold",
+                  "transition-all duration-200",
+                  "hover:bg-white/10 hover:text-primary",
+                  "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-secondary"
+                )}
+                style={{
+                  fontSize: "clamp(1rem, 1.5vw, 1.5rem)",
+                  paddingTop: "clamp(0.75rem, 1.25vw, 1.25rem)",
+                  paddingBottom: "clamp(0.75rem, 1.25vw, 1.25rem)",
+                  paddingLeft: "clamp(1rem, 1.5vw, 1.5rem)",
+                  paddingRight: "clamp(1rem, 1.5vw, 1.5rem)",
+                }}
+                aria-label={t("openGroupInfo")}
+              >
+                <ListMinus
+                  style={{
+                    width: "clamp(1.25rem, 1.75vw, 1.75rem)",
+                    height: "clamp(1.25rem, 1.75vw, 1.75rem)",
+                  }}
+                />
+                <span>{t("openGroupInfo")}</span>
+              </button>
+              <div className="flex">
+                <LocaleSwitcher />
+              </div>
             </div>
           </nav>
 

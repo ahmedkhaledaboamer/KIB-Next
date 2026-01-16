@@ -3,6 +3,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar/navbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import { PopupModalProvider } from "@/components/PopupModalProvider";
 
 export default async function LocaleLayout({
   children,
@@ -20,12 +21,14 @@ export default async function LocaleLayout({
   const isRTL = locale === "ar";
   return (
     <NextIntlClientProvider messages={messages}>
-      <Navbar />
-      <section className="min-h-svh" dir={isRTL ? "rtl" : "ltr"}>
-        {children}
-      </section>
-      <ScrollToTopButton />
-      <Footer />
+      <PopupModalProvider>
+        <Navbar />
+        <section className="min-h-svh" dir={isRTL ? "rtl" : "ltr"}>
+          {children}
+        </section>
+        <ScrollToTopButton />
+        <Footer />
+      </PopupModalProvider>
     </NextIntlClientProvider>
   );
 }

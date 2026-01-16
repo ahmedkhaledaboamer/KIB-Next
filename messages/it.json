@@ -4,6 +4,7 @@
     },
     "navbar": {
         "cta": "Prenota Consultazione",
+        "openGroupInfo": "Apri Informazioni Gruppo",
         "routes": [
             {
                 "label": "Home",
@@ -447,6 +448,77 @@
         },
         "altText": {
             "background": "Sfondo Contatti"
+        }
+    },
+    "popupModal": {
+        "title": "Parte di un Gruppo Leader",
+        "description1": "Operiamo all'interno di un sistema aziendale istituzionale con capacità sotto la leadership di Sheikh Abdul Aziz Bin Abdullah Al Mualla. Ci basiamo su una struttura legale e finanziaria integrata, progettata per servire decisioni importanti ed entità ad alto impatto.",
+        "description2": "Questo sistema è stato istituito per operare secondo standard istituzionali rigorosi, combinando governance, disciplina e capacità di esecuzione, con piena prontezza per l'espansione all'interno degli Emirati Arabi Uniti e oltre.",
+        "description3": "La nostra forza non risiede solo nelle nostre dimensioni, ma nella nostra capacità di mantenere la coesione del sistema, la chiarezza delle decisioni e la qualità dell'esecuzione.",
+        "ourGroup": "Il Nostro Gruppo",
+        "privacyPolicy": "Politica sulla Privacy",
+        "followUs": "Seguici",
+        "close": "Chiudi",
+        "services": {
+            "generalConsultations": "Consulenze Generali",
+            "aiResearch": "Intelligenza Artificiale e Ricerca",
+            "claimsSettlement": "Liquidazione Reclami",
+            "businessmenServices": "Servizi Imprenditoriali",
+            "finance": "Finanza",
+            "trade": "Commercio"
+        }
+    },
+    "vipForm": {
+        "title": "Canali Clienti VIP",
+        "subtitle": "Canali dedicati per comunicazione esecutiva e file ad alto valore",
+        "fields": {
+            "name": "Nome",
+            "email": "Email",
+            "phone": "Numero di telefono",
+            "clientType": "Tipo di cliente",
+            "reason": "Motivo del contatto",
+            "notes": "Note aggiuntive"
+        },
+        "clientTypes": {
+            "vip": "VIP",
+            "entrepreneur": "Imprenditore",
+            "investor": "Investitore",
+            "institution": "Istituzione",
+            "partner": "Partner",
+            "consultant": "Consulente"
+        },
+        "submitButton": "Richiedi contatto esecutivo",
+        "privacyNote": "Tutti i dati forniti sono soggetti a rigorosa riservatezza e non saranno condivisi con terze parti.",
+        "successMessage": "La tua richiesta è stata inviata con successo"
+    },
+    "articles": {
+        "title": "Approfondimenti e Articoli",
+        "subtitle": "Esplora articoli scritti da esperti che offrono approfondimenti pratici e orientamenti strategici",
+        "searchPlaceholder": "Cerca...",
+        "all": "Tutti",
+        "mostRead": "Più Letti",
+        "relatedArticles": "Articoli Correlati",
+        "faq": "Domande Frequenti",
+        "readMore": "Leggi di Più",
+        "noArticles": "Nessun articolo disponibile",
+        "fetchError": "Errore nel recupero degli articoli",
+        "errorMessage": "Si è verificato un errore durante il recupero degli articoli",
+        "minute": "minuto",
+        "minutes": "minuti",
+        "author": "Fondazione di Consulenza Legale Sheikh Abdul Aziz Bin Abdullah Al Mualla",
+        "faqItems": {
+            "question1": "Quali tipi di finanziamento offriamo? KIB Financing",
+            "answer1": "Offriamo una varietà di soluzioni di finanziamento progettate specificamente per soddisfare le tue esigenze",
+            "question2": "Quanto tempo richiede il processo di approvazione del finanziamento?",
+            "answer2": "Il processo di approvazione richiede solitamente 3-5 giorni lavorativi",
+            "question3": "Chi è idoneo a richiedere il finanziamento?",
+            "answer3": "Tutti i cittadini e i residenti che soddisfano le condizioni richieste"
+        },
+        "socialMedia": {
+            "facebook": "Facebook",
+            "twitter": "Twitter",
+            "instagram": "Instagram",
+            "linkedin": "LinkedIn"
         }
     }
 }

@@ -4,6 +4,7 @@
     },
     "navbar": {
         "cta": "Book Consultation",
+        "openGroupInfo": "Open Group Information",
         "routes": [
             {
                 "label": "Home",
@@ -447,6 +448,77 @@
         },
         "altText": {
             "background": "Contact Background"
+        }
+    },
+    "popupModal": {
+        "title": "Part of a Leading Group",
+        "description1": "We operate within an institutional business system with capabilities under the leadership of Sheikh Abdul Aziz Bin Abdullah Al Mualla. We are based on an integrated legal and financial structure, designed to serve major decisions and high-impact entities.",
+        "description2": "This system was established to operate according to strict institutional standards, combining governance, discipline, and execution capability, with full readiness for expansion within the United Arab Emirates and beyond.",
+        "description3": "Our strength lies not only in our size, but in our ability to maintain system cohesion, decision clarity, and execution quality.",
+        "ourGroup": "Our Group",
+        "privacyPolicy": "Privacy Policy",
+        "followUs": "Follow Us",
+        "close": "Close",
+        "services": {
+            "generalConsultations": "General Consultations",
+            "aiResearch": "Artificial Intelligence and Research",
+            "claimsSettlement": "Claims Settlement",
+            "businessmenServices": "Businessmen Services",
+            "finance": "Finance",
+            "trade": "Trade"
+        }
+    },
+    "vipForm": {
+        "title": "VIP Client Channels",
+        "subtitle": "Dedicated channels for executive communication and high-value files",
+        "fields": {
+            "name": "Name",
+            "email": "Email",
+            "phone": "Phone Number",
+            "clientType": "Client Type",
+            "reason": "Reason for Contact",
+            "notes": "Additional Notes"
+        },
+        "clientTypes": {
+            "vip": "VIP",
+            "entrepreneur": "Entrepreneur",
+            "investor": "Investor",
+            "institution": "Institution",
+            "partner": "Partner",
+            "consultant": "Consultant"
+        },
+        "submitButton": "Request Executive Contact",
+        "privacyNote": "All provided data is subject to strict confidentiality and will not be shared with any third party.",
+        "successMessage": "Your request has been sent successfully"
+    },
+    "articles": {
+        "title": "Insights & Articles",
+        "subtitle": "Explore expert-written articles offering practical insights and strategic guidance",
+        "searchPlaceholder": "Search...",
+        "all": "All",
+        "mostRead": "Most Read",
+        "relatedArticles": "Related Articles",
+        "faq": "Frequently Asked Questions",
+        "readMore": "Read More",
+        "noArticles": "No articles available",
+        "fetchError": "Failed to fetch articles",
+        "errorMessage": "An error occurred while fetching articles",
+        "minute": "minute",
+        "minutes": "minutes",
+        "author": "Sheikh Abdul Aziz Bin Abdullah Al Mualla Legal Consultancy Foundation",
+        "faqItems": {
+            "question1": "What types of financing do we offer? KIB Financing",
+            "answer1": "We offer a variety of financing solutions designed specifically to meet your needs",
+            "question2": "How long does the financing approval process take?",
+            "answer2": "The approval process usually takes 3-5 business days",
+            "question3": "Who is eligible to apply for financing?",
+            "answer3": "All citizens and residents who meet the required conditions"
+        },
+        "socialMedia": {
+            "facebook": "Facebook",
+            "twitter": "Twitter",
+            "instagram": "Instagram",
+            "linkedin": "LinkedIn"
         }
     }
 }

@@ -4,6 +4,7 @@
     },
     "navbar": {
         "cta": "Beratung buchen",
+        "openGroupInfo": "Gruppeninformationen öffnen",
         "routes": [
             {
                 "label": "Startseite",
@@ -446,6 +447,77 @@
         },
         "altText": {
             "background": "Kontakt-Hintergrund"
+        }
+    },
+    "popupModal": {
+        "title": "Teil einer führenden Gruppe",
+        "description1": "Wir arbeiten innerhalb eines institutionellen Geschäftssystems mit Fähigkeiten unter der Führung von Sheikh Abdul Aziz Bin Abdullah Al Mualla. Wir stützen uns auf eine integrierte rechtliche und finanzielle Struktur, die darauf ausgelegt ist, wichtige Entscheidungen und hochwirksame Einheiten zu bedienen.",
+        "description2": "Dieses System wurde gegründet, um nach strengen institutionellen Standards zu arbeiten, die Governance, Disziplin und Ausführungsfähigkeit kombinieren, mit vollständiger Bereitschaft zur Expansion innerhalb der Vereinigten Arabischen Emirate und darüber hinaus.",
+        "description3": "Unsere Stärke liegt nicht nur in unserer Größe, sondern in unserer Fähigkeit, Systemkohäsion, Entscheidungsklarität und Ausführungsqualität aufrechtzuerhalten.",
+        "ourGroup": "Unsere Gruppe",
+        "privacyPolicy": "Datenschutzrichtlinie",
+        "followUs": "Folgen Sie uns",
+        "close": "Schließen",
+        "services": {
+            "generalConsultations": "Allgemeine Beratungen",
+            "aiResearch": "Künstliche Intelligenz und Forschung",
+            "claimsSettlement": "Schadensregulierung",
+            "businessmenServices": "Dienstleistungen für Geschäftsleute",
+            "finance": "Finanzierung",
+            "trade": "Handel"
+        }
+    },
+    "vipForm": {
+        "title": "VIP-Kundenkanäle",
+        "subtitle": "Dedizierte Kanäle für Führungskommunikation und hochwertige Dateien",
+        "fields": {
+            "name": "Name",
+            "email": "E-Mail",
+            "phone": "Telefonnummer",
+            "clientType": "Kundentyp",
+            "reason": "Kontaktgrund",
+            "notes": "Zusätzliche Notizen"
+        },
+        "clientTypes": {
+            "vip": "VIP",
+            "entrepreneur": "Unternehmer",
+            "investor": "Investor",
+            "institution": "Institution",
+            "partner": "Partner",
+            "consultant": "Berater"
+        },
+        "submitButton": "Exekutivkontakt anfordern",
+        "privacyNote": "Alle bereitgestellten Daten unterliegen strengster Vertraulichkeit und werden nicht an Dritte weitergegeben.",
+        "successMessage": "Ihre Anfrage wurde erfolgreich gesendet"
+    },
+    "articles": {
+        "title": "Einblicke & Artikel",
+        "subtitle": "Entdecken Sie von Experten geschriebene Artikel mit praktischen Einblicken und strategischen Anleitungen",
+        "searchPlaceholder": "Suchen...",
+        "all": "Alle",
+        "mostRead": "Meist Gelesen",
+        "relatedArticles": "Verwandte Artikel",
+        "faq": "Häufig Gestellte Fragen",
+        "readMore": "Weiterlesen",
+        "noArticles": "Keine Artikel verfügbar",
+        "fetchError": "Fehler beim Abrufen der Artikel",
+        "errorMessage": "Beim Abrufen der Artikel ist ein Fehler aufgetreten",
+        "minute": "Minute",
+        "minutes": "Minuten",
+        "author": "Sheikh Abdul Aziz Bin Abdullah Al Mualla Rechtsberatungsstiftung",
+        "faqItems": {
+            "question1": "Welche Arten von Finanzierungen bieten wir an? KIB Financing",
+            "answer1": "Wir bieten eine Vielzahl von Finanzierungslösungen an, die speziell auf Ihre Bedürfnisse zugeschnitten sind",
+            "question2": "Wie lange dauert der Genehmigungsprozess für die Finanzierung?",
+            "answer2": "Der Genehmigungsprozess dauert normalerweise 3-5 Werktage",
+            "question3": "Wer ist berechtigt, eine Finanzierung zu beantragen?",
+            "answer3": "Alle Bürger und Einwohner, die die erforderlichen Bedingungen erfüllen"
+        },
+        "socialMedia": {
+            "facebook": "Facebook",
+            "twitter": "Twitter",
+            "instagram": "Instagram",
+            "linkedin": "LinkedIn"
         }
     }
 }

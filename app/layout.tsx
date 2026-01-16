@@ -14,7 +14,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html>
-      <body className={`${gildaDisplay.variable} antialiased`}>{children}</body>
+      <body className={`${gildaDisplay.variable} antialiased`} suppressHydrationWarning>{children}</body>
     </html>
   );
 }

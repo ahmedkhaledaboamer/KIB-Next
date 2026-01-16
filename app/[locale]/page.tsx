@@ -11,6 +11,7 @@ import PartnersSection from "@/components/screens/home/PartnersSection";
 import { getTranslations } from "next-intl/server";
 import { getSectors } from "@/utils/getSectors";
 import { getFields } from "@/utils/getFields";
+import ModernGradientForm from "@/components/screens/home/ModernGradientForm";
 
 export default async function Page() {
   const t = await getTranslations("page");
@@ -27,8 +28,8 @@ export default async function Page() {
       <CommentsSection />
       <WhyChooseUs />
       {/* <CustomerCare/> */}
-      
       <SectorSlider sectors={sectors} isLoading={false} />
+      <ModernGradientForm />
       <LegalCTASection />
     </section>
   );

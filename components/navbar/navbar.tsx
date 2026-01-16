@@ -8,6 +8,7 @@ import { useCallback, useMemo } from "react";
 import LocaleSwitcher from "../locale-switcher";
 import Logo from "../logo";
 import MobileNavbar from "./mobile-nav";
+import { PopupModalTrigger } from "../PopupModalProvider";
 
 interface Route {
   label: string;
@@ -53,7 +54,7 @@ export default function Navbar() {
         "flex justify-between items-center",
         "shadow-lg shadow-black/20",
         "transition-all duration-300 ease-in-out",
-        "w-full rounded-none  ",
+        "w-full rounded-none top-0 fixed ",
         'px-6 py-4'
       )}
       role="navigation"
@@ -118,6 +119,7 @@ export default function Navbar() {
         <div className="hidden md:flex">
           <LocaleSwitcher />
         </div>
+        <PopupModalTrigger />
         <Button
           className="hidden lg:flex whitespace-nowrap"
           variant="primary"
